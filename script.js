@@ -23,9 +23,9 @@ const experienceData = {
                     <h3>Coordinator SINFO</h3>
                     <p>IST Technology Conference (2022-Present)</p>
                     <ul>
-                        <li>Collaborated with a team to organize the largest free tech event in Portugal, managing communication with key stakeholders and sponsors.</li>
-                        <li>Ensured smooth event operations by overseeing speaker sessions and managing on-site logistics.</li>
-                        <li>Contributed to event planning by identifying trends and suggesting relevant tech topics, driving audience engagement and attendance.</li>
+                        <li>Currently coordinating a team to organize the largest free tech event in Portugal, managing communication with key stakeholders and sponsors.</li>
+                        <li>Ensuring smooth event operations by overseeing speaker sessions and managing on-site logistics.</li>
+                        <li>Contributing to event planning by identifying trends and suggesting relevant tech topics, driving audience engagement and attendance.</li>
                     </ul>
                 </div>
                 <div class="student-org">
@@ -43,7 +43,7 @@ const experienceData = {
                 <ul>
                     <li>Provided personalized mathematics and physics tutoring, adapting methods to suit individual learning styles and improve academic performance.</li>
                     <li>Assisted in ballet classes, supporting both students and the head teacher by giving constructive feedback and helping maintain a structured learning environment.</li>
-                    <li>Demonstrated adaptability by balancing both roles, improving students' academic and extracurricular performance.</li>
+                    <li>Demonstrated adaptability in both roles, improving students' academic and extracurricular performance.</li>
                 </ul>`,
     volunteering: `<h3>Volunteer</h3>
                 <p>ReFood (2016-2020) and Banco Alimentar (2012-2020)</p>
