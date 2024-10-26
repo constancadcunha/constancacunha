@@ -435,7 +435,7 @@ p {
 
 .education-container {
     display: flex;
-    justify-content: left; /* Center the container */
+    justify-content: center; /* Center the container */
     gap: 20px; /* Space between the education items */
     margin: 40px 0; /* Additional space around the section */
 }
