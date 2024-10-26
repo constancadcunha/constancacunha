@@ -489,14 +489,30 @@ p {
     font-weight: bold;
 }
 
-/* Link styling */
+/* Reset box effect for contact-info links */
+.contact-info a {
+    display: inline !important; /* Force inline display to avoid box */
+    color: #5A5753 !important; /* Neutral color */
+    text-decoration: underline !important; /* Basic link style */
+    padding: 0 !important; /* Remove padding */
+    margin: 0 !important; /* Remove margin */
+    border: none !important; /* Remove any borders */
+    background: transparent !important; /* Remove background */
+    box-shadow: none !important; /* Remove any shadow */
+}
+
+
+/* Button-like styling only for .projects-resume links */
 .projects-resume a {
+    display: inline-block; /* Button style */
     color: #E4A957;
     text-decoration: none;
     font-weight: bold;
-    display: inline-block;
     font-size: 18px;
     transition: color 0.3s ease;
+    padding: 12px 24px; /* Adds padding for button look */
+    background-color: #E4A957;
+    border-radius: 5px;
 }
 
 .projects-resume a:hover {
