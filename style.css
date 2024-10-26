@@ -63,7 +63,7 @@ h1, header h1 {
 /* All section headers */
 .section-header {
     text-align: center;
-    color: #FFFAF1;
+    color: #5A5753;
     font-family: 'Satisfy', cursive;
     font-size: 40px; /* Increased font size for main section headers */
     padding: 30px;
