@@ -501,7 +501,6 @@ p {
     box-shadow: none !important; /* Remove any shadow */
 }
 
-
 /* Button-like styling only for .projects-resume links */
 .projects-resume a {
     display: inline-block; /* Button style */
