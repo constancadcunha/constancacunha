@@ -63,7 +63,7 @@ h1, header h1 {
 /* All section headers */
 .section-header {
     text-align: center;
-    color: #FFFFFF; /* Change to a contrasting color */
+    color: #FFFAF1; /* Change to a contrasting color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add drop shadow */
     font-family: 'Satisfy', cursive;
     font-size: 40px; /* Increased font size for main section headers */
