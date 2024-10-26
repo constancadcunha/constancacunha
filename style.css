@@ -1,3 +1,4 @@
+
 /* General Styles */
 html {
     scroll-behavior: smooth;
@@ -67,13 +68,17 @@ h1, header h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add drop shadow */
     font-family: 'Satisfy', cursive;
     font-size: 40px; /* Increased font size for main section headers */
-    padding: 30px;
+    padding: 15px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
     transition: all 0.5s ease; /* Smoother transition */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.section-header.header-3 {
+    margin-bottom: 45px; /* Increase spacing below the header */
 }
 
 /* All h2 headers */
@@ -82,7 +87,7 @@ h2, .section-header h2 {
     position: relative;
     z-index: 1;
     margin: 0;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.5s ease; /* Smoother transition */ 
 }
 
 /* All h3 headers */
@@ -154,7 +159,6 @@ header nav a:hover {
     transition: all 0.3s ease;
 }
 
-
 /* Paragraph text */
 p {
     font-size: 20px;
@@ -162,33 +166,6 @@ p {
     max-width: 80%;
     margin: 15px auto;
     transition: all 0.5s ease; /* Smoother transition */
-}
-
-/* Experience Tabs */
-.experience-tabs {
-    margin: 20px 0;
-}
-
-.experience-tabs button {
-    background-color: #E4A957;
-    color: #5A5753;
-    border: none;
-    padding: 12px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: all 0.5s ease; /* Smoother transition */
-}
-
-.experience-tabs button:hover {
-    background-color: #D1A26E;
-    transform: translateY(-2px);
-}
-
-.experience-tabs button.active {
-    background-color: #D1A26E;
-    transform: translateY(-2px);
-    font-weight: bold;
 }
 
 /* Student Organizations Layout */
@@ -302,11 +279,6 @@ p {
     transition: all 0.5s ease; /* Smoother transition */
 }
 
-/* Experience Tabs */
-.experience-tabs {
-    margin: -10px 0; /* Reduced margin to bring buttons closer to the content */
-}
-
 .experience-tabs button {
     background-color: #E4A957;
     color: #5A5753;
@@ -333,7 +305,7 @@ p {
 #experience-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 10px; /* Reduced padding to decrease the space between buttons and content */
+    padding-top: -7px; /* Reduced padding to decrease the space between buttons and content */
     transition: all 0.5s ease;
 }
 
