@@ -435,19 +435,17 @@ p {
 
 .education-container {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding-top: 10px;
+    justify-content: center; /* Center the container */
+    gap: 20px; /* Space between the education items */
+    margin: 40px 0; /* Additional space around the section */
 }
 
 .education-item {
-    flex: 1;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: -40px;
-    margin-bottom: 20px;
+    max-width: 400px; /* Adjust max width as needed */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Optional padding for better spacing */
+    border: 1px solid #E4A957; /* Optional border for distinction */
+    border-radius: 8px; /* Rounded corners for aesthetics */
 }
 
 .education-item h4 {
