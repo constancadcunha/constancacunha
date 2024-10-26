@@ -30,7 +30,7 @@ const experienceData = {
                 </div>
                 <div class="student-org">
                     <h3>Human Resources Coordinator</h3>
-                    <p>Diferencial - IST Student Newspaper (2021 - 2023)</p>
+                    <p>Diferencial (2021 - 2023)</p>
                     <ul>
                         <li>Managed recruitment campaigns for both writers and technical staff, enhancing team organization and fostering a positive work environment.</li>
                         <li>Conducted interviews and onboarded new recruits, demonstrating strong interpersonal skills and leadership.</li>
