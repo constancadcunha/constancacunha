@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constança Cunha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Constança Cunha</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contacts">Contacts</a>
+        </nav>
+    </header>
+
+    <!-- Sections -->
+    <section id="about">
+        <div class="section-header header-5">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-me-content">
+            <img src="/img/profile.jpeg" alt="Constança Cunha" class="profile-image">
+            <div class="about-me-text">
+                <p><strong>Hello!</strong> I'm <strong>Constança Cunha</strong>, a <strong>front-end developer</strong> with a passion for crafting intuitive web experiences. Currently pursuing my <strong>Master's in Computer Science</strong> at Instituto Superior Técnico, I specialize in merging technical expertise with <strong>creative problem-solving</strong>.</p>
+    
+                <p>Throughout my journey, I’ve had the opportunity to lead projects such as an internal web app, where I focused on enhancing workflows and functionality using <strong>HTML</strong>, <strong>JavaScript</strong>, and <strong>CSS</strong>. I take pride in pushing the boundaries of web development, continuously improving projects by adding <strong>API support</strong> and new features that provide real impact.</p>
+    
+                <p>My mission? To create meaningful connections between technology and users, fuelled by my curiosity and drive to make a positive difference. I believe in using my skills to streamline processes, build engaging interfaces, and develop user-generated solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-header header-2"><h2>Skills</h2></div>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Portuguese (Native)</li>
+                    <li>English (Native)</li>
+                    <li>Spanish (B2)</li>
+                    <li>French (B1)</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Julia</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>Assembly</li>
+                    <li>Prolog</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Graphic Design</h3>
+                <ul>
+                    <li>Adobe Illustrator</li>
+                    <li>Photoshop</li>
+                    <li>Premiere Pro</li>
+                    <li>After Effects</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Webpage design</li>
+                    <li>UX</li>
+                </ul>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Verbal and written communication</li>
+                    <li>Teamwork</li>
+                    <li>Leadership</li>
+                    <li>Time management</li>
+                    <li>Creativity</li>
+                    <li>Problem-Solving</li>
+                    <li>Adaptability</li>
+                    <li>Multitasking</li>
+                    <li>Resilience</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <div id="experience" class="section">
+        <div class="section-header header-3">
+            <h2>Experience</h2>
+        </div>
+        
+        <div class="experience-tabs">
+            <button data-type="internship" class="active">Internship</button>
+            <button data-type="student">Student Organizations</button>
+            <button data-type="tutoring">Tutoring</button>
+            <button data-type="volunteering">Volunteering</button>
+        </div>
+        
+        <div id="experience-content">
+            <!-- Content will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <section id="education" class="section">
+        <div class="section-header header-4">
+            <h2>Education</h2>
+        </div>
+        <div class="education-container">
+            <!-- Bachelor's Degree -->
+            <div class="education-item">
+                <h4>Bachelor's in Computer Science and Engineering</h4>
+                <h5>Instituto Superior Técnico<br>(Graduated: 2023)</h5>
+                <li>Focus on software engineering and graphic design.</li>
+                <li><strong>Relevant Coursework:</strong> Object-Oriented Programming, Algorithms, and Human-Computer Interaction.</li>
+            </div>
+            
+            <!-- Master's Degree -->
+            <div class="education-item">
+                <h4>Master's in Computer Science and Engineering</h4>
+                <h5>Instituto Superior Técnico<br>(Expected Completion: 2025)</h5>
+                <li>Focus on web development, user experience (UX), and human-computer interaction (HCI).</li>
+                <li><strong>Relevant Coursework:</strong> Data Structures, Advanced Algorithms, Full-Stack Development, and UX Design.</li>
+            </div>
+        </div>
+    </section>      
+
+    <section id="contacts" class="section">
+        <div class="section-header header-5">
+            <h2>Contacts</h2>
+        </div>
+        <div class="contacts-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h3>Let's Connect!</h3>
+                <p><strong>Email:</strong> constancadcunha@gmail.com</p>
+                <p><strong>LinkedIn:</strong> constanca-szolnoky-cunha</p>
+                <p><strong>Phone:</strong> +351-934-864-186</p>
+            </div>
+            
+            <!-- Projects and Resume Links -->
+            <div class="projects-resume">
+                <h3>See my Projects</h3>
+                <p><a href="https://github.com/constancadcunha" target="_blank">GitHub Profile</a></p>
+                <a href="resume.pdf" class="resume-link" target="_blank">Get my Resume</a>
+            </div>
+        </div>
+    </section>    
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

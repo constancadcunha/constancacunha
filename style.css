@@ -1,0 +1,553 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    color: #5A5753;
+    background-color: #FEEFD9;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px; /* Added bottom padding for more space at the bottom */
+    text-align: center;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #E4A957;
+    color: #5A5753;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* Section padding to prevent header overlap */
+.section {
+    padding-top: 100px; /* Reduced to bring sections closer to the header */
+    margin-top: -50px;
+    scroll-margin-top: 100px;
+}
+
+/* All h1 headers */
+h1, header h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 48px; /* Increased font size */
+    margin: 0 20px;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* All section headers */
+.section-header {
+    text-align: center;
+    color: #FFFAF1;
+    font-family: 'Satisfy', cursive;
+    font-size: 40px; /* Increased font size for main section headers */
+    padding: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 0.5s ease; /* Smoother transition */
+    margin-bottom: 40px;
+}
+
+/* All h2 headers */
+h2, .section-header h2 {
+    font-size: 44px; /* Increased font size */
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* All h3 headers */
+h3, .skills-category h3 {
+    font-size: 32px; /* Slightly increased for emphasis */
+    font-weight: bold;
+    color: #5A5753;
+    margin-bottom: 20px;
+    text-align: left;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* Navigation links */
+header nav a {
+    margin: 0 15px;
+    color: #5A5753;
+    text-decoration: none;
+    font-size: 22px; /* Slightly larger for readability */
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+header nav a:hover {
+    color: #5A5753;
+    transform: translateY(-2px);
+}
+
+/* Background images for each section header */
+.header-1 {
+    background-image: url('img/1st.jpeg');
+}
+
+.header-2 {
+    background-image: url('img/2nd.webp');
+}
+
+.header-3 {
+    background-image: url('img/3rd.jpeg');
+}
+
+.header-4 {
+    background-image: url('img/4th.jpg');
+}
+
+.header-5 {
+    background-image: url('img/5th.webp');
+}
+
+/* Optional: Add a subtle overlay to make text more readable over images */
+.section-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 250, 241, 0.251);
+    z-index: 0;
+}
+
+/* Profile Image */
+.profile-image {
+    width: 300px;  /* Set width */
+    height: 300px; /* Set height to make it a square */
+    border: 3px solid #E4A957;
+    margin-bottom: 10px;
+    border-radius: 5%; /* Optional: maintain some rounding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+
+/* Paragraph text */
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 80%;
+    margin: 15px auto;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* Experience Tabs */
+.experience-tabs {
+    margin: 20px 0;
+}
+
+.experience-tabs button {
+    background-color: #E4A957;
+    color: #5A5753;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+.experience-tabs button:hover {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+}
+
+.experience-tabs button.active {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Student Organizations Layout */
+.student-orgs-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.student-org {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Contacts */
+#contacts a {
+    display: inline-block;
+    background-color: #E4A957;
+    color: #5A5753;
+    padding: 12px 24px;
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 18px;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+#contacts a:hover {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-category {
+    flex: 1;
+    text-align: left;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.skills-category h3 {
+    font-size: 27px;
+    font-weight: bold;
+    color: #5A5753;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #5A5753;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    font-size: 17px;
+    line-height: 1.8; /* Adjusted line height to fit longer items */
+    text-align: left;
+    white-space: nowrap; /* Prevents line breaks within skill items */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds an ellipsis for overflow */
+}
+
+.skills-category ul li {
+    color: #5A5753;
+    position: relative;
+    padding-left: 15px; /* Reduced padding to fit items better */
+    transition: all 0.5s ease;
+}
+
+.skills-category ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #5A5753;
+}
+
+/* About Me Section Layout */
+#about {
+    padding-top: 100px; /* Reduced padding for a smoother flow */
+}
+
+.about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 30px;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* About Me Text Styling */
+.about-me-text {
+    max-width: 800px;
+    font-family: 'Playfair Display', serif;
+    color: #5A5753;
+    text-align: left;
+    transition: all 0.5s ease; /* Smoother transition */
+}
+
+/* Experience Tabs */
+.experience-tabs {
+    margin: -10px 0; /* Reduced margin to bring buttons closer to the content */
+}
+
+.experience-tabs button {
+    background-color: #E4A957;
+    color: #5A5753;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s ease;
+}
+
+.experience-tabs button:hover {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+}
+
+.experience-tabs button.active {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+    font-weight: bold;
+}
+
+/* Experience Content */
+#experience-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 10px; /* Reduced padding to decrease the space between buttons and content */
+    transition: all 0.5s ease;
+}
+
+#experience-content h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#experience-content p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+
+#experience-content ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#experience-content li {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#experience-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #E4A957;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section {
+        padding-top: 100px;
+    }
+    
+    .about-me-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .profile-image {
+        width: 140px;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 18px;
+        max-width: 90%;
+    }
+    
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    .skills-category {
+        border-left: none;
+        padding: 20px;
+    }
+
+    .skills-category h3 {
+        border-bottom: 1px solid #5A5753;
+    }
+    
+    .skills-category:last-child {
+        border-bottom: none;
+    }
+    
+    header nav a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    
+    .experience-tabs button {
+        padding: 8px 10px;
+        font-size: 16px;
+        margin: 2px;
+    }
+
+    .student-orgs-container {
+        flex-direction: column;
+    }
+    
+    .student-org {
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+/* Education Section */
+
+.education-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.education-item {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+.education-item h4 {
+    font-size: 24px;
+    color: #5A5753;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.education-item h5 {
+    font-size: 17px;
+    color: #5A5753;
+    margin-bottom: 5px;
+    text-align: left;
+    font-style: italic;
+}
+
+.education-item li {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #5A5753;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column;
+    }
+}
+
+/* Contacts Section */
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;  /* Increased gap between the boxes */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-top: -10px;
+}
+
+.contact-info, .projects-resume {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;  /* Kept radius for slight rounding */
+    box-shadow: none;  /* Removed box shadow */
+    text-align: left; /* Align text to the left */
+}
+
+.contact-info h3, .projects-resume h3 {
+    font-size: 24px;
+    color: #5A5753;
+    margin-bottom: 10px;
+    text-align: center; /* Keep the header centered */
+}
+
+.contact-info p, .projects-resume p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #5A5753;
+    margin: 5px 0;
+}
+
+/* Making the Email, LinkedIn, and Phone bold */
+.contact-info p strong {
+    font-weight: bold;
+}
+
+/* Link styling */
+.projects-resume a {
+    color: #E4A957;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.projects-resume a:hover {
+    color: #D1A26E;
+}
+
+/* Ensure the buttons are aligned */
+.projects-resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-resume a {
+    margin: 10px 0;  /* Adds some spacing between buttons */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .contacts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
