@@ -1,5 +1,3 @@
-
-/* General Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -10,13 +8,12 @@ body {
     background-color: #FEEFD9;
     margin: 0;
     padding: 0;
-    padding-bottom: 50px; /* Added bottom padding for more space at the bottom */
+    padding-bottom: 50px;
     text-align: center;
     overflow-x: hidden;
-    transition: all 0.5s ease;
+    transition: background-color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Background */
 body::before {
     content: '';
     position: fixed;
@@ -29,6 +26,7 @@ body::before {
     background-attachment: fixed;
     opacity: 0.1;
     z-index: -1;
+    transition: opacity 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 /* Header Styles */
@@ -43,79 +41,74 @@ header {
     align-items: center;
     padding: 20px 0;
     z-index: 1000;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: background-color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Section padding to prevent header overlap */
 .section {
-    padding-top: 100px; /* Reduced to bring sections closer to the header */
+    padding-top: 100px;
     margin-top: -50px;
     scroll-margin-top: 100px;
+    transition: padding 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* All h1 headers */
 h1, header h1 {
     font-family: 'Satisfy', cursive;
-    font-size: 48px; /* Increased font size */
+    font-size: 48px;
     margin: 0 20px;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* All section headers */
 .section-header {
     text-align: center;
-    color: #FFFAF1; /* Change to a contrasting color */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add drop shadow */
+    color: #FFFAF1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-family: 'Satisfy', cursive;
-    font-size: 40px; /* Increased font size for main section headers */
+    font-size: 40px;
     padding: 15px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
     margin-bottom: 20px;
 }
 
 .section-header.header-3 {
-    margin-bottom: 45px; /* Increase spacing below the header */
+    margin-bottom: 45px; 
 }
 
-/* All h2 headers */
 h2, .section-header h2 {
-    font-size: 44px; /* Increased font size */
+    font-size: 44px; 
     position: relative;
     z-index: 1;
     margin: 0;
-    transition: all 0.5s ease; /* Smoother transition */ 
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* All h3 headers */
 h3, .skills-category h3 {
-    font-size: 32px; /* Slightly increased for emphasis */
+    font-size: 32px; 
     font-weight: bold;
     color: #5A5753;
     margin-bottom: 20px;
     text-align: left;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Navigation links */
 header nav a {
     margin: 0 15px;
     color: #5A5753;
     text-decoration: none;
-    font-size: 22px; /* Slightly larger for readability */
+    font-size: 22px; 
     font-weight: bold;
-    transition: all 0.5s ease;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 header nav a:hover {
     color: #5A5753;
     transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
-/* Background images for each section header */
 .header-1 {
     background-image: url('img/1st.jpeg');
 }
@@ -136,7 +129,6 @@ header nav a:hover {
     background-image: url('img/5th.webp');
 }
 
-/* Optional: Add a subtle overlay to make text more readable over images */
 .section-header::after {
     content: '';
     position: absolute;
@@ -148,27 +140,26 @@ header nav a:hover {
     z-index: 0;
 }
 
-/* Profile Image */
 .profile-image {
-    width: 300px;  /* Set width */
-    height: 300px; /* Set height to make it a square */
+    width: 300px;  
+    height: 300px; 
     border: 3px solid #E4A957;
     margin-bottom: 10px;
-    border-radius: 5%; /* Optional: maintain some rounding */
+    border-radius: 5%; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Paragraph text */
 p {
     font-size: 20px;
     line-height: 1.6;
     max-width: 80%;
     margin: 15px auto;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.5s ease;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
-/* Student Organizations Layout */
 .student-orgs-container {
     display: flex;
     gap: 30px;
@@ -186,7 +177,6 @@ p {
     border-radius: 8px;
 }
 
-/* Contacts */
 #contacts a {
     display: inline-block;
     background-color: #E4A957;
@@ -195,7 +185,8 @@ p {
     text-decoration: none;
     margin-top: 20px;
     font-size: 18px;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.5s ease;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 #contacts a:hover {
@@ -203,7 +194,6 @@ p {
     transform: translateY(-2px);
 }
 
-/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: space-between;
@@ -216,6 +206,7 @@ p {
     text-align: left;
     padding: 20px 40px;
     position: relative;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .skills-category h3 {
@@ -233,18 +224,18 @@ p {
     padding: 0;
     margin: 20px 0 0 0;
     font-size: 17px;
-    line-height: 1.8; /* Adjusted line height to fit longer items */
+    line-height: 1.8;
     text-align: left;
-    white-space: nowrap; /* Prevents line breaks within skill items */
+    white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis; /* Adds an ellipsis for overflow */
+    text-overflow: ellipsis;
 }
 
 .skills-category ul li {
     color: #5A5753;
     position: relative;
-    padding-left: 15px; /* Reduced padding to fit items better */
-    transition: all 0.5s ease;
+    padding-left: 15px; 
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .skills-category ul li::before {
@@ -254,9 +245,8 @@ p {
     color: #5A5753;
 }
 
-/* About Me Section Layout */
 #about {
-    padding-top: 100px; /* Reduced padding for a smoother flow */
+    padding-top: 100px; 
 }
 
 .about-me-content {
@@ -267,16 +257,15 @@ p {
     margin: 0 auto;
     padding: 40px 20px;
     gap: 30px;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1); 
 }
 
-/* About Me Text Styling */
 .about-me-text {
     max-width: 800px;
     font-family: 'Playfair Display', serif;
     color: #5A5753;
     text-align: left;
-    transition: all 0.5s ease; /* Smoother transition */
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .experience-tabs button {
@@ -287,7 +276,7 @@ p {
     margin: 0 5px;
     cursor: pointer;
     font-size: 18px;
-    transition: all 0.5s ease;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .experience-tabs button:hover {
@@ -301,12 +290,11 @@ p {
     font-weight: bold;
 }
 
-/* Experience Content */
 #experience-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: -7px; /* Reduced padding to decrease the space between buttons and content */
-    transition: all 0.5s ease;
+    padding-top: -7px; 
+    transition: opacity 0.3s ease-in-out;
 }
 
 #experience-content h3 {
@@ -320,11 +308,10 @@ p {
     font-style: italic;
 }
 
-
 #experience-content ul {
     list-style-type: none;
     padding: 0;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.8;
     text-align: left;
     max-width: 800px;
@@ -344,7 +331,6 @@ p {
     color: #E4A957;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .section {
         padding-top: 100px;
@@ -404,21 +390,19 @@ p {
     }
 }
 
-/* Education Section */
-
 .education-container {
     display: flex;
-    justify-content: center; /* Center the container */
-    gap: 20px; /* Space between the education items */
-    margin: 40px 0; /* Additional space around the section */
+    justify-content: center; 
+    gap: 20px; 
+    margin: 40px 0; 
 }
 
 .education-item {
-    max-width: 400px; /* Adjust max width as needed */
-    text-align: left; /* Align text to the left */
-    padding: 20px; /* Optional padding for better spacing */
-    border: 1px solid #E4A957; /* Optional border for distinction */
-    border-radius: 8px; /* Rounded corners for aesthetics */
+    max-width: 400px; 
+    text-align: left; 
+    padding: 20px; 
+    border: 1px solid #E4A957; 
+    border-radius: 8px; 
 }
 
 .education-item h4 {
@@ -444,18 +428,16 @@ p {
     text-align: left;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
     .education-container {
         flex-direction: column;
     }
 }
 
-/* Contacts Section */
 .contacts-container {
     display: flex;
     justify-content: center;
-    gap: 70px;  /* Increased gap between the boxes */
+    gap: 70px;  
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 20px;
@@ -465,16 +447,16 @@ p {
 .contact-info, .projects-resume {
     flex: 1;
     padding: 20px;
-    border-radius: 8px;  /* Kept radius for slight rounding */
-    box-shadow: none;  /* Removed box shadow */
-    text-align: left; /* Align text to the left */
+    border-radius: 8px;  
+    box-shadow: none;  
+    text-align: left; 
 }
 
 .contact-info h3, .projects-resume h3 {
     font-size: 24px;
     color: #5A5753;
     margin-bottom: 10px;
-    text-align: center; /* Keep the header centered */
+    text-align: center; 
 }
 
 .contact-info p, .projects-resume p {
@@ -484,24 +466,21 @@ p {
     margin: 5px 0;
 }
 
-/* Making the Email, LinkedIn, and Phone bold */
 .contact-info p strong {
     font-weight: bold;
 }
 
-/* Reset box effect for contact-info links */
 .contact-info a {
-    display: inline !important; /* Force inline display to avoid box */
-    color: #5A5753 !important; /* Neutral color */
-    text-decoration: underline !important; /* Basic link style */
-    padding: 0 !important; /* Remove padding */
-    margin: 0 !important; /* Remove margin */
-    border: none !important; /* Remove any borders */
-    background: transparent !important; /* Remove background */
-    box-shadow: none !important; /* Remove any shadow */
+    display: inline !important; 
+    color: #5A5753 !important; 
+    text-decoration: underline !important; 
+    padding: 0 !important; 
+    margin: 0 !important; 
+    border: none !important; 
+    background: transparent !important; 
+    box-shadow: none !important; 
 }
 
-/* Projects resume styling */
 .projects-resume {
     display: flex;
     flex-direction: column;
@@ -509,14 +488,12 @@ p {
     text-align: center;
 }
 
-/* Align GitHub and resume links side by side */
 .projects-links {
     display: flex;
-    gap: 20px; /* Space between the links */
-    margin-top: -10px; /* Adds a bit of space from the header */
+    gap: 20px; 
+    margin-top: -10px; 
 }
 
-/* Button-like styling for each link */
 .projects-links a {
     color: #E4A957;
     text-decoration: none;
@@ -534,10 +511,243 @@ p {
     color: #D1A26E;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
     .contacts-container {
         flex-direction: column;
         align-items: center;
     }
+}
+
+#contact {
+    padding: 50px 20px;
+    background-color: #FFFAF1;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #5A5753;
+    background-color: #FEEFD9;
+    border: 1px solid #E4A957;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form input[type="email"]:focus,
+#contact-form textarea:focus {
+    border-color: #D1A26E;
+    box-shadow: 0 0 5px rgba(225, 150, 80, 0.3);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button[type="submit"] {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #FFF;
+    background-color: #E4A957;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background-color: #d6a864; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden;
+    background-size: 65%; 
+    background-repeat: no-repeat; 
+    background-position: center 33%; 
+}
+
+.social-icons .linkedin {
+    background-image: url('img/linkedin-icon.png'); 
+}
+
+.social-icons .github {
+    background-image: url('img/github-icon.png'); 
+}
+
+.social-icons .cv {
+    background-image: url('img/cv-icon.png'); 
+    background-position: 55% 35%; 
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#contact-form select {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: #5A5753;
+    background-color: #FEEFD9;
+    border: 1px solid #E4A957;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    margin-bottom: 15px;
+    appearance: none; 
+    background: url('img/arrow-icon.png') no-repeat right 12px center, #FEEFD9; 
+    background-size: 16px; 
+}
+
+#contact-form select:focus {
+    border-color: #D1A26E;
+    box-shadow: 0 0 5px rgba(225, 150, 80, 0.3);
+}
+
+#contact-form select:hover {
+    cursor: pointer;
+}
+
+body.dark-mode {
+    background-color: #2C2C2C;
+    color: #EAEAEA;
+    transition: background-color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1), color 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode .profile-image {
+    border-color: #D1A26E;
+}
+
+body.dark-mode #contact-form input,
+body.dark-mode #contact-form textarea,
+body.dark-mode #contact-form select {
+    background-color: #444;
+    color: #EAEAEA;
+    border-color: #D1A26E;
+}
+
+body.dark-mode #contact-form input:focus,
+body.dark-mode #contact-form textarea:focus,
+body.dark-mode #contact-form select:focus {
+    border-color: #f7af5d;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+body.dark-mode button,
+body.dark-mode #contact-form button[type="submit"] {
+    background-color: #f7af5d;
+    color: #2C2C2C;
+}
+
+body.dark-mode .experience-tabs button {
+    background-color: #555;
+    color: #EAEAEA;
+}
+
+body.dark-mode .experience-tabs button.active {
+    background-color: #D1A26E;
+    color: #2C2C2C;
+}
+
+body.dark-mode #contact-form select {
+    background: url('img/arrow-icon.png') no-repeat right 12px center, #FEEFD9; 
+    background-size: 16px; 
+    background-color: #444;
+    color: #beb7b1;
+    border-color: #D1A26E;
+}
+
+/* Button hover states */
+button:hover, #contact-form button[type="submit"]:hover {
+    background-color: #D1A26E;
+    transform: translateY(-2px);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode a {
+    color: #EAEAEA;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 10px;
+    font-size: 24px; 
+    cursor: pointer;
+    outline: none;
+}
+
+#dark-mode-toggle:focus {
+    outline: none; 
+}
+
+.progress-bar {
+    background-color: #e0dfdf; 
+    border-radius: 10px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    background-color: #f7af5d;
+    height: 100%;
+    width: 0; /* Start at 0% width */
+    transition: width 1s ease-in-out; /* Smooth animation */
+    animation: fillProgress 1.5s ease forwards;
+}
+
+body.dark-mode .progress-bar {
+    background-color: #EAEAEA;
+}
+
+body.dark-mode .progress-bar .progress-fill {
+    background-color: #E4A957;
 }
