@@ -1,17 +1,18 @@
-// Smooth Scroll for Header Links
-document.querySelectorAll('header nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
         e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
+        const targetId = anchor.getAttribute("href").substring(1);
         document.getElementById(targetId).scrollIntoView({
-            behavior: 'smooth'
+          behavior: "smooth",
         });
+      });
     });
-});
+});  
 
 // Experience Content Switcher
 const experienceData = {
-    internship: `<h3>Front-End Developer Apprentice</h3>
+  internship: `<h3>Front-End Developer Apprentice</h3>
                 <p>Sky Portugal- Internship (2024)</p>
                 <ul>
                     <li><strong>Spearheaded</strong> the development of a <strong>critical</strong> internal web application for STB (Set-Top Box) device monitoring and diagnostics, utilizing <strong>HTML</strong>, <strong>vanilla JavaScript</strong>, and <strong>CSS</strong>.</li>
@@ -21,7 +22,7 @@ const experienceData = {
                     <li>Successfully delivered a <strong>complete</strong>, <strong>production-ready</strong> solution that <strong>significantly improved</strong> the efficiency of device monitoring and support processes.</li>
                 </ul>`,
 
-    student: `<div class="student-orgs-container">
+  student: `<div class="student-orgs-container">
                 <div class="student-org">
                     <h3>Coordinator SINFO</h3>
                     <p>IST Technology Conference (2022-Present)</p>
@@ -43,15 +44,15 @@ const experienceData = {
                     </ul>
                 </div>
               </div>`,
-    tutoring: `<div class="student-orgs-container">
+  tutoring: `<div class="student-orgs-container">
                 <div class="student-org">
                     <h3>Mathematics and Physics Tutor</h3>
                     <p>Private Tutoring (2020-2022)</p>
-                <ul>
-                    <li>Provided <strong>one-on-one tutoring</strong> in <strong>physics and mathematics</strong> to a middle school student, developing <strong>personalized learning strategies</strong> to address his unique needs.</li>
-                    <li>Simplified complex concepts through <strong>real-world examples</strong> and <strong>interactive teaching methods</strong>, resulting in <strong>improved academic performance</strong> and increased confidence in <strong>STEM subjects</strong>.</li>
-                    <li>Demonstrated <strong>patience and adaptability</strong> in adjusting teaching approaches to maintain student engagement and ensure comprehensive understanding of fundamental concepts.</li>
-                </ul>
+                    <ul>
+                        <li>Provided <strong>one-on-one tutoring</strong> in <strong>physics and mathematics</strong> to a middle school student, developing <strong>personalized learning strategies</strong> to address his unique needs.</li>
+                        <li>Simplified complex concepts through <strong>real-world examples</strong> and <strong>interactive teaching methods</strong>, resulting in <strong>improved academic performance</strong> and increased confidence in <strong>STEM subjects</strong>.</li>
+                        <li>Demonstrated <strong>patience and adaptability</strong> in adjusting teaching approaches to maintain student engagement and ensure comprehensive understanding of fundamental concepts.</li>
+                    </ul>
                 </div>
                 <div class="student-org">
                     <h3>Ballet Teacher Assistant</h3>
@@ -61,88 +62,91 @@ const experienceData = {
                         <li>Supported lead instructor in <strong>class management</strong>, <strong>technique demonstration</strong>, and <strong>individual student guidance</strong>.</li>
                         <li>Helped develop young dancers' skills through <strong>clear communication</strong> and <strong>positive reinforcement</strong>, while ensuring proper form and safety.</li>
                         <li>Contributed to <strong>choreography planning</strong> and <strong>recital preparations</strong>, showcasing organizational skills and attention to detail.</li>
-                    </ul>`,
-    volunteering: `<div class="student-orgs-container">
+                    </ul>
+                </div>
+            </div>`,
+  volunteering: `<div class="student-orgs-container">
                     <div class="student-org">
                         <h3>Volunteer</h3>
                         <p>ReFood (2016-2020)</p>
-                    <ul>
-                        <li>Contributed to <strong>ReFood's mission</strong> of <strong>reducing food waste</strong> and <strong>fighting hunger</strong> by collecting and redistributing surplus food from local restaurants and businesses.</li>
-                        <li>Assisted in <strong>sorting and organizing</strong> food donations for timely <strong>distribution</strong> to families and individuals in need.</li>
-                        <li>Collaborated with a dedicated <strong>team of volunteers</strong> to maintain consistent service and support for community members.</li>
-                    </ul>
+                        <ul>
+                            <li>Contributed to <strong>ReFood's mission</strong> of <strong>reducing food waste</strong> and <strong>fighting hunger</strong> by collecting and redistributing surplus food from local restaurants and businesses.</li>
+                            <li>Assisted in <strong>sorting and organizing</strong> food donations for timely <strong>distribution</strong> to families and individuals in need.</li>
+                            <li>Collaborated with a dedicated <strong>team of volunteers</strong> to maintain consistent service and support for community members.</li>
+                        </ul>
                     </div>
                     <div class="student-org">
                         <h3>Volunteer</h3>
                         <p>Banco Alimentar (2012-2020)</p>
-                    <ul>
-                        <li>Engaged in <strong>long-term volunteer service</strong> with <strong>Portugal's largest food bank organization</strong>, demonstrating sustained commitment to addressing <strong>food insecurity</strong>.</li>
-                        <li>Participated in <strong>national food collection campaigns</strong> at supermarkets, helping to organize and motivate <strong>community donations</strong>.</li>
-                        <li>Supported the organization's mission of providing <strong>essential nutrition</strong> to <strong>thousands of families</strong> across Portugal.</li>
-                    </ul>
-                    </div>`
+                        <ul>
+                            <li>Engaged in <strong>long-term volunteer service</strong> with <strong>Portugal's largest food bank organization</strong>, demonstrating sustained commitment to addressing <strong>food insecurity</strong>.</li>
+                            <li>Participated in <strong>national food collection campaigns</strong> at supermarkets, helping to organize and motivate <strong>community donations</strong>.</li>
+                            <li>Supported the organization's mission of providing <strong>essential nutrition</strong> to <strong>thousands of families</strong> across Portugal.</li>
+                        </ul>
+                    </div>
+                </div>`,
 };
 
 // Dark Mode Toggle Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleButton = document.getElementById("dark-mode-toggle");
+  const body = document.body;
 
-    // Check for previously saved user preference
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-        toggleButton.textContent = '☀️'; // Change to sun icon for switching back
+  // Check for previously saved user preference
+  if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️"; // Change to sun icon for switching back
+  }
+
+  toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      toggleButton.textContent = "☀️"; // Sun icon
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      toggleButton.textContent = "🌙"; // Moon icon
     }
-
-    toggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-            toggleButton.textContent = '☀️'; // Sun icon
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-            toggleButton.textContent = '🌙'; // Moon icon
-        }
-    });
+  });
 });
 
 function showExperience(type) {
-    const content = document.getElementById('experience-content');
-    
-    // Fade out the content before updating
-    content.style.opacity = 0;
-    setTimeout(() => {
-        content.innerHTML = experienceData[type];
-        
-        // Fade in the content after updating
-        content.style.opacity = 1;
-        
-        // Update active button state
-        document.querySelectorAll('.experience-tabs button').forEach(button => {
-            button.classList.remove('active');
-            if (button.getAttribute('data-type') === type) {
-                button.classList.add('active');
-            }
-        });
-    }, 300); // Adjust this duration to match the CSS transition time
+  const content = document.getElementById("experience-content");
+
+  // Fade out the content before updating
+  content.style.opacity = 0;
+  setTimeout(() => {
+    content.innerHTML = experienceData[type];
+
+    // Fade in the content after updating
+    content.style.opacity = 1;
+
+    // Update active button state
+    document.querySelectorAll(".experience-tabs button").forEach((button) => {
+      button.classList.remove("active");
+      if (button.getAttribute("data-type") === type) {
+        button.classList.add("active");
+      }
+    });
+  }, 300); // Adjust this duration to match the CSS transition time
 }
 
 // Initialize experience tabs and default content
-document.addEventListener('DOMContentLoaded', () => {
-    const tabsContainer = document.querySelector('.experience-tabs');
-    tabsContainer.innerHTML = `
+document.addEventListener("DOMContentLoaded", () => {
+  const tabsContainer = document.querySelector(".experience-tabs");
+  tabsContainer.innerHTML = `
         <button data-type="internship" class="active">Internship</button>
         <button data-type="student">Student Organizations</button>
         <button data-type="tutoring">Tutoring</button>
         <button data-type="volunteering">Volunteering</button>
     `;
 
-    document.querySelectorAll('.experience-tabs button').forEach(button => {
-        button.addEventListener('click', () => {
-            showExperience(button.getAttribute('data-type'));
-        });
+  document.querySelectorAll(".experience-tabs button").forEach((button) => {
+    button.addEventListener("click", () => {
+      showExperience(button.getAttribute("data-type"));
     });
+  });
 
-    showExperience('internship'); 
+  showExperience("internship");
 });
