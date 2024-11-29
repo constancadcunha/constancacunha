@@ -1,14 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('a').forEach((anchor) => {
-      anchor.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = anchor.getAttribute("href").substring(1);
-        document.getElementById(targetId).scrollIntoView({
+  document.querySelectorAll('a').forEach((anchor) => {
+    anchor.addEventListener("click", (e) => {
+      const href = anchor.getAttribute("href");
+
+      if (href.startsWith('http') || anchor.hasAttribute('download')) {
+        return;
+      }
+
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
           behavior: "smooth",
         });
-      });
+      }
     });
-});  
+  });
+});
 
 // Experience Content Switcher
 const experienceData = {
