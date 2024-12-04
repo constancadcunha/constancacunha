@@ -564,7 +564,7 @@ p {
 #contact-form button[type="submit"] {
     font-family: 'Playfair Display', serif;
     font-size: 18px;
-    color: #FFF;
+    color: #5A5753;
     background-color: #E4A957;
     border: none;
     border-radius: 5px;
@@ -594,7 +594,6 @@ p {
     display: flex;
     align-items: center; 
     justify-content: center; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     overflow: hidden;
     background-size: 65%; 
     background-repeat: no-repeat; 
@@ -611,7 +610,26 @@ p {
 
 .social-icons .cv {
     background-image: url('img/cv-icon.png'); 
-    background-position: 55% 35%; 
+}
+
+.social-icons .projects {
+    background-image: url('img/icon-projects.png'); 
+}
+
+body.dark-mode .social-icons .linkedin {
+    background-image: url('img/linkedin-icon-dark.png'); 
+}
+
+body.dark-mode .social-icons .github {
+    background-image: url('img/github-icon-dark.png'); 
+}
+
+body.dark-mode .social-icons .cv {
+    background-image: url('img/cv-icon-dark.png'); 
+}
+
+body.dark-mode .social-icons .projects {
+    background-image: url('img/icon-projects-dark.png'); 
 }
 
 .social-icons .icon:hover {
@@ -676,7 +694,7 @@ body.dark-mode #contact-form select:focus {
 body.dark-mode button,
 body.dark-mode #contact-form button[type="submit"] {
     background-color: #f7af5d;
-    color: #2C2C2C;
+    color: #fff;
 }
 
 body.dark-mode .experience-tabs button {
@@ -751,3 +769,4 @@ body.dark-mode .progress-bar {
 body.dark-mode .progress-bar .progress-fill {
     background-color: #E4A957;
 }
+
