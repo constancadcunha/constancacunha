@@ -193,23 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
               });
 
               designItem.appendChild(img);
-
-              // Add a title below the image
-              const title = document.createElement("p");
-              title.classList.add("design-title");
-              title.textContent = design.title || `Design ${index + 1}`;
-              designItem.appendChild(title);
-
               designsContainer.appendChild(designItem);
           });
       });
-
-  // Create a lightbox for images
-  const lightbox = document.createElement("div");
-  lightbox.id = "lightbox";
-  document.body.appendChild(lightbox);
-
-  lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("active");
-  });
 });
