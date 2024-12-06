@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('a').forEach((anchor) => {
+  document.querySelectorAll("a").forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const href = anchor.getAttribute("href");
 
-      if (href.startsWith('http') || anchor.hasAttribute('download')) {
-        return;
+      // Allow external links and downloads to open normally
+      if (href.startsWith("http") || anchor.hasAttribute("download")) {
+        return; // Don't prevent default behavior for external links or downloads
       }
 
+      // Prevent default only for internal links (smooth scrolling)
       e.preventDefault();
       const targetId = href.substring(1);
       const targetElement = document.getElementById(targetId);
@@ -159,4 +161,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showExperience("internship");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const designsContainer = document.querySelector(".designs-container");
+
+  // Fetch the JSON file
+  fetch("designs.json")
+      .then((response) => response.json())
+      .then((designFiles) => {
+          designFiles.forEach((design, index) => {
+              if (!design.fileName.endsWith(".png")) return; // Skip non-PNG files
+              
+              const designItem = document.createElement("div");
+              designItem.classList.add("design-item");
+
+              // Create the image element
+              const img = document.createElement("img");
+              img.src = `sinfo-graphic-designs/${design.fileName}`;
+              img.alt = design.title || `Design ${index + 1}`;
+              img.classList.add("design-image");
+
+              // Lightbox functionality for images
+              img.addEventListener("click", () => {
+                  const lightbox = document.getElementById("lightbox");
+                  const lightboxImg = document.createElement("img");
+                  lightboxImg.src = img.src;
+                  lightbox.innerHTML = ""; // Clear existing content
+                  lightbox.appendChild(lightboxImg);
+                  lightbox.classList.add("active");
+              });
+
+              designItem.appendChild(img);
+
+              // Add a title below the image
+              const title = document.createElement("p");
+              title.classList.add("design-title");
+              title.textContent = design.title || `Design ${index + 1}`;
+              designItem.appendChild(title);
+
+              designsContainer.appendChild(designItem);
+          });
+      });
+
+  // Create a lightbox for images
+  const lightbox = document.createElement("div");
+  lightbox.id = "lightbox";
+  document.body.appendChild(lightbox);
+
+  lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+  });
 });
