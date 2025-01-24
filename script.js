@@ -168,32 +168,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Fetch the JSON file
   fetch("designs.json")
-      .then((response) => response.json())
-      .then((designFiles) => {
-          designFiles.forEach((design, index) => {
-              if (!design.fileName.endsWith(".png")) return; // Skip non-PNG files
-              
-              const designItem = document.createElement("div");
-              designItem.classList.add("design-item");
+    .then((response) => response.json())
+    .then((designFiles) => {
+      designFiles.forEach((design, index) => {
+        if (!design.fileName.endsWith(".png")) return; // Skip non-PNG files
 
-              // Create the image element
-              const img = document.createElement("img");
-              img.src = `sinfo-graphic-designs/${design.fileName}`;
-              img.alt = design.title || `Design ${index + 1}`;
-              img.classList.add("design-image");
+        const designItem = document.createElement("div");
+        designItem.classList.add("design-item");
 
-              // Lightbox functionality for images
-              img.addEventListener("click", () => {
-                  const lightbox = document.getElementById("lightbox");
-                  const lightboxImg = document.createElement("img");
-                  lightboxImg.src = img.src;
-                  lightbox.innerHTML = ""; // Clear existing content
-                  lightbox.appendChild(lightboxImg);
-                  lightbox.classList.add("active");
-              });
+        // Create the image element
+        const img = document.createElement("img");
+        img.src = `sinfo-graphic-designs/${design.fileName}`;
+        img.alt = design.title || `Design ${index + 1}`;
+        img.classList.add("design-image");
 
-              designItem.appendChild(img);
-              designsContainer.appendChild(designItem);
-          });
+        // Lightbox functionality for images
+        img.addEventListener("click", () => {
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.createElement("img");
+          lightboxImg.src = img.src;
+          lightbox.innerHTML = ""; // Clear existing content
+          lightbox.appendChild(lightboxImg);
+          lightbox.classList.add("active");
+        });
+
+        designItem.appendChild(img);
+        designsContainer.appendChild(designItem);
       });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Courses Data
+  const coursesData = {
+    ucd: `<h3>User Centered Design</h3>
+            <ul>
+                <li><strong>Description:</strong> This course focuses on designing interfaces and systems centered on the user's needs and preferences. It covers methodologies for user research, prototyping, and usability testing to create intuitive and effective designs.</li>
+                <li><strong>Grade:</strong> 18/20</li>
+                <li><strong>Related Project:</strong> <a href='https://group1ccul03.notion.site/78aca85d730543929c78a2d25c008060?v=0ed04df2912d4a379f3af8766f5ae863' target='_blank'>ReMi, Relocation App</a> – A comprehensive study applying user-centered design methodologies to improve accessibility and usability in digital products.</li>
+            </ul>`,
+    iv: `<h3>Interaction Visualization</h3>
+          <ul>
+              <li><strong>Description:</strong> This course explores techniques for visualizing data and user interactions effectively. It delves into creating interactive visualizations that enhance user understanding and engagement.</li>
+              <li><strong>Grade:</strong> 17/20</li>
+              <li><strong>Related Project:</strong> <a href='https://github.com/constancadcunha/MentalHealth-Database' target='_blank'>Mental Health Dashboard</a> – An interactive web application visualizing the relationship between mental health, GDP per capita, alcohol consumption, and age group distributions using D3.js.</li>
+          </ul>`,
+    dp: `<h3>3D Programming</h3>
+          <ul>
+              <li><strong>Description:</strong> This course delves into the principles and practices of creating 3D environments and graphics. It includes topics such as GPU programming, real-time rendering, and ray tracing techniques.</li>
+              <li><strong>Grade:</strong> 17/20</li>
+              <li><strong>Related Project:</strong> <a href='https://github.com/constancadcunha/GPU_PathTracer' target='_blank'>GPU Path Tracer</a> – A GPU-based path tracer capable of rendering photorealistic images by simulating the physics of light.</li>
+          </ul>`,
+    ids: `<h3>Interaction Design Studio</h3>
+          <ul>
+              <li><strong>Description:</strong> This course focuses on advanced interaction design methodologies, exploring prototyping, iterative design processes, and user testing to create impactful digital experiences.</li>
+              <li><strong>Grade:</strong> 19/20</li>
+              <li><strong>Related Project:</strong> <a href='https://www.figma.com/proto/UC2rBn1q2buoAE2SHOHmMg/App?node-id=256-1408&t=P7htnFTlR2wzGlHD-1' target='_blank'>Interactive Mobile App Prototype</a> – A comprehensive Figma-based project showcasing a user-centric mobile application design, iteratively refined based on user feedback.</li>
+          </ul>`,    
+    cg: `<h3>Computer Graphics</h3>
+          <ul>
+              <li><strong>Description:</strong> This course covers the fundamentals of rendering, modeling, and graphical algorithms. It includes topics like 3D transformations, lighting, shading, and the development of graphical applications.</li>
+              <li><strong>Grade:</strong> 17/20</li>
+              <li><strong>Related Project:</strong> <a href='https://github.com/constancadcunha/Project2.CG_22-23' target='_blank'>3D Graphics Engine</a> – A project involving the creation of a basic 3D graphics engine demonstrating rendering and shading techniques.</li>
+          </ul>`,
+  };
+
+  // Courses Content Switcher
+  function showCourse(type) {
+    const content = document.getElementById("courses-content");
+
+    // Fade out the content before updating
+    content.style.opacity = 0;
+    setTimeout(() => {
+      content.innerHTML = coursesData[type];
+
+      // Fade in the content after updating
+      content.style.opacity = 1;
+
+      // Update active button state
+      document.querySelectorAll(".course-tabs button").forEach((button) => {
+        button.classList.remove("active");
+        if (button.getAttribute("data-type") === type) {
+          button.classList.add("active");
+        }
+      });
+    }, 300); // Adjust this duration to match the CSS transition time
+  }
+
+  // Initialize courses tabs and default content
+  document.querySelectorAll(".course-tabs button").forEach((button) => {
+    button.addEventListener("click", () => {
+      showCourse(button.getAttribute("data-type"));
+    });
+  });
+
+  showCourse("ucd"); // Default course
 });
