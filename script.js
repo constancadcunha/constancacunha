@@ -204,13 +204,13 @@ document.addEventListener("DOMContentLoaded", () => {
     ucd: `<h3>User Centered Design</h3>
             <ul>
                 <li><strong>Description:</strong> This course focuses on designing interfaces and systems centered on the user's needs and preferences. It covers methodologies for user research, prototyping, and usability testing to create intuitive and effective designs.</li>
-                <li><strong>Grade:</strong> 18/20</li>
+                <li><strong>Grade:</strong> 19/20</li>
                 <li><strong>Related Project:</strong> <a href='https://group1ccul03.notion.site/78aca85d730543929c78a2d25c008060?v=0ed04df2912d4a379f3af8766f5ae863' target='_blank'>ReMi, Relocation App</a> – A comprehensive study applying user-centered design methodologies to improve accessibility and usability in digital products.</li>
             </ul>`,
     iv: `<h3>Interaction Visualization</h3>
           <ul>
               <li><strong>Description:</strong> This course explores techniques for visualizing data and user interactions effectively. It delves into creating interactive visualizations that enhance user understanding and engagement.</li>
-              <li><strong>Grade:</strong> 17/20</li>
+              <li><strong>Grade:</strong> 18/20</li>
               <li><strong>Related Project:</strong> <a href='https://github.com/constancadcunha/MentalHealth-Database' target='_blank'>Mental Health Dashboard</a> – An interactive web application visualizing the relationship between mental health, GDP per capita, alcohol consumption, and age group distributions using D3.js.</li>
           </ul>`,
     dp: `<h3>3D Programming</h3>
