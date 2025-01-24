@@ -133,6 +133,10 @@ header nav a:hover {
     background-image: url('img/6th.jpg');
 }
 
+.header-7 {
+    background-image: url('img/7th.jpeg');
+}
+
 .section-header::after {
     content: '';
     position: absolute;
@@ -897,4 +901,79 @@ body.dark-mode .progress-bar .progress-fill {
     position: absolute;
     left: 0;
     color: #E4A957;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.certificate-card {
+    background-color: #FFFAF1;
+    border: 1px solid #E4A957;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.certificate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card h3 {
+    font-size: 18px;
+    color: #5A5753;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4; /* Adjusted for readability */
+}
+
+.certificate-card a {
+    display: inline-block;
+    font-size: 16px;
+    color: #E4A957;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #E4A957;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.certificate-card a:hover {
+    background-color: #E4A957;
+    color: #FFFAF1;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .certificate-card {
+    background-color: #2C2C2C; /* Dark background for cards */
+    border-color: #D1A26E; /* Slightly lighter border */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow for dark mode */
+}
+
+body.dark-mode .certificate-card h3 {
+    color: #EAEAEA; /* Light text for titles */
+}
+
+body.dark-mode .certificate-card a {
+    color: #D1A26E; /* Light link color */
+    border-color: #D1A26E;
+}
+
+body.dark-mode .certificate-card a:hover {
+    background-color: #D1A26E;
+    color: #2C2C2C; /* Switch to dark text for hover in dark mode */
 }
