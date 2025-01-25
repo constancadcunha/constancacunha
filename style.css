@@ -956,6 +956,11 @@ body.dark-mode .progress-bar .progress-fill {
     background-color: #E4A957;
     color: #FFFAF1;
 }
+.certificate-card p {
+    font-size: 16px;
+    color: #5A5753;
+    margin-bottom: 10px;
+}
 
 /* Dark Mode Styles */
 body.dark-mode .certificate-card {
@@ -976,4 +981,8 @@ body.dark-mode .certificate-card a {
 body.dark-mode .certificate-card a:hover {
     background-color: #D1A26E;
     color: #2C2C2C; /* Switch to dark text for hover in dark mode */
+}
+
+body.dark-mode .certificate-card p {
+    color: #EAEAEA; /* Ensure readability in dark mode */
 }
