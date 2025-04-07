@@ -1,10 +1,10 @@
-# Constança Cunha's Portfolio
+# Constança Cunha's CV Website
 
 ## Description
 
-Welcome to my personal portfolio website! I’m **Constança Cunha**, a passionate **front-end developer** dedicated to creating intuitive web experiences. Currently pursuing my **Master's in Computer Science** at **Instituto Superior Técnico**, I specialize in merging technical expertise with creative problem-solving.
+Welcome to my personal website! I’m **Constança Cunha**, a passionate **front-end developer** dedicated to creating intuitive web experiences. Currently pursuing my **Master's in Computer Science** at **Instituto Superior Técnico**, I specialize in merging technical expertise with creative problem-solving.
 
-This portfolio showcases my journey, skills, and projects, highlighting my commitment to enhancing user experiences through innovative web solutions.
+This website showcases my journey, skills, and projects, highlighting my commitment to enhancing user experiences through innovative web solutions.
 
 ## Technologies Used
 
@@ -44,7 +44,7 @@ My mission? To create meaningful connections between technology and users, fuele
 
 ## Future Plans
 
-- Expand the portfolio with a blog section to share insights on web development and personal projects.
+- Expand the website with a blog section to share insights on web development and personal projects.
 - Add more case studies to demonstrate my work in **software engineering** and **graphic design**.
 
 ## License
@@ -63,4 +63,4 @@ Check out my projects on GitHub!
 
 - **GitHub Profile**: [Constança Cunha GitHub](https://github.com/constanca-cunha)
 
-Thank you for visiting my portfolio!
+Thank you for visiting my website!
