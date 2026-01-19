@@ -22,34 +22,32 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ================= EXPERIENCE DATA ================= */
 
 const experienceData = {
-  internship: `
+  sky: `
     <div class="student-orgs-container">
       <div class="student-org">
         <h3>Front-End Developer Apprentice</h3>
-        <p>
-          :contentReference[oaicite:0]{index=0} —
-          <strong>Sky Internship</strong> (2024)
-        </p>
+        <p><strong>Sky Internship</strong> (2024)</p>
         <ul>
-          <li><strong>Spearheaded</strong> the development of a <strong>critical</strong> internal web application for STB (Set-Top Box) device monitoring and diagnostics using <strong>HTML</strong>, <strong>vanilla JavaScript</strong>, and <strong>CSS</strong>.</li>
-          <li>Designed a <strong>user-friendly interface</strong> that streamlined internal workflows and enhanced team efficiency.</li>
-          <li>Implemented <strong>additional features</strong> beyond initial requirements, including <strong>API support testing</strong> and <strong>data export</strong> functionality.</li>
-          <li>Created intuitive tools for accessing and analyzing device data, enabling <strong>data-driven decision-making</strong>.</li>
-          <li>Delivered a <strong>production-ready solution</strong> that significantly improved internal support operations.</li>
+          <li><strong>Spearheaded</strong> the development of a critical internal web application for STB device monitoring and diagnostics using HTML, vanilla JavaScript, and CSS.</li>
+          <li>Designed a user-friendly interface that streamlined internal workflows and improved team efficiency.</li>
+          <li>Implemented additional features beyond initial requirements, including API support testing and data export functionality.</li>
+          <li>Created intuitive tools for accessing and analyzing device data, enabling data-driven decision-making.</li>
+          <li>Delivered a production-ready solution that significantly improved internal support operations.</li>
         </ul>
       </div>
+    </div>
+  `,
 
+  nextflat: `
+    <div class="student-orgs-container">
       <div class="student-org">
         <h3>Full-Stack Developer Intern</h3>
-        <p>
-          :contentReference[oaicite:1]{index=1} —
-          <strong>NextFlat CH Internship</strong> (2025–2026)
-        </p>
+        <p><strong>NextFlat CH Internship</strong> (2025–2026)</p>
         <ul>
-          <li><strong>6-month internship</strong> starting <strong>September 2025</strong>.</li>
-          <li>Based in <strong>Zurich, Switzerland</strong> with a <strong>hybrid setup</strong> (remote & on-site).</li>
-          <li>Completed <strong>1 month on-site</strong> in Zurich, collaborating closely with cross-functional teams.</li>
-          <li>Worked as a <strong>Full-Stack Developer Intern</strong>, contributing to both front-end and back-end features.</li>
+          <li>6-month internship starting September 2025.</li>
+          <li>Based in Zurich, Switzerland with a hybrid setup (remote & on-site).</li>
+          <li>Completed 1 month on-site in Zurich, collaborating closely with cross-functional teams.</li>
+          <li>Worked as a Full-Stack Developer Intern, contributing to both front-end and back-end features.</li>
           <li>Participated in real-world product development within a fast-paced startup environment.</li>
         </ul>
       </div>
@@ -62,9 +60,9 @@ const experienceData = {
         <h3>Coordinator SINFO</h3>
         <p>IST Technology Conference (2022–Present)</p>
         <ul>
-          <li><strong>Core member</strong> of Portugal's largest free technology conference.</li>
-          <li>Designed <strong>30+</strong> marketing assets, including top-performing Instagram posts.</li>
-          <li>Member of the <strong>Coordination Team</strong>, managing multiple teams.</li>
+          <li>Core member of Portugal's largest free technology conference.</li>
+          <li>Designed 30+ marketing assets, including top-performing Instagram posts.</li>
+          <li>Member of the Coordination Team, managing multiple teams.</li>
           <li>Led creative direction for SINFO 31 recruitment campaigns.</li>
         </ul>
       </div>
@@ -73,9 +71,9 @@ const experienceData = {
         <h3>Human Resources Coordinator</h3>
         <p>Diferencial (2021–2023)</p>
         <ul>
-          <li>Advanced from journalist to <strong>Head of Human Resources</strong>.</li>
-          <li>Led recruitment of <strong>56 new members</strong>.</li>
-          <li>Boosted team satisfaction by <strong>65%</strong>.</li>
+          <li>Advanced from journalist to Head of Human Resources.</li>
+          <li>Led recruitment of 56 new members.</li>
+          <li>Boosted team satisfaction by 65%.</li>
           <li>Managed HR operations and team development.</li>
         </ul>
       </div>
@@ -154,7 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  showExperience("internship");
+  // Default tab
+  showExperience("sky");
 });
 
 /* ================= DARK MODE ================= */
