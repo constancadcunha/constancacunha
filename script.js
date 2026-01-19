@@ -21,6 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ================= EXPERIENCE DATA ================= */
 
 const experienceData = {
+  nextflat: `
+    <div class="student-orgs-container">
+      <div class="student-org">
+        <h3>Full-Stack Developer Intern</h3>
+        <p>
+          <strong>NextFlat CH</strong> (2025–2026)<br>
+          Full-Stack Developer Intern — Zurich, Switzerland 
+        </p>
+        <ul>
+          <li><strong>Product Ownership:</strong> Fully integrated member of the core engineering team, contributing across <strong>frontend, backend, and design</strong> for a production application actively used by real clients.</li>
+          <li><strong>Frontend & Design Leadership:</strong> Primary owner of frontend quality, UI/UX consistency, and visual architecture; led <strong>major interface redesigns</strong> that significantly improved clarity, usability, and overall product polish.</li>
+          <li><strong>High-Impact Improvements:</strong> Implemented extensive frontend and backend changes that simplified code structure, enhanced maintainability, and delivered a <strong>cleaner, more intuitive user experience</strong> across the application.</li>
+          <li><strong>Cross-Functional Collaboration:</strong> Worked closely with engineers, product stakeholders, and designers, translating requirements into <strong>scalable technical solutions</strong> while maintaining strong design coherence.</li>
+        </ul>
+      </div>
+    </div>
+  `,
+  
   sky: `
     <div class="student-orgs-container">
       <div class="student-org">
@@ -32,24 +50,6 @@ const experienceData = {
           <li>Implemented <strong>additional features</strong> beyond initial requirements, including API support testing and data export functionality.</li>
           <li>Built intuitive tools for accessing and analyzing device data, enabling <strong>data-driven decision-making</strong>.</li>
           <li>Delivered a <strong>production-ready solution</strong> that meaningfully improved internal support operations.</li>
-        </ul>
-      </div>
-    </div>
-  `,
-
-  nextflat: `
-    <div class="student-orgs-container">
-      <div class="student-org">
-        <h3>Full-Stack Developer Intern</h3>
-        <p>
-          <strong>NextFlat CH</strong> (2025–2026)<br>
-          Full-Stack Developer Intern — Zurich, Switzerland (Remote & On-site, including 1 month on-site)
-        </p>
-        <ul>
-          <li><strong>Product Ownership:</strong> Fully integrated member of the core engineering team, contributing across <strong>frontend, backend, and design</strong> for a production application actively used by real clients.</li>
-          <li><strong>Frontend & Design Leadership:</strong> Primary owner of frontend quality, UI/UX consistency, and visual architecture; led <strong>major interface redesigns</strong> that significantly improved clarity, usability, and overall product polish.</li>
-          <li><strong>High-Impact Improvements:</strong> Implemented extensive frontend and backend changes that simplified code structure, enhanced maintainability, and delivered a <strong>cleaner, more intuitive user experience</strong> across the application.</li>
-          <li><strong>Cross-Functional Collaboration:</strong> Worked closely with engineers, product stakeholders, and designers, translating requirements into <strong>scalable technical solutions</strong> while maintaining strong design coherence.</li>
         </ul>
       </div>
     </div>
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  showExperience("sky");
+  showExperience("nextflat");
 });
 
 /* ================= DARK MODE ================= */
