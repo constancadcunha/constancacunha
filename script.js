@@ -130,6 +130,56 @@ const experienceData = {
   `
 };
 
+/* ================= COURSES DATA ================= */
+
+const coursesData = {
+  ucd: `
+    <h3>User Centered Design</h3>
+    <ul>
+      <li>Studied the full UCD process: user research, personas, scenarios, prototyping, and usability testing.</li>
+      <li>Conducted user interviews and contextual inquiries to inform design decisions.</li>
+      <li>Created low- and high-fidelity prototypes using Figma.</li>
+      <li>Performed heuristic evaluations and usability tests to validate design solutions.</li>
+    </ul>
+  `,
+  iv: `
+    <h3>Interaction Visualization</h3>
+    <ul>
+      <li>Explored principles of information visualization and interactive data exploration.</li>
+      <li>Developed interactive visualizations using D3.js and other web technologies.</li>
+      <li>Applied visual encoding principles to communicate complex data effectively.</li>
+      <li>Designed dashboards and visual narratives for real-world datasets.</li>
+    </ul>
+  `,
+  dp: `
+    <h3>3D Programming</h3>
+    <ul>
+      <li>Learned 3D graphics programming concepts including transformations, lighting, and shading.</li>
+      <li>Developed interactive 3D scenes using Three.js and WebGL.</li>
+      <li>Implemented camera systems, materials, and texture mapping.</li>
+      <li>Built a complete 3D application as a final project.</li>
+    </ul>
+  `,
+  ids: `
+    <h3>Interaction Design Studio</h3>
+    <ul>
+      <li>Participated in a studio-based course focused on designing interactive systems.</li>
+      <li>Collaborated in multidisciplinary teams to develop design concepts from ideation to prototype.</li>
+      <li>Applied design thinking methodologies to solve real-world interaction challenges.</li>
+      <li>Presented and critiqued design work in iterative review sessions.</li>
+    </ul>
+  `,
+  cg: `
+    <h3>Computer Graphics</h3>
+    <ul>
+      <li>Studied fundamental computer graphics algorithms: rasterization, ray tracing, and shading models.</li>
+      <li>Implemented rendering pipelines and geometric transformations.</li>
+      <li>Worked with OpenGL for real-time graphics rendering.</li>
+      <li>Developed projects involving scene modeling, animation, and visual effects.</li>
+    </ul>
+  `
+};
+
 /* ================= EXPERIENCE TAB LOGIC ================= */
 
 function showExperience(type) {
@@ -154,6 +204,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   showExperience("nextflat");
+});
+
+/* ================= COURSES TAB LOGIC ================= */
+
+function showCourse(type) {
+  const content = document.getElementById("courses-content");
+  content.style.opacity = 0;
+
+  setTimeout(() => {
+    content.innerHTML = coursesData[type];
+    content.style.opacity = 1;
+
+    document.querySelectorAll(".course-tabs button").forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.type === type);
+    });
+  }, 300);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".course-tabs button").forEach((button) => {
+    button.addEventListener("click", () => {
+      showCourse(button.dataset.type);
+    });
+  });
+
+  showCourse("ucd");
 });
 
 /* ================= DARK MODE ================= */
