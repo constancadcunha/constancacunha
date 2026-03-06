@@ -1,385 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Constança Cunha</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js?v=1" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Constança Cunha — Product Designer</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <h1>Constança Cunha</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#courses">Related Courses</a>
-            <a href="#education">Education</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#contacts">Contact Me</a>
-        </nav>
-        <!-- Dark Mode Toggle Button -->
-        <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-    </header>    
 
-    <!-- Sections -->
-    <section id="about">
-        <div class="section-header header-5">
-            <h2>About Me</h2>
-        </div>
-        <div class="about-me-content">
-            <img src="img/profile.jpeg" alt="Profile Picture" class="profile-image">
-            <div class="about-me-text">
-                <p>👋 <strong>Hello!</strong> I'm <strong>Constança Cunha</strong>, a <strong>front-end developer</strong> who turns complex problems into elegant web solutions. Currently pursuing my <strong>Master's in Computer Science</strong> at Instituto Superior Técnico, I blend technical precision with creative innovation.</p>
-            
-                <p>My work spans from crafting internal web applications to developing user-centric interfaces. I specialize in <strong>HTML</strong>, <strong>JavaScript</strong>, and <strong>CSS</strong>, with a keen focus on building features that drive real business impact. Each project is an opportunity to push boundaries and create seamless user experiences.</p>
-                
-                <p>I'm passionate about bridging the gap between users and technology through intuitive design and clean code. Let's build something amazing together.</p>
-            
-                <p>Please visit my personal portfolio @ <a href="https://constancadcunha.github.io/portfolio/" target="_blank">https://constancadcunha.github.io/portfolio/</a></p>
-            </div>
+<canvas id="bg-canvas"></canvas>
+<canvas id="trail-canvas"></canvas>
+<div id="cur-outer"></div>
+<div id="cur-inner"></div>
 
-    </section>
+<div id="preloader">
+  <canvas id="pre-canvas" width="260" height="260"></canvas>
+  <p class="pre-text">Preparing the atelier…</p>
+</div>
 
-    <section id="skills">
-        <div class="section-header header-2"><h2>Skills</h2></div>
-        <div class="skills-container">
-            <div class="skills-category languages">
-                <h3>Languages</h3>
-                <ul>
-                    <li>Portuguese
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 100%;"></div>
-                        </div>
-                    </li>
-                    <li>English
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 100%;"></div>
-                        </div>
-                    </li>
-                    <li>Spanish
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 55%;"></div>
-                        </div>
-                    </li>
-                    <li>French
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 50%;"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills-category programming">
-                <h3>Programming</h3>
-                <ul>
-                    <li>Python
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li>HTML
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>JavaScript
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Julia
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
-                        </div>
-                    </li>
-                    <li>CSS
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
-                        </div>
-                    </li>
-                    <li>C
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%;"></div>
-                        </div>
-                    </li>
-                    <li>Java
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%;"></div>
-                        </div>
-                    </li>
-                    <li>C++
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 55%;"></div>
-                        </div>
-                    </li>
-                    <li>Prolog
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 50%;"></div>
-                        </div>
-                    </li>
-                    <li>Assembly
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 45%;"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills-category graphic-design">
-                <h3>Graphic Design</h3>
-                <ul>
-                    <li>Webpage design
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>UX
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>Adobe Illustrator
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Photoshop
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Premiere Pro
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%;"></div>
-                        </div>
-                    </li>
-                    <li>After Effects
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 65%;"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills-category soft-skills">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Verbal and written communication
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li>Teamwork
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li>Leadership
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>Time management
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
-                    </li>
-                    <li>Creativity
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Problem-Solving
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Adaptability
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li>Multitasking
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
-                        </div>
-                    </li>
-                    <li>Resilience
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%;"></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <div id="experience" class="section">
-        <div class="section-header header-3">
-            <h2>Experience</h2>
-        </div>
-        
-        <div class="experience-tabs">
-          <button data-type="nextflat">NextFlat CH Internship</button>
-          <button data-type="sky" class="active">Sky Internship</button>
-          <button data-type="student">Student Organizations</button>
-          <button data-type="tutoring">Tutoring</button>
-          <button data-type="volunteering">Volunteering</button>
-        </div>
+<nav id="nav">
+  <button class="nav-logo" id="nav-logo">CC</button>
+  <ul class="nav-ul">
+    <li><a href="#hero">Atelier</a></li>
+    <li><a href="#about">Portrait</a></li>
+    <li><a href="#skills">Palette</a></li>
+    <li><a href="#experience">Gallery</a></li>
+    <li><a href="#courses">Studio</a></li>
+    <li><a href="#education">Roots</a></li>
+    <li><a href="#contacts">Letter</a></li>
+  </ul>
+  <button id="theme-btn"><span class="material-symbols-outlined" id="theme-icon">light_mode</span></button>
+</nav>
 
-        
-        <div id="experience-content">
-            <!-- Content will be dynamically inserted here by JavaScript -->
-        </div>
+<!-- ══════════════ HERO — PERFECT, UNTOUCHED ══════════════ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="orbit-ring" id="orbit-ring"></div>
+  <div class="hero-content">
+    <p class="hero-label">Product Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon, Portugal</p>
+    <h1 class="hero-h1" id="hero-h1">
+      <span class="h1-word">Con</span><span class="h1-word">stan</span><span class="h1-word">ça</span><br>
+      <em><span class="h1-word">Cu</span><span class="h1-word">nha</span></em>
+    </h1>
+    <p class="hero-tagline">I design with swirling intention —<br>turning tangled problems into <strong>luminous experiences.</strong></p>
+    <div class="hero-ctas">
+      <a href="#about" class="cta-fill"><span class="material-symbols-outlined">brush</span>Enter the Atelier</a>
+      <a href="#contacts" class="cta-ghost"><span class="material-symbols-outlined">mail</span>Write Me</a>
     </div>
-    
-    <div id="courses" class="section">
-        <div class="section-header header-6">
-            <h2>Related Courses</h2>
-        </div>
-        <div class="course-tabs">
-            <button data-type="ucd" class="active">User Centered Design</button>
-            <button data-type="iv">Interaction Visualization</button>
-            <button data-type="dp">3d Programming</button>
-            <button data-type="ids">Interaction Design Studio</button>
-            <button data-type="cg">Computer Graphics</button>
-        </div>
-        <div id="courses-content">
-            <!-- Content will be dynamically inserted here by JavaScript -->
-        </div>
-    </div>       
+  </div>
+  <div class="hero-scroll-cue"><div class="scroll-bar"></div><span>scroll</span></div>
+</section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="section-header header-4">
-            <h2>Education</h2>
-        </div>
-        <div class="education-container">
-            <div class="education-item">
-                <h3>Bachelor's in Computer Science and Engineering</h3>
-                <p style="text-align: left;"><strong>Instituto Superior Técnico</strong></p>
-                <p style="text-align: left;"><em>(Graduated: 2023)</em></p>
-                <li style="text-align: left;">Focus on software engineering and graphic design.</li>
-                <li style="text-align: left;"><strong>Relevant Coursework:</strong> Object-Oriented Programming, Analysis and Synthesis of Algorithms, Computer Graphics and Human-Computer Interaction.</li>
-            </div>
-            <div class="education-item">
-                <h3>Master's in Computer Science and Engineering</h3>
-                <p style="text-align: left;"><strong>Instituto Superior Técnico</strong></p>
-                <p style="text-align: left;"><em>(Expected Completion: 2025)</em></p>
-                <li style="text-align: left;">Focus on web development, user experience (UX), and human-computer interaction (HCI).</li>
-                <li style="text-align: left;"><strong>Relevant Coursework:</strong> Natural Language, Interaction Visualization, User Centered Design, and 3D Programming.</li>
-            </div>
-        </div>
-    </section>
 
-    <section id="certificates" class="section">
-        <div class="section-header header-7">
-            <h2>Certificates</h2>
+<!-- ══ §1 ABOUT — Full-bleed cinematic, portrait backdrop, giant split type ══ -->
+<section id="about">
+  <div class="ab-scene">
+    <div class="ab-img-col" id="ab-img-col">
+      <img src="img/profile.jpeg" alt="Constança" id="ab-img"/>
+      <canvas id="ab-wipe" class="ab-wipe"></canvas>
+      <div class="ab-img-grain"></div>
+      <div class="ab-img-vignette"></div>
+    </div>
+    <div class="ab-text-col">
+      <div class="ab-ticker-wrap">
+        <div class="ab-ticker">
+          <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
+          <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
+          <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
+          <span>Ballet Dancer</span><b>✦</b><span>Van Gogh Admirer</span><b>✦</b>
+          <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
+          <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
+          <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
+          <span>Ballet Dancer</span><b>✦</b><span>Van Gogh Admirer</span><b>✦</b>
         </div>
-        <div class="certificates-container">
-            <div class="certificate-card">
-                <h3>Complete Figma Megacourse: UI/UX Design Beginner to Expert</h3>
-                <p>Issued by <strong>Udemy</strong></p>
-                <a href="certificates/UC-a1497d98-ab9f-4d61-8f60-92c8a520914f.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>DIGITAL SKILLS: USER EXPERIENCE</h3>
-                <p>Issued by <strong>Accenture</strong></p>
-                <a href="certificates/digital-skills-user-experience_certificate_of_achievement_57cnwno.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Intro to UI/UX design</h3>
-                <p>Issued by <strong>Le Wagon</strong></p>
-                <a href="certificates/Constança Cunha - 2025-01-24.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Intro to engaging Meta ads with AI</h3>
-                <p>Issued by <strong>Le Wagon</strong></p>
-                <a href="certificates/Constança Cunha - 2025-01-24 (1).pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Launch your side project with Javascript</h3>
-                <p>Issued by <strong>Le Wagon</strong></p>
-                <a href="certificates/Constança Cunha - 2025-01-24 (2).pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Master Digital Product Design: UX Research & UI Design</h3>
-                <p>Issued by <strong>Udemy</strong></p>
-                <a href="certificates/UC-486f6c5c-1406-477b-86bc-709727580248.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Master Figma for Web Design & Freelancing: Learn UI/UX</h3>
-                <p>Issued by <strong>Udemy</strong></p>
-                <a href="certificates/UC-03333345-1bff-4c16-90e1-23441660e75c.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Modern UI Development in Unity 4.6/5.0</h3>
-                <p>Issued by <strong>Udemy</strong></p>
-                <a href="certificates/UC-9b00fce4-8886-4ac2-96d6-23a7c9f9ebd8.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>The Web Developer Bootcamp</h3>
-                <p>Issued by <strong>Udemy</strong></p>
-                <a href="certificates/UC-5533914a-a4c9-4171-b4c3-46bc1f0b70c8.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>The Complete Guide to UI/UX Wireframing</h3>
-                <p>Issued by <strong>Alison</strong></p>
-                <a href="certificates/Learner-Verification-4444-45789523.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Enterprise Design Thinking Co-Creator</h3>
-                <p>Issued by <strong>IBM</strong></p>
-                <a href="certificates/Enterprise_Design_Thinking_Co_Creator_Badge20250125-26-hts2xc.pdf" download>Download Certificate</a>
-            </div>
-            <div class="certificate-card">
-                <h3>Enterprise Design Thinking Practitioner</h3>
-                <p>Issued by <strong>IBM</strong></p>
-                <a href="certificates/Enterprise_Design_Thinking_Practitioner_Badge20250125-26-4dyqob.pdf" download>Download Certificate</a>
-            </div>
+      </div>
+      <div class="ab-inner">
+        <p class="room-tag">Room I — The Portrait</p>
+        <h2 class="ab-manifesto">
+          <span class="abm rup">I paint with</span>
+          <span class="abm abm-gold rup" style="--d:.08s"><em>intention —</em></span>
+          <span class="abm rup" style="--d:.16s">turning friction</span>
+          <span class="abm abm-gold rup" style="--d:.24s">into <em>light.</em></span>
+        </h2>
+        <p class="ab-bio rup" style="--d:.3s">Finishing my <strong>MSc at IST Lisbon</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky London</strong> &amp; <strong>NextFlat Zürich</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
+        <div class="ab-stats rup" style="--d:.38s">
+          <div class="ab-stat"><span class="abs-n">2+</span><span class="abs-l">years experience</span></div>
+          <div class="ab-stat"><span class="abs-n">30+</span><span class="abs-l">assets shipped</span></div>
+          <div class="ab-stat"><span class="abs-n">56</span><span class="abs-l">people led</span></div>
         </div>
-    </section>
+        <div class="ab-chips rup" style="--d:.46s">
+          <a href="https://constancadcunha.github.io/portfolio/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>Portfolio</a>
+          <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
+          <a href="https://github.com/constancadcunha" target="_blank" class="abchip"><span class="material-symbols-outlined">code</span>GitHub</a>
+          <a href="resume.pdf" download class="abchip"><span class="material-symbols-outlined">download</span>Resume</a>
+        </div>
+        <div class="ab-quote rup" style="--d:.54s">
+          <span class="abq-orn">"</span>
+          <p id="abq-text">If you hear a voice within you saying 'you cannot paint' — then by all means paint, and that voice will be silenced.</p>
+          <cite id="abq-cite">— Vincent van Gogh</cite>
+          <div class="abq-row">
+            <button class="abq-btn" id="abq-prev">←</button>
+            <div class="abq-dots" id="abq-dots"></div>
+            <button class="abq-btn" id="abq-next">→</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="contacts" class="section">
-        <div class="section-header header-1">
-            <h2>Contact Me</h2>
+
+<!-- ══ §2 SKILLS — Horizontal drag-scroll palette strips ══ -->
+<section id="skills">
+  <div class="sk-intro rup">
+    <p class="room-tag">Room II — The Palette</p>
+    <h2 class="sk-h2">The colours I <em>paint</em> with</h2>
+    <p class="sk-drag-hint"><span class="material-symbols-outlined">drag_pan</span> drag to explore</p>
+  </div>
+  <div class="sk-viewport">
+    <div class="sk-track" id="sk-track">
+
+      <div class="sk-strip" style="--bg:linear-gradient(160deg,#061208 0%,#0f2a14 50%,#1e4a22 100%);--acc:#7dbd5a">
+        <canvas class="strip-cv"></canvas>
+        <div class="sk-strip-inner">
+          <span class="material-symbols-outlined sk-ic">design_services</span>
+          <h3 class="sk-strip-title">Design &amp; UX</h3>
+          <p class="sk-strip-sub">Where ideas become interfaces</p>
+          <div class="sk-tags">
+            <span class="skt star">Figma</span><span class="skt star">UX Research</span><span class="skt star">Prototyping</span>
+            <span class="skt">Illustrator</span><span class="skt">Photoshop</span><span class="skt">After Effects</span>
+            <span class="skt">Premiere</span><span class="skt">Usability Testing</span><span class="skt">Design Thinking</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sk-strip" style="--bg:linear-gradient(160deg,#060b1a 0%,#0d1f3e 50%,#1a3a6e 100%);--acc:#4a7ab5">
+        <canvas class="strip-cv"></canvas>
+        <div class="sk-strip-inner">
+          <span class="material-symbols-outlined sk-ic">terminal</span>
+          <h3 class="sk-strip-title">Engineering</h3>
+          <p class="sk-strip-sub">The craft behind every pixel</p>
+          <div class="sk-tags">
+            <span class="skt star">HTML / CSS</span><span class="skt star">JavaScript</span><span class="skt star">Python</span>
+            <span class="skt">Three.js</span><span class="skt">D3.js</span><span class="skt">Julia</span>
+            <span class="skt">Java</span><span class="skt">C / C++</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sk-strip" style="--bg:linear-gradient(160deg,#180e04 0%,#3a1e08 50%,#6e3a10 100%);--acc:#e8b84b">
+        <canvas class="strip-cv"></canvas>
+        <div class="sk-strip-inner">
+          <span class="material-symbols-outlined sk-ic">language</span>
+          <h3 class="sk-strip-title">Languages</h3>
+          <p class="sk-strip-sub">Voices that carry meaning</p>
+          <div class="sk-lang-bars">
+            <div class="sklb"><span>Portuguese</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Native</span></div>
+            <div class="sklb"><span>English</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Fluent</span></div>
+            <div class="sklb"><span>Spanish</span><div class="sklb-t"><div class="sklb-f" data-w="55" style="--lc:#c97d2a"></div></div><span class="sklb-l">B1</span></div>
+            <div class="sklb"><span>French</span><div class="sklb-t"><div class="sklb-f" data-w="45" style="--lc:#8a5010"></div></div><span class="sklb-l">A2</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sk-strip" style="--bg:linear-gradient(160deg,#0e0a1a 0%,#1c1030 50%,#2e1a58 100%);--acc:#b89ce8">
+        <canvas class="strip-cv"></canvas>
+        <div class="sk-strip-inner">
+          <span class="material-symbols-outlined sk-ic">psychology</span>
+          <h3 class="sk-strip-title">Soft Skills</h3>
+          <p class="sk-strip-sub">The human side of design</p>
+          <div class="sk-tags">
+            <span class="skt star">Leadership</span><span class="skt star">Creativity</span>
+            <span class="skt">Communication</span><span class="skt">Teamwork</span>
+            <span class="skt">Problem Solving</span><span class="skt">Adaptability</span><span class="skt">Empathy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sk-strip sk-secret" id="sk-secret" style="--bg:linear-gradient(160deg,#0a0804 0%,#1a1408 50%,#2e220a 100%);--acc:#e8b84b">
+        <canvas class="strip-cv"></canvas>
+        <div class="sk-strip-inner">
+          <span class="material-symbols-outlined sk-ic">auto_awesome</span>
+          <h3 class="sk-strip-title">Secret Studio</h3>
+          <p class="sk-strip-sub">The brushwork nobody asked for.</p>
+          <p class="sk-secret-cta">Click to paint the night sky ✦</p>
+        </div>
+      </div>
+
+    </div>
+    <button class="sk-nav sk-nav-l" id="sk-nav-l"><span class="material-symbols-outlined">chevron_left</span></button>
+    <button class="sk-nav sk-nav-r" id="sk-nav-r"><span class="material-symbols-outlined">chevron_right</span></button>
+  </div>
+</section>
+
+
+<!-- ══ §3 EXPERIENCE — Painted vertical timeline ══ -->
+<section id="experience">
+  <div class="exp-intro rup">
+    <p class="room-tag">Room III — The Gallery</p>
+    <h2 class="exp-h2">Where I've <em>painted</em></h2>
+  </div>
+
+  <div class="exp-layout">
+    <!-- Animated spine -->
+    <div class="exp-spine-wrap">
+      <svg class="exp-spine-svg" viewBox="0 0 24 900" preserveAspectRatio="none">
+        <path id="exp-path" d="M12,0 C10,90 14,180 12,270 C10,360 14,450 12,540 C10,630 14,720 12,810 C10,870 12,900 12,900"
+          stroke="rgba(232,184,75,0.15)" stroke-width="1" fill="none"/>
+        <path id="exp-path-fill" d="M12,0 C10,90 14,180 12,270 C10,360 14,450 12,540 C10,630 14,720 12,810 C10,870 12,900 12,900"
+          stroke="#e8b84b" stroke-width="1.5" fill="none"
+          stroke-dasharray="1200" stroke-dashoffset="1200"/>
+      </svg>
+    </div>
+
+    <div class="exp-items">
+
+      <div class="exp-item rup" data-i="0">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">01</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="0">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Full-Stack Internship · Zürich · 2025–2026</span>
+              <h3 class="exp-title">NextFlat <em>CH</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-0">
+            <div class="exp-card-body-inner">
+              <p>Fully embedded in a live production team — designing, developing, and deploying simultaneously. Every sprint, every standup, every push to main.</p>
+              <ul>
+                <li><strong>UI/UX ownership</strong> — led major interface redesigns across the full product.</li>
+                <li><strong>Full-stack code</strong> — frontend and backend work that simplified architecture.</li>
+                <li><strong>Design system</strong> — established consistent visual language across all surfaces.</li>
+                <li><strong>Cross-functional</strong> — translated stakeholder briefs into scalable features.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.1s" data-i="1">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">02</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="1">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Front-End Apprenticeship · London · 2024</span>
+              <h3 class="exp-title">Sky</h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-1">
+            <div class="exp-card-body-inner">
+              <p>Built a complete internal diagnostics web app from absolute zero. No framework, no template — pure HTML, vanilla JS, and obsessive craft.</p>
+              <ul>
+                <li><strong>Built from scratch</strong> — internal STB monitoring tool in pure HTML/JS/CSS.</li>
+                <li><strong>UX-driven</strong> — tool redesign cut average task time significantly.</li>
+                <li><strong>Beyond scope</strong> — added API testing and data-export features unprompted.</li>
+                <li><strong>Production impact</strong> — solution now used across support operations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.2s" data-i="2">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">03</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="2">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Student Leadership · Lisbon · 2021–Present</span>
+              <h3 class="exp-title">SINFO &amp; <em>Diferencial</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-2">
+            <div class="exp-card-body-inner">
+              <p>Core team at Portugal's largest free tech conference. Head of HR at a 100-person student newspaper. Creative director, recruiter, culture builder.</p>
+              <ul>
+                <li><strong>Design director</strong> — 30+ marketing assets; led creative direction for SINFO 31.</li>
+                <li><strong>Head of HR</strong> — rose from journalist to leading all human resources.</li>
+                <li><strong>Recruitment</strong> — led intake of 56 new members in a single cycle.</li>
+                <li><strong>Culture</strong> — boosted team satisfaction scores by 65%.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.3s" data-i="3">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">04</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="3">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Education &amp; Arts · Lisbon · 2015–2022</span>
+              <h3 class="exp-title">Teaching &amp; <em>Ballet</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-3">
+            <div class="exp-card-body-inner">
+              <p>Seven years across two disciplines — the rigour of Maths &amp; Physics, and the expression of ballet. Clarity through relentless practice.</p>
+              <ul>
+                <li><strong>Private tutoring</strong> — Maths &amp; Physics, tailored strategies, measurable improvement.</li>
+                <li><strong>Ballet teacher assistant</strong> — choreography, class coordination, live performance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.4s" data-i="4">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">05</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="4">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2012–2020</span>
+              <h3 class="exp-title">ReFood &amp; <em>Banco Alimentar</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-4">
+            <div class="exp-card-body-inner">
+              <p>Eight years of showing up — food rescue, redistribution, community. Because design without humanity means nothing.</p>
+              <ul>
+                <li><strong>Food rescue</strong> — sustained multi-year commitment across national campaigns.</li>
+                <li><strong>Community</strong> — supported families facing food insecurity across Lisbon.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ §4 COURSES — Full-bleed stacked hover cards ══ -->
+<section id="courses">
+  <canvas id="courses-canvas"></canvas>
+  <div class="crs-head rup">
+    <p class="room-tag">Room IV — The Studio</p>
+    <h2 class="crs-h2">Where I studied <em>the craft</em></h2>
+  </div>
+  <div class="crs-grid">
+
+    <div class="crs-card rup" style="--acc:#e8b84b">
+      <div class="crs-card-bg" style="background:linear-gradient(135deg,#140e02 0%,#2a1e06 60%,#3e2e0a 100%)"></div>
+      <div class="crs-card-inner">
+        <span class="crs-n">01</span>
+        <h3 class="crs-title">User Centered Design</h3>
+        <p class="crs-body">Full UCD process — user research, personas, prototyping, usability testing. Every decision grounded in real evidence. Figma; heuristic evaluations; A/B tests; accessibility audits.</p>
+        <div class="crs-chips"><span>Figma</span><span>User Research</span><span>Prototyping</span><span>Usability</span><span>Accessibility</span></div>
+      </div>
+      <div class="crs-card-glow"></div>
+    </div>
+
+    <div class="crs-card rup" style="--d:.06s;--acc:#4a7ab5">
+      <div class="crs-card-bg" style="background:linear-gradient(135deg,#040a18 0%,#0d1e38 60%,#162e52 100%)"></div>
+      <div class="crs-card-inner">
+        <span class="crs-n">02</span>
+        <h3 class="crs-title">Interaction Visualization</h3>
+        <p class="crs-body">Information visualization theory and interactive data exploration. Interactive charts with D3.js; dashboards and visual narratives for real datasets. Clarity through form.</p>
+        <div class="crs-chips"><span>D3.js</span><span>Data Viz</span><span>SVG</span><span>Interaction</span><span>Narrative</span></div>
+      </div>
+      <div class="crs-card-glow"></div>
+    </div>
+
+    <div class="crs-card rup" style="--d:.12s;--acc:#7aaad4">
+      <div class="crs-card-bg" style="background:linear-gradient(135deg,#060e18 0%,#0e1e2e 60%,#182e44 100%)"></div>
+      <div class="crs-card-inner">
+        <span class="crs-n">03</span>
+        <h3 class="crs-title">3D Programming</h3>
+        <p class="crs-body">3D graphics — transformations, lighting models, shading pipelines. Interactive scenes with Three.js and WebGL. Built a complete browser-based 3D application as final project.</p>
+        <div class="crs-chips"><span>Three.js</span><span>WebGL</span><span>Shaders</span><span>GLSL</span><span>Lighting</span></div>
+      </div>
+      <div class="crs-card-glow"></div>
+    </div>
+
+    <div class="crs-card rup" style="--d:.18s;--acc:#c97d2a">
+      <div class="crs-card-bg" style="background:linear-gradient(135deg,#140802 0%,#2e1806 60%,#4a2a0e 100%)"></div>
+      <div class="crs-card-inner">
+        <span class="crs-n">04</span>
+        <h3 class="crs-title">Interaction Design Studio</h3>
+        <p class="crs-body">Designing complex interactive systems in multidisciplinary teams. Design thinking applied to messy real-world challenges — iterative critique, rapid prototyping, live user testing.</p>
+        <div class="crs-chips"><span>Systems Design</span><span>Design Thinking</span><span>Critique</span><span>Prototyping</span></div>
+      </div>
+      <div class="crs-card-glow"></div>
+    </div>
+
+    <div class="crs-card rup" style="--d:.24s;--acc:#6b9e6b">
+      <div class="crs-card-bg" style="background:linear-gradient(135deg,#060e06 0%,#101e10 60%,#1a2e1a 100%)"></div>
+      <div class="crs-card-inner">
+        <span class="crs-n">05</span>
+        <h3 class="crs-title">Computer Graphics</h3>
+        <p class="crs-body">Rasterization, ray tracing, shading, rendering pipelines from first principles. Geometric transformations built from scratch with OpenGL. The craft behind every pixel.</p>
+        <div class="crs-chips"><span>OpenGL</span><span>Ray Tracing</span><span>Shaders</span><span>Rasterization</span><span>GLSL</span></div>
+      </div>
+      <div class="crs-card-glow"></div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ §5 EDUCATION — Museum room with lit canvases ══ -->
+<section id="education">
+  <div class="edu-room-bg">
+    <div class="edu-wall"></div>
+    <div class="edu-floor"></div>
+    <div class="edu-spot-1"></div>
+    <div class="edu-spot-2"></div>
+  </div>
+  <div class="edu-head rup">
+    <p class="room-tag">Room V — The Roots</p>
+    <h2 class="edu-h2">Academic <em>foundations</em></h2>
+  </div>
+  <div class="edu-frames">
+
+    <div class="edu-frame-wrap rup" style="--d:.1s">
+      <div class="edu-frame">
+        <div class="edu-frame-border"></div>
+        <div class="edu-painting">
+          <div class="edu-painting-light"></div>
+          <div class="edu-ghost-ltr">BSc</div>
+          <div class="edu-pc">
+            <span class="edu-badge">2020 — 2023</span>
+            <p class="edu-deg-t">Bachelor of Science</p>
+            <h3 class="edu-deg-n">Computer Science<br>&amp; Engineering</h3>
+            <p class="edu-inst"><span class="material-symbols-outlined">school</span>Instituto Superior Técnico</p>
+            <div class="edu-chips">
+              <span>Software Engineering</span><span>Graphic Design</span>
+              <span>OOP &amp; Algorithms</span><span>Computer Graphics</span>
+              <span>HCI</span><span>Data Structures</span>
+            </div>
+          </div>
+          <div class="edu-shine-bar"></div>
+        </div>
+      </div>
+      <div class="edu-plaque">
+        <strong>BSc Computer Science</strong><br>IST · 2020–2023
+      </div>
+    </div>
+
+    <div class="edu-frame-wrap rup" style="--d:.25s">
+      <div class="edu-frame edu-frame-lit">
+        <div class="edu-frame-border"></div>
+        <div class="edu-painting edu-painting-active">
+          <div class="edu-painting-light"></div>
+          <div class="edu-in-progress">In Progress</div>
+          <div class="edu-ghost-ltr">MSc</div>
+          <div class="edu-pc">
+            <span class="edu-badge edu-badge-gold">2023 — 2025</span>
+            <p class="edu-deg-t">Master of Science</p>
+            <h3 class="edu-deg-n">Computer Science<br>&amp; Engineering</h3>
+            <p class="edu-inst"><span class="material-symbols-outlined">school</span>Instituto Superior Técnico</p>
+            <div class="edu-chips">
+              <span>UX &amp; Interaction Design</span><span>Visualization</span>
+              <span>NLP</span><span>3D Programming</span>
+              <span>Web Technologies</span><span>HCI</span>
+            </div>
+          </div>
+          <div class="edu-shine-bar"></div>
+        </div>
+      </div>
+      <div class="edu-plaque edu-plaque-gold">
+        <strong>MSc Computer Science</strong><br>IST · 2023–2025
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══ §6 CONTACT — Candlelit atelier ══ -->
+<section id="contacts">
+  <canvas id="candle-canvas"></canvas>
+  <div class="ctt-glow"></div>
+  <div class="ctt-layout">
+
+    <div class="ctt-left">
+      <p class="room-tag rup">Room VI — The Letter</p>
+      <h2 class="ctt-h2 rup" style="--d:.05s">Write me<br><em>a letter</em></h2>
+      <div class="ctt-letter rup" style="--d:.18s">
+        <div class="ctt-letter-head">
+          <div class="ctt-stamp"><span>CC</span><div class="ctt-stamp-perf"></div></div>
+          <div class="ctt-lh-text">
+            <strong>Constança Cunha</strong>
+            <span>Lisbon · Open to remote &amp; internships</span>
+          </div>
+          <span class="ctt-date" id="ctt-date"></span>
         </div>
         <form id="contact-form" action="https://getform.io/f/apjjprla" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            
+          <div class="ctt-field">
+            <label><span class="material-symbols-outlined">person</span>From</label>
+            <input type="text" name="name" placeholder="Your name" required/>
+          </div>
+          <div class="ctt-field">
+            <label><span class="material-symbols-outlined">alternate_email</span>Reply-to</label>
+            <input type="email" name="email" placeholder="your@email.com" required/>
+          </div>
+          <div class="ctt-field">
+            <label><span class="material-symbols-outlined">subject</span>Re:</label>
             <select name="subject" required>
-                <option value="" disabled selected>Select a Subject</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="job-opportunity">Job Opportunity</option>
-                <option value="project-inquiry">Project Inquiry</option>
-                <option value="general-question">General Question</option>
+              <option value="" disabled selected>Choose a subject…</option>
+              <option>Collaboration</option><option>Job Opportunity</option>
+              <option>Project Inquiry</option><option>General Question</option>
             </select>
-        
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <input type="hidden" name="_gotcha" style="display:none !important">
-            <button type="submit">Send Message</button>
+          </div>
+          <div class="ctt-field">
+            <label><span class="material-symbols-outlined">edit_note</span>Message</label>
+            <textarea name="message" rows="4" placeholder="Dear Constança, I came across your work and…" required></textarea>
+          </div>
+          <input type="hidden" name="_gotcha" style="display:none!important"/>
+          <button type="submit" class="ctt-send">
+            <span class="ctt-wax">✦</span>Seal &amp; Send
+            <span class="material-symbols-outlined">send</span>
+          </button>
         </form>
-        
-        
-            
-        <!-- Projects and Resume Links -->
-        <div class="social-icons">
-            <div class="icon">
-                <a href="https://www.linkedin.com/in/constanca-cunha/" class="icon linkedin" target="_blank" aria-label="LinkedIn" title="LinkedIn Page"></a>
-            </div>
-            <div class="icon">
-                <a href="https://github.com/constancadcunha" class="icon github" target="_blank" aria-label="GitHub" title="GitHub Page"></a>
-            </div>
-            <div class="icon">
-                <a href="resume.pdf" class="icon cv" download aria-label="Download CV" title="Download my CV"></a>
-            </div>
-            <div class="icon">
-                <a href="Constanca_Cunha_Designs.zip" class="icon projects" download aria-label="View Projects" title="View my Projects"></a>
-            </div>
-        </div>          
-    </section>        
-    
+      </div>
+    </div>
+
+    <div class="ctt-right rup" style="--d:.32s">
+      <blockquote class="ctt-quote">
+        <span class="cttq-m">"</span>
+        <p>I dream my painting<br>and I paint my dream.</p>
+        <cite>— Vincent van Gogh</cite>
+      </blockquote>
+      <div class="ctt-soc-grid">
+        <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="ctt-soc"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
+        <a href="https://github.com/constancadcunha" target="_blank" class="ctt-soc"><span class="material-symbols-outlined">code</span>GitHub</a>
+        <a href="resume.pdf" download class="ctt-soc"><span class="material-symbols-outlined">download</span>Resume</a>
+        <a href="Constanca_Cunha_Designs.zip" download class="ctt-soc"><span class="material-symbols-outlined">folder_zip</span>Projects</a>
+      </div>
+      <div class="ctt-mpaint">
+        <p class="ctt-mpl"><span class="material-symbols-outlined">brush</span>Paint your own starry night</p>
+        <canvas id="mini-canvas" width="300" height="150"></canvas>
+        <div class="ctt-mpc">
+          <button class="mdot on" data-c="#e8b84b" style="--dc:#e8b84b"></button>
+          <button class="mdot" data-c="#4a7ab5" style="--dc:#4a7ab5"></button>
+          <button class="mdot" data-c="#f5e6c8" style="--dc:#f5e6c8"></button>
+          <button class="mdot" data-c="#7dbd7d" style="--dc:#7dbd7d"></button>
+          <button class="mdot" data-c="#c94040" style="--dc:#c94040"></button>
+          <button class="mini-clr" id="mini-clear"><span class="material-symbols-outlined">restart_alt</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2025</span>
+  <button id="footer-star"><span class="material-symbols-outlined">star</span></button>
+</footer>
+
+<div id="egg-modal" aria-hidden="true">
+  <div class="egg-box">
+    <button id="egg-close"><span class="material-symbols-outlined">close</span></button>
+    <h3>Paint Your Starry Night</h3>
+    <p class="egg-sub">Drag your brush across the canvas.</p>
+    <canvas id="egg-canvas" width="560" height="340"></canvas>
+    <div class="egg-ctrl">
+      <button class="epdot on" data-c="#E8B84B" style="--bc:#E8B84B"></button>
+      <button class="epdot" data-c="#4A7AB5" style="--bc:#4A7AB5"></button>
+      <button class="epdot" data-c="#F5E6C8" style="--bc:#F5E6C8"></button>
+      <button class="epdot" data-c="#7DBD7D" style="--bc:#7DBD7D"></button>
+      <button class="epdot" data-c="#C94040" style="--bc:#C94040"></button>
+      <button class="epdot" data-c="#ffffff" style="--bc:#ffffff"></button>
+      <button id="egg-clear"><span class="material-symbols-outlined">restart_alt</span>Clear</button>
+    </div>
+    <p class="egg-quote">"I dream my painting and I paint my dream." — Van Gogh</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
