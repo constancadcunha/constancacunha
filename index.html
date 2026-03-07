@@ -30,9 +30,10 @@
     <li><a href="#contacts">Letter</a></li>
   </ul>
   <button id="theme-btn"><span class="material-symbols-outlined" id="theme-icon">light_mode</span></button>
+  <button id="nav-ham" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-
-<!-- ══════════════ HERO — PERFECT, UNTOUCHED ══════════════ -->
 <section id="hero">
   <canvas id="hero-canvas" width="1" height="1"></canvas>
   <div class="orbit-ring" id="orbit-ring"></div>
@@ -50,56 +51,43 @@
   </div>
   <div class="hero-scroll-cue"><div class="scroll-bar"></div><span>scroll</span></div>
 </section>
-
-
-<!-- ══ §1 ABOUT — Grand gallery, salon hang, full-bleed ══ -->
 <section id="about">
   <div class="ab-scene">
     <div class="ab-img-col" id="ab-img-col">
-      <!-- Gallery wall texture -->
       <div class="ab-wall"></div>
-      <!-- Ceiling track spot -->
       <div class="ab-spotlight"></div>
-      <!-- The painting — hung on the wall -->
       <div class="ab-painting-wrap">
         <img src="img/profile.jpeg" alt="Constança" id="ab-img"/>
         <div class="ab-img-grain"></div>
         <canvas id="ab-wipe" class="ab-wipe"></canvas>
       </div>
-      <!-- Ornate gilt frame -->
       <div class="ab-frame"></div>
-      <!-- Museum hanging wire -->
       <div class="ab-wire"></div>
-      <!-- Museum placard below the painting -->
       <div class="ab-placard">
         <span class="ab-placard-room">Room I · The Portrait</span>
         <strong class="ab-placard-title">Constança Cunha</strong>
         <span class="ab-placard-sub">Product Designer &amp; Engineer</span>
-        <span class="ab-placard-year">Lisbon, Portugal &nbsp;·&nbsp; c. 2025</span>
+        <span class="ab-placard-year">Lisbon, Portugal &nbsp;·&nbsp; c. 2023</span>
       </div>
-      <!-- Gallery floor shadow -->
       <div class="ab-floor"></div>
     </div>
 
     <div class="ab-text-col">
-      <!-- Scrolling gold ticker -->
       <div class="ab-ticker-wrap">
         <div class="ab-ticker">
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
-          <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
-          <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
+          <span>UX Researcher</span><b>✦</b><span>Instituto Superior Técnico</span><b>✦</b>
+          <span>Sky · Lisbon</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
           <span>Ballet Dancer</span><b>✦</b><span id="ticker-admirer-1">Van Gogh Admirer</span><b>✦</b>
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
-          <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
-          <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
+          <span>UX Researcher</span><b>✦</b><span>Instituto Superior Técnico</span><b>✦</b>
+          <span>Sky · Lisbon</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
           <span>Ballet Dancer</span><b>✦</b><span id="ticker-admirer-2">Van Gogh Admirer</span><b>✦</b>
         </div>
       </div>
 
       <div class="ab-inner">
         <p class="room-tag rup">Room I — The Portrait</p>
-
-        <!-- Grand artist name — the centrepiece -->
         <div class="ab-name-block rup" style="--d:.04s">
           <span class="ab-name-line1">Constança</span>
           <em class="ab-name-line2">Cunha</em>
@@ -111,19 +99,16 @@
 
         <div class="ab-rule rup" style="--d:.16s"><span class="ab-rule-diamond">◆</span></div>
 
-        <p class="ab-bio rup" style="--d:.22s">Finishing my <strong>MSc at IST Lisbon</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky London</strong> &amp; <strong>NextFlat Zürich</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
+        <p class="ab-bio rup" style="--d:.22s">Finishing my <strong>MSc at Instituto Superior Técnico</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky</strong> &amp; <strong>nextflat CH</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
 
         <div class="ab-stats rup" style="--d:.3s">
-          <div class="ab-stat"><span class="abs-n">2+</span><span class="abs-l">years experience</span></div>
-          <div class="ab-stat"><span class="abs-n">30+</span><span class="abs-l">assets shipped</span></div>
-          <div class="ab-stat"><span class="abs-n">56</span><span class="abs-l">people led</span></div>
+          <div class="ab-stat"><span class="abs-n">5k+</span><span class="abs-l">conference attendees</span></div>
+          <div class="ab-stat"><span class="abs-n">500+</span><span class="abs-l">platform users</span></div>
+          <div class="ab-stat"><span class="abs-n">~30%</span><span class="abs-l">faster feature builds</span></div>
         </div>
 
         <div class="ab-chips rup" style="--d:.38s">
-          <a href="https://constancadcunha.github.io/portfolio/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>Portfolio</a>
-          <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
-          <a href="https://github.com/constancadcunha" target="_blank" class="abchip"><span class="material-symbols-outlined">code</span>GitHub</a>
-          <a href="resume.pdf" download class="abchip"><span class="material-symbols-outlined">download</span>Resume</a>
+          <a href="https://constancadcunha.github.io/portfolio/" target="_blank" class="abchip abchip-hero"><span class="material-symbols-outlined">open_in_new</span>View Portfolio</a>
         </div>
 
         <div class="ab-quote rup" style="--d:.46s">
@@ -140,9 +125,6 @@
     </div>
   </div>
 </section>
-
-
-<!-- ══ §2 SKILLS — Gallery Wall of Paintings ══ -->
 <section id="skills">
   <canvas id="sk-bg-cv"></canvas>
   <div class="sk-intro rup">
@@ -230,9 +212,6 @@
 
   </div>
 </section>
-
-
-<!-- ══ §3 EXPERIENCE — Painted vertical timeline ══ -->
 <section id="experience">
   <div class="exp-intro rup">
     <p class="room-tag">Room III — The Gallery</p>
@@ -240,7 +219,6 @@
   </div>
 
   <div class="exp-layout">
-    <!-- Animated spine -->
     <div class="exp-spine-wrap">
       <svg class="exp-spine-svg" viewBox="0 0 24 1400" preserveAspectRatio="none" style="overflow:visible">
         <path id="exp-path" d="M12,0 C10,140 14,280 12,420 C10,560 14,700 12,840 C10,980 14,1120 12,1260 C10,1360 12,1400 12,1400"
@@ -261,20 +239,15 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="0">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Full-Stack Internship · Zürich · 2025–2026</span>
-              <h3 class="exp-title">NextFlat <em>CH</em></h3>
+              <span class="exp-eyebrow">Product Design &amp; Frontend Engineering · Zürich, Remote · Sep 2025–Mar 2026</span>
+              <h3 class="exp-title">nextflat <em>CH</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-0">
             <div class="exp-card-body-inner">
-              <p>Fully embedded in a live production team — designing, developing, and deploying simultaneously. Every sprint, every standup, every push to main.</p>
-              <ul>
-                <li><strong>UI/UX ownership</strong> — led major interface redesigns across the full product.</li>
-                <li><strong>Full-stack code</strong> — frontend and backend work that simplified architecture.</li>
-                <li><strong>Design system</strong> — established consistent visual language across all surfaces.</li>
-                <li><strong>Cross-functional</strong> — translated stakeholder briefs into scalable features.</li>
-              </ul>
+              <p>Remote work on a live real estate platform used by <span class="exp-hl">500+</span> people in Zurich. Redesigned the homepage, dashboards, and feed to make them actually usable — then worked directly with engineers to ship it across <span class="exp-hl">2</span> release cycles.</p>
+              <p>Built a CSS module component library from atomic design principles. Implementation time for new features dropped by roughly <span class="exp-hl">~30%</span>. Features went through multiple rounds of stakeholder and user feedback before shipping — balancing what people asked for with what the product actually needed.</p>
             </div>
           </div>
         </div>
@@ -288,20 +261,15 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="1">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Front-End Apprenticeship · London · 2024</span>
+              <span class="exp-eyebrow">Front-End Developer Internship · Lisbon · Jul–Aug 2024</span>
               <h3 class="exp-title">Sky</h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-1">
             <div class="exp-card-body-inner">
-              <p>Built a complete internal diagnostics web app from absolute zero. No framework, no template — pure HTML, vanilla JS, and obsessive craft.</p>
-              <ul>
-                <li><strong>Built from scratch</strong> — internal STB monitoring tool in pure HTML/JS/CSS.</li>
-                <li><strong>UX-driven</strong> — tool redesign cut average task time significantly.</li>
-                <li><strong>Beyond scope</strong> — added API testing and data-export features unprompted.</li>
-                <li><strong>Production impact</strong> — solution now used across support operations.</li>
-              </ul>
+              <p>Two months in Lisbon. Built an internal STB device management system from nothing in under <span class="exp-hl">2 weeks</span>. Before it existed, onboarding a device took several days. After: <span class="exp-hl">&lt;4 hours</span>.</p>
+              <p>Also automated repetitive workflows and built structured data exports used across all operational teams. Most of it came from talking to the people who'd actually use the thing before writing a single line of code.</p>
             </div>
           </div>
         </div>
@@ -315,18 +283,15 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="2">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Student Org · Lisbon · May 2022–May 2025</span>
+              <span class="exp-eyebrow">Student Org · Lisbon · Mar 2022–May 2025</span>
               <h3 class="exp-title">SINFO</h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-2">
             <div class="exp-card-body-inner">
-              <p>Portugal's largest free tech conference. Grew from multimedia member to coordinator — from crafting every asset to leading the full event.</p>
-              <ul>
-                <li><strong>Coordinator</strong> (2024–2025) — led SINFO 32 end-to-end: team, speakers, sponsors, and logistics for 1000+ attendees.</li>
-                <li><strong>Multimedia Member</strong> (2022–2024) — produced all marketing content (video, photo, social); creative direction for SINFO 31; 30+ assets delivered.</li>
-              </ul>
+              <p>Started making content, ended up running the conference. Three years at Portugal's largest free tech event — <span class="exp-hl">5,000+</span> attendees, <span class="exp-hl">85+</span> partner companies, entirely free to attend.</p>
+              <p>As Coordinator (2024–2025), led a <span class="exp-hl">30-person</span> team through the full event cycle: curating speakers, securing Tier-1 sponsorships including Oracle, and coordinating national media coverage through CNN Portugal. As Multimedia Team Member (2022–2024), handled production and communications across two consecutive editions.</p>
             </div>
           </div>
         </div>
@@ -347,12 +312,8 @@
           </button>
           <div class="exp-card-body" id="expb-3">
             <div class="exp-card-body-inner">
-              <p>100-person student newspaper at IST. Led all human resources — recruitment, team culture, and organisational health.</p>
-              <ul>
-                <li><strong>Head of HR</strong> — owned all recruitment and culture initiatives for the full team.</li>
-                <li><strong>Recruitment</strong> — led intake of 56 new members in a single cycle.</li>
-                <li><strong>Culture</strong> — boosted team satisfaction scores by 65%.</li>
-              </ul>
+              <p>Built the HR function from scratch for a <span class="exp-hl">20+</span> person student team at IST's student newspaper. No existing process — recruitment, onboarding, retention — all of it written from nothing.</p>
+              <p>The goal: get the right people in, and make sure they stayed. First-year retention improved, and so did how quickly new members found their footing.</p>
             </div>
           </div>
         </div>
@@ -373,11 +334,7 @@
           </button>
           <div class="exp-card-body" id="expb-4">
             <div class="exp-card-body-inner">
-              <p>Volunteer at the world's largest tech conference. Thousands of attendees, speakers, and exhibitors — and behind every smooth interaction, a volunteer.</p>
-              <ul>
-                <li><strong>Attendee support</strong> — guided speakers, press, and partners at one of tech's biggest events.</li>
-                <li><strong>Operations</strong> — kept the machine running across a multi-day, multi-venue event.</li>
-              </ul>
+              <p>One edition of WebSummit in Lisbon. Guided speakers, press, and partners through a multi-day, multi-venue event where thousands of things can go wrong — and usually don't, because people behind the scenes keep it together.</p>
             </div>
           </div>
         </div>
@@ -398,11 +355,7 @@
           </button>
           <div class="exp-card-body" id="expb-5">
             <div class="exp-card-body-inner">
-              <p>Seven years across two disciplines — the rigour of Maths &amp; Physics, and the expression of ballet. Clarity through relentless practice.</p>
-              <ul>
-                <li><strong>Private tutoring</strong> — Maths &amp; Physics, tailored strategies, measurable improvement.</li>
-                <li><strong>Ballet teacher assistant</strong> — choreography, class coordination, live performance.</li>
-              </ul>
+              <p><span class="exp-hl">7 years</span> teaching two completely different things to completely different people. Maths and Physics to students who needed structured thinking. Ballet to children who needed to trust their bodies. Both came down to the same skill: breaking something hard into steps someone else can follow.</p>
             </div>
           </div>
         </div>
@@ -416,18 +369,14 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="6">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Volunteering · Lisbon · 2014–2020</span>
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2017–2020</span>
               <h3 class="exp-title">Re<em>Food</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-6">
             <div class="exp-card-body-inner">
-              <p>Six years of showing up — rescuing surplus food and delivering it to families in need across Lisbon. Because design without humanity means nothing.</p>
-              <ul>
-                <li><strong>Food rescue</strong> — weekly collections from restaurants and supermarkets.</li>
-                <li><strong>Community</strong> — direct support to families facing food insecurity.</li>
-              </ul>
+              <p><span class="exp-hl">3 years</span> of weekly food rescue across Lisbon — collecting surplus from restaurants and supermarkets, delivering to families in need. The kind of work that doesn't show up in a CV the way it should.</p>
             </div>
           </div>
         </div>
@@ -441,18 +390,14 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="7">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Volunteering · Lisbon · 2012–2014</span>
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2014–2020</span>
               <h3 class="exp-title">Banco <em>Alimentar</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-7">
             <div class="exp-card-body-inner">
-              <p>National food bank campaigns from an early age. A long-running commitment to giving back — sorting, collecting, and distributing across the country.</p>
-              <ul>
-                <li><strong>National campaigns</strong> — participated in annual collection drives across Lisbon.</li>
-                <li><strong>Food distribution</strong> — direct warehouse and logistics support.</li>
-              </ul>
+              <p>Portugal's national food bank campaigns — annual collection drives, warehouse sorting, and distribution across Lisbon. The kind of volunteering you start young and don't stop thinking about.</p>
             </div>
           </div>
         </div>
@@ -461,9 +406,6 @@
     </div>
   </div>
 </section>
-
-
-<!-- ══ §4 COURSES — Gallery wall framed artworks ══ -->
 <section id="courses">
   <div class="crs-head rup">
     <p class="room-tag">Room IV — The Studio</p>
@@ -576,11 +518,29 @@
       </div>
     </div>
 
+    <div class="crs-artwork rup" style="--d:.40s;--acc:#b87abf">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">06</span>
+          <span class="material-symbols-outlined crs-painting-ic">psychology</span>
+          <h3 class="crs-title">Master's Thesis</h3>
+          <p class="crs-body">Extended an existing usability testing tool — which used facial recognition to track emotional responses during tasks — with three new evaluation methods: heuristic evaluation, task analysis, and SAM surveys. Built to make usability testing more rigorous and complete for real applications.</p>
+          <div class="crs-chips"><span>Heuristic Evaluation</span><span>Task Analysis</span><span>SAM Surveys</span><span>Usability Testing</span><span>Facial Recognition</span></div>
+        </div>
+        <div class="crs-shine"></div>
+      </div>
+      <div class="crs-label-card">
+        <strong>Master's Thesis</strong>
+        <span>Usability · Evaluation · Research</span>
+      </div>
+    </div>
+
   </div>
 </section>
-
-
-<!-- ══ §5 EDUCATION — Official Academic Diplomas ══ -->
 <section id="education">
   <div class="edu-head rup">
     <p class="room-tag">Room V — The Roots</p>
@@ -603,10 +563,7 @@
         </div>
         <div class="edu-dip-seal">
           <div class="edu-dip-seal-ring"></div>
-          <svg class="edu-dip-seal-logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IST Técnico Lisboa">
-              <text x="50" y="40" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="700" text-anchor="middle" fill="currentColor">IST</text>
-              <text x="50" y="54" font-family="Arial,sans-serif" font-size="6.5" text-anchor="middle" fill="currentColor" style="letter-spacing:1.4px">TÉCNICO LISBOA</text>
-            </svg>
+          <img src="IST_Logo.png" alt="IST Técnico Lisboa" class="edu-dip-seal-logo"/>
         </div>
         <p class="edu-dip-hereby">This is to certify that</p>
         <p class="edu-dip-name">Constança Cunha</p>
@@ -656,10 +613,7 @@
         </div>
         <div class="edu-dip-seal edu-dip-seal-gold">
           <div class="edu-dip-seal-ring"></div>
-          <svg class="edu-dip-seal-logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IST Técnico Lisboa">
-              <text x="50" y="40" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="700" text-anchor="middle" fill="currentColor">IST</text>
-              <text x="50" y="54" font-family="Arial,sans-serif" font-size="6.5" text-anchor="middle" fill="currentColor" style="letter-spacing:1.4px">TÉCNICO LISBOA</text>
-            </svg>
+          <img src="IST_Logo.png" alt="IST Técnico Lisboa" class="edu-dip-seal-logo"/>
         </div>
         <p class="edu-dip-hereby">This is to certify that</p>
         <p class="edu-dip-name">Constança Cunha</p>
@@ -695,9 +649,6 @@
 
   </div>
 </section>
-
-
-<!-- ══ §6 CONTACT — Candlelit atelier ══ -->
 <section id="contacts">
   <canvas id="candle-canvas"></canvas>
   <div class="ctt-glow"></div>
@@ -711,7 +662,7 @@
           <div class="ctt-stamp"><span>CC</span><div class="ctt-stamp-perf"></div></div>
           <div class="ctt-lh-text">
             <strong>Constança Cunha</strong>
-            <span>Lisbon · Open to remote &amp; internships</span>
+            <span>Lisbon · Graduate programs &amp; full-time roles</span>
           </div>
           <span class="ctt-date" id="ctt-date"></span>
         </div>
@@ -746,13 +697,11 @@
     </div>
 
     <div class="ctt-right rup" style="--d:.32s">
-      <!-- Van Gogh quote — shown in dark mode -->
       <blockquote class="ctt-quote">
         <span class="cttq-m">"</span>
         <p>I dream my painting<br>and I paint my dream.</p>
         <cite>— Vincent van Gogh</cite>
       </blockquote>
-      <!-- Monet quote — shown in light mode -->
       <blockquote class="ctt-quote ctt-quote-monet">
         <span class="cttq-m">"</span>
         <p>I must have flowers,<br>always and always.</p>
@@ -781,7 +730,7 @@
 </section>
 
 <footer>
-  <span class="footer-credit">Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2025</span>
+  <span class="footer-credit">Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2026</span>
   <button id="footer-star"><span class="material-symbols-outlined">star</span></button>
 </footer>
 

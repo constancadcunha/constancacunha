@@ -58,12 +58,13 @@ body.light{
 
 /* ── reset ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   font-family:var(--serif);
   background:var(--deep);
   color:var(--wheat);
   overflow-x:hidden;
+  max-width:100vw;
   transition:background .35s,color .35s;
 }
 img{display:block;max-width:100%}
@@ -192,8 +193,8 @@ body.light .brush-divider{background:linear-gradient(to right,transparent 2%,rgb
 /* ════════════════════════════════════
    §1  ABOUT
 ════════════════════════════════════ */
-#about{position:relative;z-index:2;background:var(--deep)}
-.ab-scene{display:grid;grid-template-columns:44% 56%;min-height:100vh}
+#about{position:relative;z-index:2;background:var(--deep);overflow-x:hidden}
+.ab-scene{display:grid;grid-template-columns:44% 56%;min-height:100vh;max-width:100%}
 
 /* Portrait col — warm gallery wall */
 .ab-img-col{position:relative;overflow:hidden;background:#1a1208}
@@ -423,6 +424,17 @@ body.light .abchip{background:rgba(255,255,255,.5)}
 body.light .abchip:hover{background:rgba(90,140,120,.1)}
 .abchip .material-symbols-outlined{font-size:.76rem}
 
+/* Portfolio chip — prominent but not a slab */
+.abchip-hero{
+  font-size:.68rem;letter-spacing:.2em;padding:14px 32px;gap:9px;
+  background:var(--gold);color:#0a0c10;border-color:var(--gold);
+  box-shadow:0 4px 20px rgba(232,184,75,.22);
+}
+.abchip-hero:hover{background:var(--amber);border-color:var(--amber);transform:translateY(-3px);box-shadow:0 12px 32px rgba(232,184,75,.42)}
+.abchip-hero .material-symbols-outlined{font-size:.92rem}
+body.light .abchip-hero{background:var(--gold);color:var(--ink);border-color:var(--gold);box-shadow:0 4px 20px rgba(90,140,120,.2)}
+body.light .abchip-hero:hover{background:var(--amber);border-color:var(--amber);box-shadow:0 12px 32px rgba(90,140,120,.32)}
+
 /* Quote */
 .ab-quote{border-left:3px solid var(--gold);padding:16px 20px 16px 24px;background:var(--card);position:relative;overflow:hidden}
 .ab-quote::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(232,184,75,.04),transparent 60%);pointer-events:none}
@@ -564,7 +576,8 @@ body.light .sk-h2 em{color:var(--gold)}
   background:rgba(20,14,38,.94);
   padding:16px 18px 20px;
   border-top:2px solid var(--sacc,#e8b84b);
-  min-height:48%;
+  height:48%;
+  overflow:hidden;
   box-sizing:border-box;
 }
 body.light .sk-paint-info{background:rgba(240,238,228,.94);border-top-color:var(--sacc,#5a8c78)}
@@ -734,6 +747,10 @@ body.light .exp-card:hover{box-shadow:0 8px 28px rgba(0,0,0,.1)}
 .exp-card-body-inner li::before{content:'—';position:absolute;left:0;color:var(--gold);opacity:.55}
 .exp-card-body-inner li strong{color:var(--cream);font-weight:600}
 
+/* Highlighted inline stats in experience prose */
+.exp-hl{font-family:var(--disp);font-size:1.18em;font-style:normal;font-weight:700;color:var(--gold)}
+body.light .exp-hl{color:var(--gold)}
+
 /* ════════════════════════════════════
    §4  COURSES · gallery wall
 ════════════════════════════════════ */
@@ -778,13 +795,14 @@ body.light .crs-h2 em{color:var(--gold)}
 /* Artwork unit */
 .crs-artwork{
   display:flex;flex-direction:column;align-items:center;gap:14px;
+  height:100%;
   transition:transform .4s var(--ease);
 }
 .crs-artwork:hover{transform:translateY(-6px)}
 
 /* The frame */
 .crs-frame{
-  position:relative;width:100%;
+  position:relative;width:100%;flex:1;
   background:linear-gradient(145deg,#080e1a 0%,#0e1828 50%,#060c18 100%);
   border:10px solid #1c1608;
   box-shadow:
@@ -1095,7 +1113,7 @@ body.light .edu-dip-header-rule{background:linear-gradient(to right,transparent,
 }
 .edu-diploma:hover .edu-dip-seal-ring{border-color:rgba(232,184,75,.55);transform:rotate(30deg)}
 .edu-dip-seal span{font-family:var(--disp);font-size:.9rem;font-weight:700;color:#e8b84b;letter-spacing:.1em}
-.edu-dip-seal-logo{width:78%;height:auto;color:rgba(255,255,255,.85);opacity:.8;transition:opacity .4s}
+.edu-dip-seal-logo{width:70%;height:70%;object-fit:contain;display:block;margin-top:5px;color:rgba(255,255,255,.85);opacity:.8;transition:opacity .4s}
 .edu-diploma:hover .edu-dip-seal-logo{opacity:1}
 body.light .edu-dip-seal-logo{color:rgba(26,32,40,.75)}
 body.light .edu-diploma:hover .edu-dip-seal-logo{opacity:.9}
@@ -1374,6 +1392,35 @@ body.light #egg-clear{border-color:rgba(90,140,120,.25);color:var(--gold)}
 body.light .egg-quote{color:#c4e0d4}
 
 /* ══ RESPONSIVE ══ */
+
+/* ── Hamburger button — hidden on desktop ── */
+#nav-ham{
+  display:none;
+  flex-direction:column;gap:5px;
+  width:34px;height:34px;
+  align-items:center;justify-content:center;
+  border:1px solid var(--border);
+  border-radius:2px;
+  color:var(--gold);
+  background:none;
+  cursor:pointer;
+  transition:background .3s;
+  z-index:510;
+  position:relative;
+}
+#nav-ham:hover{background:rgba(232,184,75,.1)}
+#nav-ham span{
+  display:block;width:18px;height:1.5px;
+  background:var(--gold);
+  border-radius:1px;
+  transition:transform .35s,opacity .35s;
+  pointer-events:none;
+}
+/* X state */
+#nav.mob-open #nav-ham span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+#nav.mob-open #nav-ham span:nth-child(2){opacity:0;transform:scaleX(0)}
+#nav.mob-open #nav-ham span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
 @media(max-width:1100px){
   .ab-scene{grid-template-columns:1fr}
   .ab-img-col{min-height:56vh}
@@ -1388,22 +1435,135 @@ body.light .egg-quote{color:#c4e0d4}
   .edu-diplomas{gap:32px;padding:0 32px}
   .edu-diploma{width:clamp(260px,44vw,420px)}
   .ctt-layout{grid-template-columns:1fr;padding:80px 36px;gap:40px}
+  .ctt-right{padding-top:0}
 }
+
 @media(max-width:720px){
-  #nav .nav-ul{display:none}
-  .sk-gallery-wall{flex-direction:column;align-items:center;overflow-x:visible;gap:48px;padding:0 20px 40px}
-  .sk-painting{flex:none;width:90vw;max-width:400px;transform:none!important}
+  /* ── Nav ── */
+  #nav{padding:12px 20px}
+  #nav.slim{padding:8px 20px}
+  #nav-ham{display:flex}
+  /* Hide nav links by default; show as full-screen overlay when open */
+  #nav .nav-ul{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:36px;
+    position:fixed;
+    inset:0;
+    background:rgba(17,24,39,.97);
+    backdrop-filter:blur(24px);
+    z-index:490;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .35s;
+  }
+  body.light #nav .nav-ul{background:rgba(236,233,242,.97)}
+  #nav.mob-open .nav-ul{opacity:1;pointer-events:auto}
+  #nav .nav-ul a{
+    font-family:var(--disp);
+    font-style:italic;
+    font-size:1.5rem;
+    letter-spacing:.08em;
+    text-transform:none;
+    color:var(--cream);
+  }
+  #nav .nav-ul a::after{display:none}
+  #nav .nav-ul a:hover,#nav .nav-ul a.on{color:var(--gold)}
+
+  /* ── Hero ── */
+  .hero-label{padding:0 16px;text-align:center;font-size:.58rem}
+  .hero-tagline{padding:0 16px}
+  .hero-ctas{padding:0 16px}
+
+  /* ── About ── */
+  .ab-inner{padding:36px 20px}
+  .ab-stats{gap:18px}
+  .ab-rule{width:100%}
+  .ab-bio{max-width:100%}
+
+  /* ── Skills ── */
+  .sk-gallery-wall{flex-direction:column;align-items:center;overflow-x:visible;gap:40px;padding:0 20px 40px}
+  .sk-painting{flex:none;width:90vw;max-width:420px;transform:none!important;height:clamp(300px,70vw,420px)}
   .sk-intro{padding:0 20px 28px}
-  .exp-items{padding-left:16px}
-  .exp-marker{margin-right:16px}
+
+  /* ── Experience ── */
+  .exp-intro{padding:0 20px 36px}
+  .exp-layout{padding:0 20px;grid-template-columns:28px 1fr}
+  .exp-items{padding-left:12px}
+  .exp-marker{margin-right:14px}
+  .exp-card-head{padding:18px 18px}
+  .exp-card-body-inner{padding:0 18px}
+
+  /* ── Courses ── */
+  .crs-head{padding:0 20px 36px}
   .crs-wall{grid-template-columns:1fr;padding:0 20px 20px;gap:32px}
-  .crs-head{padding-left:20px;padding-right:20px}
-  .edu-diplomas{flex-direction:column;align-items:center}
-  .edu-diploma{width:90vw;max-width:420px}
-  .edu-head,.crs-head,.exp-intro{padding-left:20px;padding-right:20px}
-  .exp-layout{padding:0 20px}
-  footer{padding:14px 20px}
+
+  /* ── Education ── */
+  .edu-head{padding:0 20px 40px}
+  .edu-diplomas{flex-direction:column;align-items:center;padding:0 20px;gap:24px}
+  .edu-diploma{width:90vw;max-width:440px;padding:40px 28px 32px}
+
+  /* ── Contact ── */
+  .ctt-layout{padding:60px 20px 48px;gap:28px}
+  .ctt-right{padding-top:0}
+  .ctt-letter-head{padding:20px 20px 16px;gap:12px;flex-wrap:wrap}
+  form{padding:4px 20px 24px}
+  .ctt-soc-grid{grid-template-columns:1fr 1fr}
+
+  /* ── Footer ── */
+  footer{padding:16px 20px;flex-direction:column;gap:8px;text-align:center}
+  footer::before{left:20px;right:20px}
+
+  /* ── Misc ── */
   .ab-placard{bottom:16px}
+  .ab-chips{gap:6px}
+
+  /* ── About image col — fix on mobile ── */
+  .ab-scene{width:100%;max-width:100%}
+  .ab-img-col{width:100%;max-width:100%;min-height:75vw}
+  .ab-painting-wrap{inset:16px}
+  #ab-img{object-position:center 20%}
+  .ab-text-col{max-width:100%;overflow:hidden}
+}
+
+@media(max-width:480px){
+  /* Nav */
+  #nav{padding:10px 16px}
+  #nav.slim{padding:7px 16px}
+
+  /* Hero — shrink name on tiny screens */
+  .hero-h1{font-size:clamp(3rem,16vw,4.6rem)!important}
+  .hero-label{font-size:.52rem;letter-spacing:.14em}
+  .hero-ctas{flex-direction:column;align-items:stretch;padding:0 24px}
+  .cta-fill,.cta-ghost{justify-content:center;padding:13px 20px}
+
+  /* About */
+  .ab-stats{flex-wrap:wrap;gap:16px 24px}
+  .abs-n{font-size:2rem}
+  .ab-name-line1{font-size:clamp(2.2rem,9vw,3.5rem)}
+  .ab-name-line2{font-size:clamp(2.8rem,11vw,4.5rem)}
+
+  /* Education */
+  .edu-diploma{padding:32px 20px 28px}
+  .edu-dip-sigs{gap:10px}
+  .edu-dip-sig-line{width:64px}
+
+  /* Contact */
+  .ctt-soc-grid{grid-template-columns:1fr}
+  .ctt-stamp{width:44px;height:44px;font-size:1.1rem}
+
+  /* Misc */
+  .ab-inner{padding:28px 16px}
+  .exp-card-head{padding:16px 14px}
+  .exp-card-body-inner{padding:0 14px}
+  .crs-wall{padding:0 16px 20px}
+  .crs-head{padding:0 16px 28px}
+  .sk-intro{padding:0 16px 24px}
+  .edu-diplomas{padding:0 16px}
+  .ctt-layout{padding:48px 16px 40px}
+  footer{padding:14px 16px}
 }
 
 /* ════════════════════════════════════
