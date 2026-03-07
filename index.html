@@ -9,10 +9,8 @@
 </head>
 <body>
 
-<canvas id="bg-canvas"></canvas>
-<canvas id="trail-canvas"></canvas>
-<div id="cur-outer"></div>
-<div id="cur-inner"></div>
+<canvas id="bg-canvas" width="1" height="1"></canvas>
+<canvas id="trail-canvas" width="1" height="1"></canvas>
 
 <div id="preloader">
   <canvas id="pre-canvas" width="260" height="260"></canvas>
@@ -35,7 +33,7 @@
 
 <!-- ══════════════ HERO — PERFECT, UNTOUCHED ══════════════ -->
 <section id="hero">
-  <canvas id="hero-canvas"></canvas>
+  <canvas id="hero-canvas" width="1" height="1"></canvas>
   <div class="orbit-ring" id="orbit-ring"></div>
   <div class="hero-content">
     <p class="hero-label">Product Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon, Portugal</p>
@@ -53,49 +51,81 @@
 </section>
 
 
-<!-- ══ §1 ABOUT — Full-bleed cinematic, portrait backdrop, giant split type ══ -->
+<!-- ══ §1 ABOUT — Grand gallery, salon hang, full-bleed ══ -->
 <section id="about">
   <div class="ab-scene">
     <div class="ab-img-col" id="ab-img-col">
-      <img src="img/profile.jpeg" alt="Constança" id="ab-img"/>
-      <canvas id="ab-wipe" class="ab-wipe"></canvas>
-      <div class="ab-img-grain"></div>
-      <div class="ab-img-vignette"></div>
+      <!-- Gallery wall texture -->
+      <div class="ab-wall"></div>
+      <!-- Ceiling track spot -->
+      <div class="ab-spotlight"></div>
+      <!-- The painting — hung on the wall -->
+      <div class="ab-painting-wrap">
+        <img src="img/profile.jpeg" alt="Constança" id="ab-img"/>
+        <div class="ab-img-grain"></div>
+        <canvas id="ab-wipe" class="ab-wipe"></canvas>
+      </div>
+      <!-- Ornate gilt frame -->
+      <div class="ab-frame"></div>
+      <!-- Museum hanging wire -->
+      <div class="ab-wire"></div>
+      <!-- Museum placard below the painting -->
+      <div class="ab-placard">
+        <span class="ab-placard-room">Room I · The Portrait</span>
+        <strong class="ab-placard-title">Constança Cunha</strong>
+        <span class="ab-placard-sub">Product Designer &amp; Engineer</span>
+        <span class="ab-placard-year">Lisbon, Portugal &nbsp;·&nbsp; c. 2025</span>
+      </div>
+      <!-- Gallery floor shadow -->
+      <div class="ab-floor"></div>
     </div>
+
     <div class="ab-text-col">
+      <!-- Scrolling gold ticker -->
       <div class="ab-ticker-wrap">
         <div class="ab-ticker">
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
           <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
           <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
-          <span>Ballet Dancer</span><b>✦</b><span>Van Gogh Admirer</span><b>✦</b>
+          <span>Ballet Dancer</span><b>✦</b><span id="ticker-admirer-1">Van Gogh Admirer</span><b>✦</b>
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
           <span>UX Researcher</span><b>✦</b><span>IST Lisbon</span><b>✦</b>
           <span>Sky · London</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
-          <span>Ballet Dancer</span><b>✦</b><span>Van Gogh Admirer</span><b>✦</b>
+          <span>Ballet Dancer</span><b>✦</b><span id="ticker-admirer-2">Van Gogh Admirer</span><b>✦</b>
         </div>
       </div>
+
       <div class="ab-inner">
-        <p class="room-tag">Room I — The Portrait</p>
-        <h2 class="ab-manifesto">
-          <span class="abm rup">I paint with</span>
-          <span class="abm abm-gold rup" style="--d:.08s"><em>intention —</em></span>
-          <span class="abm rup" style="--d:.16s">turning friction</span>
-          <span class="abm abm-gold rup" style="--d:.24s">into <em>light.</em></span>
-        </h2>
-        <p class="ab-bio rup" style="--d:.3s">Finishing my <strong>MSc at IST Lisbon</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky London</strong> &amp; <strong>NextFlat Zürich</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
-        <div class="ab-stats rup" style="--d:.38s">
+        <p class="room-tag rup">Room I — The Portrait</p>
+
+        <!-- Grand artist name — the centrepiece -->
+        <div class="ab-name-block rup" style="--d:.04s">
+          <span class="ab-name-line1">Constança</span>
+          <em class="ab-name-line2">Cunha</em>
+        </div>
+
+        <p class="ab-role rup" style="--d:.1s">
+          Product Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon
+        </p>
+
+        <div class="ab-rule rup" style="--d:.16s"><span class="ab-rule-diamond">◆</span></div>
+
+        <p class="ab-bio rup" style="--d:.22s">Finishing my <strong>MSc at IST Lisbon</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky London</strong> &amp; <strong>NextFlat Zürich</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
+
+        <div class="ab-stats rup" style="--d:.3s">
           <div class="ab-stat"><span class="abs-n">2+</span><span class="abs-l">years experience</span></div>
           <div class="ab-stat"><span class="abs-n">30+</span><span class="abs-l">assets shipped</span></div>
           <div class="ab-stat"><span class="abs-n">56</span><span class="abs-l">people led</span></div>
         </div>
-        <div class="ab-chips rup" style="--d:.46s">
+
+        <div class="ab-chips rup" style="--d:.38s">
           <a href="https://constancadcunha.github.io/portfolio/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>Portfolio</a>
           <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="abchip"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
           <a href="https://github.com/constancadcunha" target="_blank" class="abchip"><span class="material-symbols-outlined">code</span>GitHub</a>
           <a href="resume.pdf" download class="abchip"><span class="material-symbols-outlined">download</span>Resume</a>
         </div>
-        <div class="ab-quote rup" style="--d:.54s">
+
+        <div class="ab-quote rup" style="--d:.46s">
           <span class="abq-orn">"</span>
           <p id="abq-text">If you hear a voice within you saying 'you cannot paint' — then by all means paint, and that voice will be silenced.</p>
           <cite id="abq-cite">— Vincent van Gogh</cite>
@@ -111,86 +141,92 @@
 </section>
 
 
-<!-- ══ §2 SKILLS — Horizontal drag-scroll palette strips ══ -->
+<!-- ══ §2 SKILLS — Gallery Wall of Paintings ══ -->
 <section id="skills">
+  <canvas id="sk-bg-cv"></canvas>
   <div class="sk-intro rup">
     <p class="room-tag">Room II — The Palette</p>
     <h2 class="sk-h2">The colours I <em>paint</em> with</h2>
-    <p class="sk-drag-hint"><span class="material-symbols-outlined">drag_pan</span> drag to explore</p>
   </div>
-  <div class="sk-viewport">
-    <div class="sk-track" id="sk-track">
+  <div class="sk-gallery-wall">
 
-      <div class="sk-strip" style="--bg:linear-gradient(160deg,#061208 0%,#0f2a14 50%,#1e4a22 100%);--acc:#7dbd5a">
-        <canvas class="strip-cv"></canvas>
-        <div class="sk-strip-inner">
-          <span class="material-symbols-outlined sk-ic">design_services</span>
-          <h3 class="sk-strip-title">Design &amp; UX</h3>
-          <p class="sk-strip-sub">Where ideas become interfaces</p>
-          <div class="sk-tags">
-            <span class="skt star">Figma</span><span class="skt star">UX Research</span><span class="skt star">Prototyping</span>
-            <span class="skt">Illustrator</span><span class="skt">Photoshop</span><span class="skt">After Effects</span>
-            <span class="skt">Premiere</span><span class="skt">Usability Testing</span><span class="skt">Design Thinking</span>
-          </div>
+    <div class="sk-painting rup" style="--prot:-1.5deg;--sacc:#7dbd5a;--sbg:linear-gradient(160deg,#061208 0%,#0f2a14 55%,#1e4a22 100%)">
+      <div class="sk-paint-spotlight"></div>
+      <canvas class="sk-paint-cv"></canvas>
+      <div class="sk-paint-art">
+        <span class="sk-paint-num">I</span>
+        <span class="material-symbols-outlined sk-paint-ic">design_services</span>
+      </div>
+      <div class="sk-paint-info">
+        <h3 class="sk-paint-title">Design &amp; UX</h3>
+        <p class="sk-paint-sub">Where ideas become interfaces</p>
+        <div class="sk-tags">
+          <span class="skt star">Figma</span><span class="skt star">UX Research</span><span class="skt star">Prototyping</span>
+          <span class="skt">Illustrator</span><span class="skt">Photoshop</span><span class="skt">After Effects</span>
+          <span class="skt">Usability Testing</span><span class="skt">Design Thinking</span>
         </div>
       </div>
-
-      <div class="sk-strip" style="--bg:linear-gradient(160deg,#060b1a 0%,#0d1f3e 50%,#1a3a6e 100%);--acc:#4a7ab5">
-        <canvas class="strip-cv"></canvas>
-        <div class="sk-strip-inner">
-          <span class="material-symbols-outlined sk-ic">terminal</span>
-          <h3 class="sk-strip-title">Engineering</h3>
-          <p class="sk-strip-sub">The craft behind every pixel</p>
-          <div class="sk-tags">
-            <span class="skt star">HTML / CSS</span><span class="skt star">JavaScript</span><span class="skt star">Python</span>
-            <span class="skt">Three.js</span><span class="skt">D3.js</span><span class="skt">Julia</span>
-            <span class="skt">Java</span><span class="skt">C / C++</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sk-strip" style="--bg:linear-gradient(160deg,#180e04 0%,#3a1e08 50%,#6e3a10 100%);--acc:#e8b84b">
-        <canvas class="strip-cv"></canvas>
-        <div class="sk-strip-inner">
-          <span class="material-symbols-outlined sk-ic">language</span>
-          <h3 class="sk-strip-title">Languages</h3>
-          <p class="sk-strip-sub">Voices that carry meaning</p>
-          <div class="sk-lang-bars">
-            <div class="sklb"><span>Portuguese</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Native</span></div>
-            <div class="sklb"><span>English</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Fluent</span></div>
-            <div class="sklb"><span>Spanish</span><div class="sklb-t"><div class="sklb-f" data-w="55" style="--lc:#c97d2a"></div></div><span class="sklb-l">B1</span></div>
-            <div class="sklb"><span>French</span><div class="sklb-t"><div class="sklb-f" data-w="45" style="--lc:#8a5010"></div></div><span class="sklb-l">A2</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="sk-strip" style="--bg:linear-gradient(160deg,#0e0a1a 0%,#1c1030 50%,#2e1a58 100%);--acc:#b89ce8">
-        <canvas class="strip-cv"></canvas>
-        <div class="sk-strip-inner">
-          <span class="material-symbols-outlined sk-ic">psychology</span>
-          <h3 class="sk-strip-title">Soft Skills</h3>
-          <p class="sk-strip-sub">The human side of design</p>
-          <div class="sk-tags">
-            <span class="skt star">Leadership</span><span class="skt star">Creativity</span>
-            <span class="skt">Communication</span><span class="skt">Teamwork</span>
-            <span class="skt">Problem Solving</span><span class="skt">Adaptability</span><span class="skt">Empathy</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sk-strip sk-secret" id="sk-secret" style="--bg:linear-gradient(160deg,#0a0804 0%,#1a1408 50%,#2e220a 100%);--acc:#e8b84b">
-        <canvas class="strip-cv"></canvas>
-        <div class="sk-strip-inner">
-          <span class="material-symbols-outlined sk-ic">auto_awesome</span>
-          <h3 class="sk-strip-title">Secret Studio</h3>
-          <p class="sk-strip-sub">The brushwork nobody asked for.</p>
-          <p class="sk-secret-cta">Click to paint the night sky ✦</p>
-        </div>
-      </div>
-
+      <div class="sk-paint-frame"></div>
     </div>
-    <button class="sk-nav sk-nav-l" id="sk-nav-l"><span class="material-symbols-outlined">chevron_left</span></button>
-    <button class="sk-nav sk-nav-r" id="sk-nav-r"><span class="material-symbols-outlined">chevron_right</span></button>
+
+    <div class="sk-painting rup" style="--d:.07s;--prot:1.2deg;--sacc:#4a7ab5;--sbg:linear-gradient(160deg,#060b1a 0%,#0d1f3e 55%,#1a3a6e 100%)">
+      <div class="sk-paint-spotlight"></div>
+      <canvas class="sk-paint-cv"></canvas>
+      <div class="sk-paint-art">
+        <span class="sk-paint-num">II</span>
+        <span class="material-symbols-outlined sk-paint-ic">terminal</span>
+      </div>
+      <div class="sk-paint-info">
+        <h3 class="sk-paint-title">Engineering</h3>
+        <p class="sk-paint-sub">The craft behind every pixel</p>
+        <div class="sk-tags">
+          <span class="skt star">HTML / CSS</span><span class="skt star">JavaScript</span><span class="skt star">Python</span>
+          <span class="skt">Three.js</span><span class="skt">D3.js</span><span class="skt">Julia</span>
+          <span class="skt">Java</span><span class="skt">C / C++</span>
+        </div>
+      </div>
+      <div class="sk-paint-frame"></div>
+    </div>
+
+    <div class="sk-painting rup" style="--d:.14s;--prot:-0.8deg;--sacc:#e8b84b;--sbg:linear-gradient(160deg,#180e04 0%,#3a1e08 55%,#6e3a10 100%)">
+      <div class="sk-paint-spotlight"></div>
+      <canvas class="sk-paint-cv"></canvas>
+      <div class="sk-paint-art">
+        <span class="sk-paint-num">III</span>
+        <span class="material-symbols-outlined sk-paint-ic">language</span>
+      </div>
+      <div class="sk-paint-info">
+        <h3 class="sk-paint-title">Languages</h3>
+        <p class="sk-paint-sub">Voices that carry meaning</p>
+        <div class="sk-lang-bars">
+          <div class="sklb"><span>Portuguese</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Native</span></div>
+          <div class="sklb"><span>English</span><div class="sklb-t"><div class="sklb-f" data-w="100" style="--lc:#e8b84b"></div></div><span class="sklb-l">Fluent</span></div>
+          <div class="sklb"><span>Spanish</span><div class="sklb-t"><div class="sklb-f" data-w="55" style="--lc:#c97d2a"></div></div><span class="sklb-l">B1</span></div>
+          <div class="sklb"><span>French</span><div class="sklb-t"><div class="sklb-f" data-w="45" style="--lc:#8a5010"></div></div><span class="sklb-l">A2</span></div>
+        </div>
+      </div>
+      <div class="sk-paint-frame"></div>
+    </div>
+
+    <div class="sk-painting rup" style="--d:.21s;--prot:1.8deg;--sacc:#b89ce8;--sbg:linear-gradient(160deg,#0e0a1a 0%,#1c1030 55%,#2e1a58 100%)">
+      <div class="sk-paint-spotlight"></div>
+      <canvas class="sk-paint-cv"></canvas>
+      <div class="sk-paint-art">
+        <span class="sk-paint-num">IV</span>
+        <span class="material-symbols-outlined sk-paint-ic">psychology</span>
+      </div>
+      <div class="sk-paint-info">
+        <h3 class="sk-paint-title">Soft Skills</h3>
+        <p class="sk-paint-sub">The human side of design</p>
+        <div class="sk-tags">
+          <span class="skt star">Leadership</span><span class="skt star">Creativity</span>
+          <span class="skt">Communication</span><span class="skt">Teamwork</span>
+          <span class="skt">Problem Solving</span><span class="skt">Adaptability</span><span class="skt">Empathy</span>
+        </div>
+      </div>
+      <div class="sk-paint-frame"></div>
+    </div>
+
   </div>
 </section>
 
@@ -205,12 +241,12 @@
   <div class="exp-layout">
     <!-- Animated spine -->
     <div class="exp-spine-wrap">
-      <svg class="exp-spine-svg" viewBox="0 0 24 900" preserveAspectRatio="none">
-        <path id="exp-path" d="M12,0 C10,90 14,180 12,270 C10,360 14,450 12,540 C10,630 14,720 12,810 C10,870 12,900 12,900"
+      <svg class="exp-spine-svg" viewBox="0 0 24 1400" preserveAspectRatio="none" style="overflow:visible">
+        <path id="exp-path" d="M12,0 C10,140 14,280 12,420 C10,560 14,700 12,840 C10,980 14,1120 12,1260 C10,1360 12,1400 12,1400"
           stroke="rgba(232,184,75,0.15)" stroke-width="1" fill="none"/>
-        <path id="exp-path-fill" d="M12,0 C10,90 14,180 12,270 C10,360 14,450 12,540 C10,630 14,720 12,810 C10,870 12,900 12,900"
+        <path id="exp-path-fill" d="M12,0 C10,140 14,280 12,420 C10,560 14,700 12,840 C10,980 14,1120 12,1260 C10,1360 12,1400 12,1400"
           stroke="#e8b84b" stroke-width="1.5" fill="none"
-          stroke-dasharray="1200" stroke-dashoffset="1200"/>
+          stroke-dasharray="1800" stroke-dashoffset="1800"/>
       </svg>
     </div>
 
@@ -278,17 +314,41 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="2">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Student Leadership · Lisbon · 2021–Present</span>
-              <h3 class="exp-title">SINFO &amp; <em>Diferencial</em></h3>
+              <span class="exp-eyebrow">Student Org · Lisbon · May 2022–May 2025</span>
+              <h3 class="exp-title">SINFO</h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-2">
             <div class="exp-card-body-inner">
-              <p>Core team at Portugal's largest free tech conference. Head of HR at a 100-person student newspaper. Creative director, recruiter, culture builder.</p>
+              <p>Portugal's largest free tech conference. Grew from multimedia member to coordinator — from crafting every asset to leading the full event.</p>
               <ul>
-                <li><strong>Design director</strong> — 30+ marketing assets; led creative direction for SINFO 31.</li>
-                <li><strong>Head of HR</strong> — rose from journalist to leading all human resources.</li>
+                <li><strong>Coordinator</strong> (2024–2025) — led SINFO 32 end-to-end: team, speakers, sponsors, and logistics for 1000+ attendees.</li>
+                <li><strong>Multimedia Member</strong> (2022–2024) — produced all marketing content (video, photo, social); creative direction for SINFO 31; 30+ assets delivered.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.28s" data-i="3">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">04</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="3">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Head of HR · Lisbon · Mar 2022–May 2023</span>
+              <h3 class="exp-title">Diferencial</h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-3">
+            <div class="exp-card-body-inner">
+              <p>100-person student newspaper at IST. Led all human resources — recruitment, team culture, and organisational health.</p>
+              <ul>
+                <li><strong>Head of HR</strong> — owned all recruitment and culture initiatives for the full team.</li>
                 <li><strong>Recruitment</strong> — led intake of 56 new members in a single cycle.</li>
                 <li><strong>Culture</strong> — boosted team satisfaction scores by 65%.</li>
               </ul>
@@ -297,20 +357,45 @@
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.3s" data-i="3">
+      <div class="exp-item rup" style="--d:.36s" data-i="4">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
-          <span class="exp-num">04</span>
+          <span class="exp-num">05</span>
         </div>
         <div class="exp-card" data-open="false">
-          <button class="exp-card-head" data-target="3">
+          <button class="exp-card-head" data-target="4">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2023</span>
+              <h3 class="exp-title">Web<em>Summit</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-4">
+            <div class="exp-card-body-inner">
+              <p>Volunteer at the world's largest tech conference. Thousands of attendees, speakers, and exhibitors — and behind every smooth interaction, a volunteer.</p>
+              <ul>
+                <li><strong>Attendee support</strong> — guided speakers, press, and partners at one of tech's biggest events.</li>
+                <li><strong>Operations</strong> — kept the machine running across a multi-day, multi-venue event.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.44s" data-i="5">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">06</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="5">
             <div class="exp-card-left">
               <span class="exp-eyebrow">Education &amp; Arts · Lisbon · 2015–2022</span>
               <h3 class="exp-title">Teaching &amp; <em>Ballet</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
-          <div class="exp-card-body" id="expb-3">
+          <div class="exp-card-body" id="expb-5">
             <div class="exp-card-body-inner">
               <p>Seven years across two disciplines — the rigour of Maths &amp; Physics, and the expression of ballet. Clarity through relentless practice.</p>
               <ul>
@@ -322,25 +407,50 @@
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.4s" data-i="4">
+      <div class="exp-item rup" style="--d:.52s" data-i="6">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
-          <span class="exp-num">05</span>
+          <span class="exp-num">07</span>
         </div>
         <div class="exp-card" data-open="false">
-          <button class="exp-card-head" data-target="4">
+          <button class="exp-card-head" data-target="6">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Volunteering · Lisbon · 2012–2020</span>
-              <h3 class="exp-title">ReFood &amp; <em>Banco Alimentar</em></h3>
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2014–2020</span>
+              <h3 class="exp-title">Re<em>Food</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
-          <div class="exp-card-body" id="expb-4">
+          <div class="exp-card-body" id="expb-6">
             <div class="exp-card-body-inner">
-              <p>Eight years of showing up — food rescue, redistribution, community. Because design without humanity means nothing.</p>
+              <p>Six years of showing up — rescuing surplus food and delivering it to families in need across Lisbon. Because design without humanity means nothing.</p>
               <ul>
-                <li><strong>Food rescue</strong> — sustained multi-year commitment across national campaigns.</li>
-                <li><strong>Community</strong> — supported families facing food insecurity across Lisbon.</li>
+                <li><strong>Food rescue</strong> — weekly collections from restaurants and supermarkets.</li>
+                <li><strong>Community</strong> — direct support to families facing food insecurity.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:.60s" data-i="7">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">08</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="7">
+            <div class="exp-card-left">
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2012–2014</span>
+              <h3 class="exp-title">Banco <em>Alimentar</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-7">
+            <div class="exp-card-body-inner">
+              <p>National food bank campaigns from an early age. A long-running commitment to giving back — sorting, collecting, and distributing across the country.</p>
+              <ul>
+                <li><strong>National campaigns</strong> — participated in annual collection drives across Lisbon.</li>
+                <li><strong>Food distribution</strong> — direct warehouse and logistics support.</li>
               </ul>
             </div>
           </div>
@@ -352,137 +462,234 @@
 </section>
 
 
-<!-- ══ §4 COURSES — Full-bleed stacked hover cards ══ -->
+<!-- ══ §4 COURSES — Gallery wall framed artworks ══ -->
 <section id="courses">
-  <canvas id="courses-canvas"></canvas>
   <div class="crs-head rup">
     <p class="room-tag">Room IV — The Studio</p>
     <h2 class="crs-h2">Where I studied <em>the craft</em></h2>
   </div>
-  <div class="crs-grid">
+  <div class="crs-wall">
 
-    <div class="crs-card rup" style="--acc:#e8b84b">
-      <div class="crs-card-bg" style="background:linear-gradient(135deg,#140e02 0%,#2a1e06 60%,#3e2e0a 100%)"></div>
-      <div class="crs-card-inner">
-        <span class="crs-n">01</span>
-        <h3 class="crs-title">User Centered Design</h3>
-        <p class="crs-body">Full UCD process — user research, personas, prototyping, usability testing. Every decision grounded in real evidence. Figma; heuristic evaluations; A/B tests; accessibility audits.</p>
-        <div class="crs-chips"><span>Figma</span><span>User Research</span><span>Prototyping</span><span>Usability</span><span>Accessibility</span></div>
+    <div class="crs-artwork rup" style="--acc:#e8b84b">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">01</span>
+          <span class="material-symbols-outlined crs-painting-ic">design_services</span>
+          <h3 class="crs-title">User Centered Design</h3>
+          <p class="crs-body">Full UCD process — user research, personas, prototyping, usability testing. Every decision grounded in real evidence. Figma; heuristic evaluations; A/B tests; accessibility audits.</p>
+          <div class="crs-chips"><span>Figma</span><span>User Research</span><span>Prototyping</span><span>Usability</span><span>Accessibility</span></div>
+        </div>
+        <div class="crs-shine"></div>
       </div>
-      <div class="crs-card-glow"></div>
+      <div class="crs-label-card">
+        <strong>User Centered Design</strong>
+        <span>UX Design · Research · Accessibility</span>
+      </div>
     </div>
 
-    <div class="crs-card rup" style="--d:.06s;--acc:#4a7ab5">
-      <div class="crs-card-bg" style="background:linear-gradient(135deg,#040a18 0%,#0d1e38 60%,#162e52 100%)"></div>
-      <div class="crs-card-inner">
-        <span class="crs-n">02</span>
-        <h3 class="crs-title">Interaction Visualization</h3>
-        <p class="crs-body">Information visualization theory and interactive data exploration. Interactive charts with D3.js; dashboards and visual narratives for real datasets. Clarity through form.</p>
-        <div class="crs-chips"><span>D3.js</span><span>Data Viz</span><span>SVG</span><span>Interaction</span><span>Narrative</span></div>
+    <div class="crs-artwork rup" style="--d:.08s;--acc:#4a7ab5">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">02</span>
+          <span class="material-symbols-outlined crs-painting-ic">bar_chart</span>
+          <h3 class="crs-title">Interaction Visualization</h3>
+          <p class="crs-body">Information visualization theory and interactive data exploration. Interactive charts with D3.js; dashboards and visual narratives for real datasets. Clarity through form.</p>
+          <div class="crs-chips"><span>D3.js</span><span>Data Viz</span><span>SVG</span><span>Interaction</span><span>Narrative</span></div>
+        </div>
+        <div class="crs-shine"></div>
       </div>
-      <div class="crs-card-glow"></div>
+      <div class="crs-label-card">
+        <strong>Interaction Visualization</strong>
+        <span>D3.js · Data · SVG Charts</span>
+      </div>
     </div>
 
-    <div class="crs-card rup" style="--d:.12s;--acc:#7aaad4">
-      <div class="crs-card-bg" style="background:linear-gradient(135deg,#060e18 0%,#0e1e2e 60%,#182e44 100%)"></div>
-      <div class="crs-card-inner">
-        <span class="crs-n">03</span>
-        <h3 class="crs-title">3D Programming</h3>
-        <p class="crs-body">3D graphics — transformations, lighting models, shading pipelines. Interactive scenes with Three.js and WebGL. Built a complete browser-based 3D application as final project.</p>
-        <div class="crs-chips"><span>Three.js</span><span>WebGL</span><span>Shaders</span><span>GLSL</span><span>Lighting</span></div>
+    <div class="crs-artwork rup" style="--d:.16s;--acc:#7aaad4">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">03</span>
+          <span class="material-symbols-outlined crs-painting-ic">view_in_ar</span>
+          <h3 class="crs-title">3D Programming</h3>
+          <p class="crs-body">3D graphics — transformations, lighting models, shading pipelines. Interactive scenes with Three.js and WebGL. Built a complete browser-based 3D application as final project.</p>
+          <div class="crs-chips"><span>Three.js</span><span>WebGL</span><span>Shaders</span><span>GLSL</span><span>Lighting</span></div>
+        </div>
+        <div class="crs-shine"></div>
       </div>
-      <div class="crs-card-glow"></div>
+      <div class="crs-label-card">
+        <strong>3D Programming</strong>
+        <span>Three.js · WebGL · GLSL</span>
+      </div>
     </div>
 
-    <div class="crs-card rup" style="--d:.18s;--acc:#c97d2a">
-      <div class="crs-card-bg" style="background:linear-gradient(135deg,#140802 0%,#2e1806 60%,#4a2a0e 100%)"></div>
-      <div class="crs-card-inner">
-        <span class="crs-n">04</span>
-        <h3 class="crs-title">Interaction Design Studio</h3>
-        <p class="crs-body">Designing complex interactive systems in multidisciplinary teams. Design thinking applied to messy real-world challenges — iterative critique, rapid prototyping, live user testing.</p>
-        <div class="crs-chips"><span>Systems Design</span><span>Design Thinking</span><span>Critique</span><span>Prototyping</span></div>
+    <div class="crs-artwork rup" style="--d:.24s;--acc:#c97d2a">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">04</span>
+          <span class="material-symbols-outlined crs-painting-ic">hub</span>
+          <h3 class="crs-title">Interaction Design Studio</h3>
+          <p class="crs-body">Designing complex interactive systems in multidisciplinary teams. Design thinking applied to messy real-world challenges — iterative critique, rapid prototyping, live user testing.</p>
+          <div class="crs-chips"><span>Systems Design</span><span>Design Thinking</span><span>Critique</span><span>Prototyping</span></div>
+        </div>
+        <div class="crs-shine"></div>
       </div>
-      <div class="crs-card-glow"></div>
+      <div class="crs-label-card">
+        <strong>Interaction Design Studio</strong>
+        <span>Systems · Critique · Prototyping</span>
+      </div>
     </div>
 
-    <div class="crs-card rup" style="--d:.24s;--acc:#6b9e6b">
-      <div class="crs-card-bg" style="background:linear-gradient(135deg,#060e06 0%,#101e10 60%,#1a2e1a 100%)"></div>
-      <div class="crs-card-inner">
-        <span class="crs-n">05</span>
-        <h3 class="crs-title">Computer Graphics</h3>
-        <p class="crs-body">Rasterization, ray tracing, shading, rendering pipelines from first principles. Geometric transformations built from scratch with OpenGL. The craft behind every pixel.</p>
-        <div class="crs-chips"><span>OpenGL</span><span>Ray Tracing</span><span>Shaders</span><span>Rasterization</span><span>GLSL</span></div>
+    <div class="crs-artwork rup" style="--d:.32s;--acc:#6b9e6b">
+      <div class="crs-frame">
+        <div class="crs-frame-corner crs-fc-tl"></div>
+        <div class="crs-frame-corner crs-fc-tr"></div>
+        <div class="crs-frame-corner crs-fc-bl"></div>
+        <div class="crs-frame-corner crs-fc-br"></div>
+        <div class="crs-painting">
+          <span class="crs-painting-num">05</span>
+          <span class="material-symbols-outlined crs-painting-ic">grid_on</span>
+          <h3 class="crs-title">Computer Graphics</h3>
+          <p class="crs-body">Rasterization, ray tracing, shading, rendering pipelines from first principles. Geometric transformations built from scratch with OpenGL. The craft behind every pixel.</p>
+          <div class="crs-chips"><span>OpenGL</span><span>Ray Tracing</span><span>Shaders</span><span>Rasterization</span><span>GLSL</span></div>
+        </div>
+        <div class="crs-shine"></div>
       </div>
-      <div class="crs-card-glow"></div>
+      <div class="crs-label-card">
+        <strong>Computer Graphics</strong>
+        <span>OpenGL · Ray Tracing · GLSL</span>
+      </div>
     </div>
 
   </div>
 </section>
 
 
-<!-- ══ §5 EDUCATION — Museum room with lit canvases ══ -->
+<!-- ══ §5 EDUCATION — Official Academic Diplomas ══ -->
 <section id="education">
-  <div class="edu-room-bg">
-    <div class="edu-wall"></div>
-    <div class="edu-floor"></div>
-    <div class="edu-spot-1"></div>
-    <div class="edu-spot-2"></div>
-  </div>
   <div class="edu-head rup">
     <p class="room-tag">Room V — The Roots</p>
     <h2 class="edu-h2">Academic <em>foundations</em></h2>
   </div>
-  <div class="edu-frames">
+  <div class="edu-diplomas">
 
-    <div class="edu-frame-wrap rup" style="--d:.1s">
-      <div class="edu-frame">
-        <div class="edu-frame-border"></div>
-        <div class="edu-painting">
-          <div class="edu-painting-light"></div>
-          <div class="edu-ghost-ltr">BSc</div>
-          <div class="edu-pc">
-            <span class="edu-badge">2020 — 2023</span>
-            <p class="edu-deg-t">Bachelor of Science</p>
-            <h3 class="edu-deg-n">Computer Science<br>&amp; Engineering</h3>
-            <p class="edu-inst"><span class="material-symbols-outlined">school</span>Instituto Superior Técnico</p>
-            <div class="edu-chips">
-              <span>Software Engineering</span><span>Graphic Design</span>
-              <span>OOP &amp; Algorithms</span><span>Computer Graphics</span>
-              <span>HCI</span><span>Data Structures</span>
-            </div>
+    <div class="edu-diploma rup" style="--d:.1s">
+      <div class="edu-dip-ornament edu-dip-orn-tl">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-tr">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-bl">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-br">✦</div>
+      <div class="edu-dip-border-outer"></div>
+      <div class="edu-dip-border-mid"></div>
+      <div class="edu-dip-border-inner"></div>
+      <div class="edu-dip-inner">
+        <div class="edu-dip-header">
+          <span class="edu-dip-institution">Instituto Superior Técnico</span>
+          <div class="edu-dip-header-rule"></div>
+        </div>
+        <div class="edu-dip-seal">
+          <div class="edu-dip-seal-ring"></div>
+          <svg class="edu-dip-seal-logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IST Técnico Lisboa">
+              <text x="50" y="40" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="700" text-anchor="middle" fill="currentColor">IST</text>
+              <text x="50" y="54" font-family="Arial,sans-serif" font-size="6.5" text-anchor="middle" fill="currentColor" style="letter-spacing:1.4px">TÉCNICO LISBOA</text>
+            </svg>
+        </div>
+        <p class="edu-dip-hereby">This is to certify that</p>
+        <p class="edu-dip-name">Constança Cunha</p>
+        <p class="edu-dip-has">has successfully fulfilled all requirements for the degree of</p>
+        <h3 class="edu-dip-degree">Bachelor of Science<br><em>in Computer Science &amp; Engineering</em></h3>
+        <div class="edu-dip-rule">
+          <span class="edu-dip-rule-diamond">◆</span>
+        </div>
+        <p class="edu-dip-school"><span class="material-symbols-outlined">school</span>Universidade de Lisboa · Portugal</p>
+        <p class="edu-dip-years">2020 — 2024</p>
+        <div class="edu-dip-chips">
+          <span>Software Engineering</span><span>Graphic Design</span>
+          <span>OOP &amp; Algorithms</span><span>Computer Graphics</span>
+          <span>HCI</span><span>Data Structures</span>
+        </div>
+        <div class="edu-dip-midline"></div>
+        <div class="edu-dip-sigs">
+          <div class="edu-dip-sig">
+            <div class="edu-dip-sig-line"></div>
+            <span>Dean of Faculty</span>
           </div>
-          <div class="edu-shine-bar"></div>
+          <div class="edu-dip-sig edu-dip-sig-center">
+            <span class="edu-dip-sig-stamp">✦</span>
+          </div>
+          <div class="edu-dip-sig">
+            <div class="edu-dip-sig-line"></div>
+            <span>Department Head</span>
+          </div>
         </div>
       </div>
-      <div class="edu-plaque">
-        <strong>BSc Computer Science</strong><br>IST · 2020–2023
-      </div>
+      <div class="edu-dip-ghost">BSc</div>
     </div>
 
-    <div class="edu-frame-wrap rup" style="--d:.25s">
-      <div class="edu-frame edu-frame-lit">
-        <div class="edu-frame-border"></div>
-        <div class="edu-painting edu-painting-active">
-          <div class="edu-painting-light"></div>
-          <div class="edu-in-progress">In Progress</div>
-          <div class="edu-ghost-ltr">MSc</div>
-          <div class="edu-pc">
-            <span class="edu-badge edu-badge-gold">2023 — 2025</span>
-            <p class="edu-deg-t">Master of Science</p>
-            <h3 class="edu-deg-n">Computer Science<br>&amp; Engineering</h3>
-            <p class="edu-inst"><span class="material-symbols-outlined">school</span>Instituto Superior Técnico</p>
-            <div class="edu-chips">
-              <span>UX &amp; Interaction Design</span><span>Visualization</span>
-              <span>NLP</span><span>3D Programming</span>
-              <span>Web Technologies</span><span>HCI</span>
-            </div>
+    <div class="edu-diploma edu-diploma-active rup" style="--d:.25s">
+      <div class="edu-dip-ornament edu-dip-orn-tl">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-tr">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-bl">✦</div>
+      <div class="edu-dip-ornament edu-dip-orn-br">✦</div>
+      <div class="edu-dip-border-outer"></div>
+      <div class="edu-dip-border-mid"></div>
+      <div class="edu-dip-border-inner"></div>
+      <div class="edu-dip-progress">In Progress</div>
+      <div class="edu-dip-inner">
+        <div class="edu-dip-header">
+          <span class="edu-dip-institution">Instituto Superior Técnico</span>
+          <div class="edu-dip-header-rule"></div>
+        </div>
+        <div class="edu-dip-seal edu-dip-seal-gold">
+          <div class="edu-dip-seal-ring"></div>
+          <svg class="edu-dip-seal-logo" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IST Técnico Lisboa">
+              <text x="50" y="40" font-family="Georgia,'Times New Roman',serif" font-size="36" font-weight="700" text-anchor="middle" fill="currentColor">IST</text>
+              <text x="50" y="54" font-family="Arial,sans-serif" font-size="6.5" text-anchor="middle" fill="currentColor" style="letter-spacing:1.4px">TÉCNICO LISBOA</text>
+            </svg>
+        </div>
+        <p class="edu-dip-hereby">This is to certify that</p>
+        <p class="edu-dip-name">Constança Cunha</p>
+        <p class="edu-dip-has">is presently pursuing the requirements for the degree of</p>
+        <h3 class="edu-dip-degree">Master of Science<br><em>in Computer Science &amp; Engineering</em></h3>
+        <div class="edu-dip-rule">
+          <span class="edu-dip-rule-diamond">◆</span>
+        </div>
+        <p class="edu-dip-school"><span class="material-symbols-outlined">school</span>Universidade de Lisboa · Portugal</p>
+        <p class="edu-dip-years">2024 — 2026</p>
+        <div class="edu-dip-chips">
+          <span>UX &amp; Interaction Design</span><span>Visualization</span>
+          <span>NLP</span><span>3D Programming</span>
+          <span>Web Technologies</span><span>HCI</span>
+        </div>
+        <div class="edu-dip-midline"></div>
+        <div class="edu-dip-sigs">
+          <div class="edu-dip-sig">
+            <div class="edu-dip-sig-line"></div>
+            <span>Dean of Faculty</span>
           </div>
-          <div class="edu-shine-bar"></div>
+          <div class="edu-dip-sig edu-dip-sig-center">
+            <span class="edu-dip-sig-stamp">✦</span>
+          </div>
+          <div class="edu-dip-sig">
+            <div class="edu-dip-sig-line"></div>
+            <span>Department Head</span>
+          </div>
         </div>
       </div>
-      <div class="edu-plaque edu-plaque-gold">
-        <strong>MSc Computer Science</strong><br>IST · 2023–2025
-      </div>
+      <div class="edu-dip-ghost">MSc</div>
     </div>
 
   </div>
@@ -538,10 +745,17 @@
     </div>
 
     <div class="ctt-right rup" style="--d:.32s">
+      <!-- Van Gogh quote — shown in dark mode -->
       <blockquote class="ctt-quote">
         <span class="cttq-m">"</span>
         <p>I dream my painting<br>and I paint my dream.</p>
         <cite>— Vincent van Gogh</cite>
+      </blockquote>
+      <!-- Monet quote — shown in light mode -->
+      <blockquote class="ctt-quote ctt-quote-monet">
+        <span class="cttq-m">"</span>
+        <p>I must have flowers,<br>always and always.</p>
+        <cite>— Claude Monet</cite>
       </blockquote>
       <div class="ctt-soc-grid">
         <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="ctt-soc"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
@@ -550,7 +764,7 @@
         <a href="Constanca_Cunha_Designs.zip" download class="ctt-soc"><span class="material-symbols-outlined">folder_zip</span>Projects</a>
       </div>
       <div class="ctt-mpaint">
-        <p class="ctt-mpl"><span class="material-symbols-outlined">brush</span>Paint your own starry night</p>
+        <p class="ctt-mpl" id="ctt-mpl-text"><span class="material-symbols-outlined">brush</span>Paint your own starry night</p>
         <canvas id="mini-canvas" width="300" height="150"></canvas>
         <div class="ctt-mpc">
           <button class="mdot on" data-c="#e8b84b" style="--dc:#e8b84b"></button>
@@ -566,15 +780,15 @@
 </section>
 
 <footer>
-  <span>Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2025</span>
+  <span class="footer-credit">Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2025</span>
   <button id="footer-star"><span class="material-symbols-outlined">star</span></button>
 </footer>
 
 <div id="egg-modal" aria-hidden="true">
   <div class="egg-box">
     <button id="egg-close"><span class="material-symbols-outlined">close</span></button>
-    <h3>Paint Your Starry Night</h3>
-    <p class="egg-sub">Drag your brush across the canvas.</p>
+    <h3 id="egg-title">Paint Your Starry Night</h3>
+    <p class="egg-sub" id="egg-sub-text">Drag your brush across the canvas.</p>
     <canvas id="egg-canvas" width="560" height="340"></canvas>
     <div class="egg-ctrl">
       <button class="epdot on" data-c="#E8B84B" style="--bc:#E8B84B"></button>
@@ -585,7 +799,7 @@
       <button class="epdot" data-c="#ffffff" style="--bc:#ffffff"></button>
       <button id="egg-clear"><span class="material-symbols-outlined">restart_alt</span>Clear</button>
     </div>
-    <p class="egg-quote">"I dream my painting and I paint my dream." — Van Gogh</p>
+    <p class="egg-quote" id="egg-quote-text">"I dream my painting and I paint my dream." — Van Gogh</p>
   </div>
 </div>
 
