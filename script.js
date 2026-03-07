@@ -637,6 +637,11 @@ function updateEggTexts(isLight){
   }
 }
 
+function updateFavicon(isLight){
+  const link=document.querySelector('link[rel="icon"]');
+  if(link)link.href=isLight?'favicon-light.svg':'favicon-dark.svg';
+}
+
 function updateTheme(isLight){
   // Switch bg canvas particle palette
   activePal=isLight?MONET_PAL.slice():VG_PAL.slice();
@@ -650,6 +655,8 @@ function updateTheme(isLight){
   updateMiniPalette(isLight);
   // Update egg modal texts
   updateEggTexts(isLight);
+  // Swap favicon
+  updateFavicon(isLight);
   // Reset about quotes to first quote of new set
   if(window.resetAboutQuotes)window.resetAboutQuotes();
   // Refresh mini canvas background
