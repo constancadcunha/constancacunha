@@ -1233,15 +1233,6 @@ body.light .edu-dip-border-inner{border-color:rgba(90,140,120,.1)}
 body.light .edu-dip-ornament{opacity:.55}
 body.light .edu-diploma:hover .edu-dip-ornament{opacity:1}
 
-/* In Progress badge */
-.edu-dip-progress{
-  position:absolute;top:18px;right:48px;
-  font-family:var(--mono);font-size:.46rem;letter-spacing:.12em;text-transform:uppercase;
-  color:#e8b84b;background:rgba(232,184,75,.1);border:1px solid rgba(232,184,75,.28);
-  padding:3px 9px;z-index:3;
-}
-body.light .edu-dip-progress{color:var(--gold);background:rgba(90,140,120,.1);border-color:rgba(90,140,120,.3)}
-
 /* Diploma header */
 .edu-dip-header{
   display:flex;flex-direction:column;align-items:center;gap:5px;

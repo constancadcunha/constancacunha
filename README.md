@@ -2,7 +2,7 @@
 
 ## Description
 
-Welcome to my personal website! I’m **Constança Cunha**, a passionate **front-end developer** dedicated to creating intuitive web experiences. Currently pursuing my **Master's in Computer Science** at **Instituto Superior Técnico**, I specialize in merging technical expertise with creative problem-solving.
+Welcome to my personal website! I’m **Constança Cunha**, a passionate **front-end developer** dedicated to creating intuitive web experiences. I hold a **Master's in Computer Science** (Interaction & Visualization) from **Instituto Superior Técnico**, I specialize in merging technical expertise with creative problem-solving.
 
 This website showcases my journey, skills, and projects, highlighting my commitment to enhancing user experiences through innovative web solutions.
 
