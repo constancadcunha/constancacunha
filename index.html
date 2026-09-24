@@ -144,7 +144,7 @@
     <p class="room-tag">Room II — The Palette</p>
     <h2 class="sk-h2">The colours I <em>paint</em> with</h2>
   </div>
-  <div class="sk-gallery-wall">
+  <div class="sk-gallery-wall" tabindex="0" role="region" aria-label="Skills gallery">
 
     <div class="sk-painting rup" style="--prot:-1.5deg;--sacc:#7dbd5a;--sbg:linear-gradient(160deg,#061208 0%,#0f2a14 55%,#1e4a22 100%)">
       <div class="sk-paint-spotlight"></div>
@@ -816,8 +816,8 @@
             <input type="email" name="email" placeholder="your@email.com" required/>
           </div>
           <div class="ctt-field">
-            <label><span class="material-symbols-outlined">subject</span>Re:</label>
-            <select name="subject" required>
+            <label for="ctt-subject"><span class="material-symbols-outlined" aria-hidden="true">subject</span>Re:<span class="sr-only"> Subject</span></label>
+            <select id="ctt-subject" name="subject" required>
               <option value="" disabled selected>Choose a subject…</option>
               <option>Collaboration</option><option>Job Opportunity</option>
               <option>Project Inquiry</option><option>General Question</option>
