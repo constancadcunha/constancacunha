@@ -1948,3 +1948,10 @@ body.light .ctt-send{color:#fff}
   #nav.mob-open{backdrop-filter:none;-webkit-backdrop-filter:none}
   #nav .nav-ul{height:100vh;height:100dvh;gap:clamp(14px,3.2vh,32px);overflow-y:auto;padding:64px 0 24px}
 }
+
+/* Visually hidden, still read by screen readers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* Skills gallery is keyboard-scrollable; outline drawn inside so the section's overflow can't clip it */
+.sk-gallery-wall{padding-top:20px}
+.sk-gallery-wall:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
