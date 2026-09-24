@@ -6,6 +6,15 @@ const lerp=(a,b,t)=>a+(b-a)*t;
 const R=(a,b)=>a+Math.random()*(b-a);
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
+/* reduced motion: canvases paint a still frame instead of looping */
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const stills=[];
+function animate(step,n=1){
+  if(!RM){(function f(){step(false);requestAnimationFrame(f);})();return;}
+  const run=()=>{for(let i=0;i<n;i++)step(true);};
+  run();stills.push(run);addEventListener('resize',run);
+}
+
 /* ══════════════════════════════════════
    THEME-AWARE PALETTE CONSTANTS
 ══════════════════════════════════════ */
@@ -74,8 +83,8 @@ let activeTrail=VG_TRAIL.slice();
     for(let i=0;i<55;i++)stars.push({x:R(0,100),y:R(0,72),r:R(.5,2.3),ph:R(0,Math.PI*2),fr:R(.4,1.9),halo:Math.random()>.5});
   }
   build();addEventListener('resize',build);
-  (function loop(){
-    if(!document.hidden){
+  animate(still=>{
+    if(still||!document.hidden){
       const isLM=document.body.classList.contains('light');
       cx.globalAlpha=.017;cx.fillStyle=isLM?'rgba(236,232,224,1)':'#03050c';cx.fillRect(0,0,W,H);
       pts.forEach(p=>{p.tick();p.draw();});
@@ -100,14 +109,14 @@ let activeTrail=VG_TRAIL.slice();
       }
       cx.globalAlpha=1;T++;
     }
-    requestAnimationFrame(loop);
-  })();
+  },260);
 })();
 
 /* ══════════════════════════════════════
    BRUSH TRAIL
 ══════════════════════════════════════ */
 (()=>{
+  if(RM)return;
   const cv=$('#trail-canvas'),cx=cv.getContext('2d');
   let W,H;
   function r(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
@@ -237,8 +246,8 @@ let activeTrail=VG_TRAIL.slice();
   let heroVisible=true;
   const heroObs=new IntersectionObserver(([e])=>{heroVisible=e.isIntersecting;},{rootMargin:'50px'});
   heroObs.observe(cv);
-  (function loop(){
-    if(heroVisible&&!document.hidden){
+  animate(still=>{
+    if(still||(heroVisible&&!document.hidden)){
     const isLM=document.body.classList.contains('light');
     cx.clearRect(0,0,W,H);
     if(isLM){
@@ -261,8 +270,7 @@ let activeTrail=VG_TRAIL.slice();
     }
     T++;
     }
-    requestAnimationFrame(loop);
-  })();
+  });
 })();
 
 /* ══════════════════════════════════════
@@ -297,7 +305,7 @@ let activeTrail=VG_TRAIL.slice();
 ══════════════════════════════════════ */
 (()=>{
   const nav=$('#nav'),links=$$('.nav-ul a');
-  const IDS=['hero','about','skills','experience','courses','education','contacts'];
+  const IDS=['hero','about','skills','experience','workshop','courses','education','contacts'];
   addEventListener('scroll',()=>{
     nav.classList.toggle('slim',scrollY>60);
     let cur='';IDS.forEach(id=>{const el=document.getElementById(id);if(el&&scrollY>=el.offsetTop-220)cur=id;});
@@ -334,7 +342,7 @@ let activeTrail=VG_TRAIL.slice();
 ══════════════════════════════════════ */
 $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
 (()=>{
-  const ring=$('#orbit-ring');if(!ring)return;
+  const ring=$('#orbit-ring');if(!ring||RM)return;
   const words=['design','dream','create','craft','build','paint','imagine','ship','iterate','research','prototype','UX','sketch','refine','motion','light'];
   let idx=0;
   setInterval(()=>{
@@ -348,6 +356,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
    SCROLL REVEAL
 ══════════════════════════════════════ */
 (()=>{
+  if(RM){$$('.rup').forEach(el=>el.classList.add('vis'));return;}
   const obs=new IntersectionObserver(es=>{
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
   },{threshold:.055});
@@ -360,7 +369,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
 (()=>{
   // Wipe canvas (paint reveal effect)
   const wipe=$('#ab-wipe');
-  if(wipe){
+  if(wipe&&!RM){
     const wx=wipe.getContext('2d');let W=0,H=0,T=0,phase=0;
     function rz(){W=wipe.width=wipe.offsetWidth||400;H=wipe.height=wipe.offsetHeight||600;}
     rz();addEventListener('resize',rz);
@@ -385,7 +394,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
   // Portrait parallax
   const col=document.getElementById('ab-img-col');
   const img=document.getElementById('ab-img');
-  if(col&&img){
+  if(col&&img&&!RM){
     document.addEventListener('mousemove',e=>{
       const rx=(e.clientX/innerWidth-.5)*4;const ry=(e.clientY/innerHeight-.5)*2.5;
       img.style.transform=`scale(1.05) translate(${rx}px,${ry}px)`;
@@ -426,7 +435,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
   }
   $('#abq-prev')?.addEventListener('click',()=>show(qi-1));
   $('#abq-next')?.addEventListener('click',()=>show(qi+1));
-  setInterval(()=>show(qi+1),7800);
+  if(!RM)setInterval(()=>show(qi+1),7800);
   // Export for theme switching — reset to quote 0 with new palette
   window.resetAboutQuotes=()=>show(0);
 })();
@@ -451,8 +460,8 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
     let skVisible=false;
     const skSecObs=new IntersectionObserver(([e])=>{skVisible=e.isIntersecting;},{rootMargin:'100px'});
     skSecObs.observe(bgCv.closest('section')||bgCv);
-    (function bloop(){
-      if(skVisible&&!document.hidden){
+    animate(still=>{
+      if(still||(skVisible&&!document.hidden)){
       const isLM=document.body.classList.contains('light');
       bgCx.globalAlpha=.014;bgCx.fillStyle=isLM?'rgba(216,232,220,1)':'#04020c';bgCx.fillRect(0,0,BW,BH);
       bpts.forEach(p=>{
@@ -469,8 +478,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
       });
       bgCx.globalAlpha=1;BT++;
       }
-      requestAnimationFrame(bloop);
-    })();
+    },300);
   }
 
   // Per-painting canvas — visible Van Gogh arc swirls
@@ -495,8 +503,8 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
       al:R(.1,.38)
     }));
     arcs.forEach(a=>{a.ml=a.life;});
-    (function loop(){
-      if(paintVisible&&!document.hidden){
+    animate(still=>{
+      if(still||(paintVisible&&!document.hidden)){
       const isLM=document.body.classList.contains('light');
       cx.globalAlpha=.028;cx.fillStyle=isLM?'rgba(255,255,255,.45)':'rgba(0,0,0,.88)';cx.fillRect(0,0,W,H);
       arcs.forEach(arc=>{
@@ -513,8 +521,7 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
       });
       cx.globalAlpha=1;T++;
       }
-      requestAnimationFrame(loop);
-    })();
+    },160);
   });
 
   // Animate language bars when painting is visible
@@ -532,11 +539,14 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
 (()=>{
   // Accordion
   $$('.exp-card-head').forEach(btn=>{
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-controls','expb-'+btn.dataset.target);
+    btn.querySelector('.exp-toggle-icon')?.setAttribute('aria-hidden','true');
     btn.addEventListener('click',()=>{
-      const i=btn.dataset.target;const card=btn.closest('.exp-card');
+      const card=btn.closest('.exp-card');
       const isOpen=card.dataset.open==='true';
-      $$('.exp-card').forEach(c=>{c.dataset.open='false';c.querySelector('.exp-toggle-icon').textContent='add';});
-      if(!isOpen){card.dataset.open='true';btn.querySelector('.exp-toggle-icon').textContent='remove';}
+      $$('.exp-card').forEach(c=>{c.dataset.open='false';c.querySelector('.exp-toggle-icon').textContent='add';c.querySelector('.exp-card-head').setAttribute('aria-expanded','false');});
+      if(!isOpen){card.dataset.open='true';btn.querySelector('.exp-toggle-icon').textContent='remove';btn.setAttribute('aria-expanded','true');}
     });
   });
 
@@ -550,9 +560,44 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
       es.forEach(e=>{if(e.isIntersecting)animatePath();});
     },{threshold:.05});
     const section=$('#experience');if(section)obs.observe(section);
-    function animatePath(){let offset=total;const step=total/120;
+    if(RM)path.style.strokeDashoffset=0;
+    function animatePath(){if(RM)return;let offset=total;const step=total/120;
       (function frame(){offset=Math.max(0,offset-step);path.style.strokeDashoffset=offset;if(offset>0)requestAnimationFrame(frame);})();}
   }
+})();
+
+/* ══════════════════════════════════════
+   SINFO designs — side-gallery dialog (from designs.json)
+══════════════════════════════════════ */
+(()=>{
+  const btn=$('#sinfo-designs-btn'),dlg=$('#sinfo-dialog'),grid=$('#sd-grid');
+  if(!btn||!dlg||!grid)return;
+  const DIR='sinfo-graphic-designs/';
+  let loaded=false;
+  async function load(){
+    if(loaded)return;loaded=true;
+    try{
+      const res=await fetch('designs.json');
+      const items=await res.json();
+      grid.innerHTML='';
+      items.forEach(({fileName,title})=>{
+        const full=DIR+encodeURIComponent(fileName);
+        const thumb=DIR+'thumbs/'+encodeURIComponent(fileName.replace(/\.png$/i,'.jpg'));
+        const fig=document.createElement('figure');fig.className='sd-item';
+        const a=document.createElement('a');a.href=full;a.target='_blank';a.rel='noopener noreferrer';
+        a.setAttribute('aria-label',title+', full size (opens in a new tab)');
+        const img=document.createElement('img');img.src=thumb;img.alt=title+', a SINFO design by Constança Cunha';img.loading='lazy';img.decoding='async';
+        const cap=document.createElement('figcaption');cap.textContent=title;
+        a.appendChild(img);fig.append(a,cap);grid.appendChild(fig);
+      });
+    }catch(e){
+      loaded=false;
+      grid.textContent='The designs could not be loaded right now.';
+    }
+  }
+  btn.addEventListener('click',()=>{load();dlg.showModal();});
+  $('#sd-close')?.addEventListener('click',()=>dlg.close());
+  dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close();});
 })();
 
 /* ══════════════════════════════════════
@@ -569,8 +614,8 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
   let candleVisible=false;
   const candleObs=new IntersectionObserver(([e])=>{candleVisible=e.isIntersecting;},{rootMargin:'100px'});
   candleObs.observe(cv);
-  (function loop(){
-    if(!candleVisible||document.hidden){requestAnimationFrame(loop);return;}
+  animate(still=>{
+    if(!still&&(!candleVisible||document.hidden))return;
     cx.clearRect(0,0,W,H);const t=T*.03;
     const g=cx.createRadialGradient(W*.28,H*.55,0,W*.28,H*.55,H*.42);
     g.addColorStop(0,`rgba(201,125,42,${.06+.025*Math.sin(t)})`);
@@ -583,8 +628,8 @@ $$('.h1-word').forEach((el,i)=>el.style.animationDelay=(i*80)+'ms');
       const al=s.life/s.ml;
       cx.beginPath();cx.arc(s.x*W,s.y*H,R(.4,1.4),0,Math.PI*2);cx.fillStyle=`rgba(245,210,130,${al*.38})`;cx.fill();
     });
-    cx.globalAlpha=1;T++;requestAnimationFrame(loop);
-  })();
+    cx.globalAlpha=1;T++;
+  });
 })();
 
 /* ══════════════════════════════════════
@@ -701,6 +746,10 @@ function updateTheme(isLight){
   if(window.resetAboutQuotes)window.resetAboutQuotes();
   // Refresh mini canvas background
   if(window.refreshMiniCanvasBg)window.refreshMiniCanvasBg();
+  // Repaint still canvases (reduced motion) in the new palette
+  stills.forEach(run=>run());
+  const tb=document.getElementById('theme-btn');
+  if(tb)tb.setAttribute('aria-label',isLight?'Switch to dark theme':'Switch to light theme');
 }
 
 /* ══════════════════════════════════════

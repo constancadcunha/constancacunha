@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Constança Cunha — Product Designer</title>
+  <title>Constança Cunha — Design Engineer</title>
+  <meta name="description" content="Constança Cunha, design engineer in Lisbon. I design in Figma and ship in code: Frontend Developer at Phira Ventures, previously nextflat and Sky. M.Sc. Computer Science, Instituto Superior Técnico. Open to relocation, EU citizen."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://constancadcunha.github.io/constancacunha/"/>
+  <meta property="og:title" content="Constança Cunha — Design Engineer"/>
+  <meta property="og:description" content="Design engineer. I design in Figma and ship in code. Frontend Developer at Phira Ventures, Lisbon."/>
+  <meta property="og:image" content="https://constancadcunha.github.io/constancacunha/img/profile.jpeg"/>
+  <meta property="og:image:alt" content="Portrait of Constança Cunha"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link rel="icon" type="image/svg+xml" href="favicon-dark.svg"/>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=IM+Fell+English:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
@@ -19,17 +27,18 @@
 </div>
 
 <nav id="nav">
-  <button class="nav-logo" id="nav-logo">CC</button>
+  <button class="nav-logo" id="nav-logo" aria-label="Back to top">CC</button>
   <ul class="nav-ul">
     <li><a href="#hero">Atelier<small>Home</small></a></li>
     <li><a href="#about">Portrait<small>About</small></a></li>
     <li><a href="#skills">Palette<small>Skills</small></a></li>
     <li><a href="#experience">Gallery<small>Experience</small></a></li>
+    <li><a href="#workshop">Workshop<small>Projects</small></a></li>
     <li><a href="#courses">Studio<small>Courses</small></a></li>
     <li><a href="#education">Roots<small>Education</small></a></li>
     <li><a href="#contacts">Letter<small>Contact</small></a></li>
   </ul>
-  <button id="theme-btn"><span class="material-symbols-outlined" id="theme-icon">light_mode</span></button>
+  <button id="theme-btn" aria-label="Switch to light theme"><span class="material-symbols-outlined" id="theme-icon" aria-hidden="true">light_mode</span></button>
   <button id="nav-ham" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -38,14 +47,15 @@
   <canvas id="hero-canvas" width="1" height="1"></canvas>
   <div class="orbit-ring" id="orbit-ring"></div>
   <div class="hero-content">
-    <p class="hero-label">Product Designer &nbsp;·&nbsp; UX Researcher &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon, Portugal</p>
+    <p class="hero-label">Design Engineer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Product Designer &nbsp;·&nbsp; Lisbon, Portugal</p>
     <h1 class="hero-h1" id="hero-h1">
       <span class="h1-word">Con</span><span class="h1-word">stan</span><span class="h1-word">ça</span><br>
       <em><span class="h1-word">Cu</span><span class="h1-word">nha</span></em>
     </h1>
-    <p class="hero-tagline"><strong>Product Designer</strong> — I turn messy user problems into interfaces that actually <strong>work.</strong><br><span class="hero-tagline-sub">CS background · frontend fluent · shipped on live products.</span></p>
+    <p class="hero-tagline"><strong>Design engineer.</strong> I design in Figma and ship in code.<br><span class="hero-tagline-sub">CS background · frontend fluent · shipped on live products.</span></p>
     <div class="hero-ctas">
       <a href="#about" class="cta-fill"><span class="material-symbols-outlined">brush</span>Enter the Atelier</a>
+      <a href="https://constancadcunha.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="cta-ghost"><span class="material-symbols-outlined">open_in_new</span>View Portfolio</a>
       <a href="#contacts" class="cta-ghost"><span class="material-symbols-outlined">mail</span>Write Me</a>
     </div>
   </div>
@@ -57,7 +67,7 @@
       <div class="ab-wall"></div>
       <div class="ab-spotlight"></div>
       <div class="ab-painting-wrap">
-        <img src="img/profile.jpeg" alt="Constança" id="ab-img"/>
+        <img src="img/profile.jpeg" alt="Portrait of Constança Cunha" id="ab-img"/>
         <div class="ab-img-grain"></div>
         <canvas id="ab-wipe" class="ab-wipe"></canvas>
       </div>
@@ -66,8 +76,8 @@
       <div class="ab-placard">
         <span class="ab-placard-room">Room I · The Portrait</span>
         <strong class="ab-placard-title">Constança Cunha</strong>
-        <span class="ab-placard-sub">Product Designer &amp; Engineer</span>
-        <span class="ab-placard-year">Lisbon, Portugal &nbsp;·&nbsp; c. 2023</span>
+        <span class="ab-placard-sub">Design Engineer</span>
+        <span class="ab-placard-year">Lisbon, Portugal &nbsp;·&nbsp; c. 2026</span>
       </div>
       <div class="ab-floor"></div>
     </div>
@@ -75,10 +85,12 @@
     <div class="ab-text-col">
       <div class="ab-ticker-wrap">
         <div class="ab-ticker">
+          <span>Design Engineer</span><b>✦</b><span>Phira Ventures · Lisbon</span><b>✦</b>
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
           <span>UX Researcher</span><b>✦</b><span>Instituto Superior Técnico</span><b>✦</b>
           <span>Sky · Lisbon</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
           <span>Ballet Dancer</span><b>✦</b><span id="ticker-admirer-1">Van Gogh Admirer</span><b>✦</b>
+          <span>Design Engineer</span><b>✦</b><span>Phira Ventures · Lisbon</span><b>✦</b>
           <span>Product Designer</span><b>✦</b><span>Front-End Developer</span><b>✦</b>
           <span>UX Researcher</span><b>✦</b><span>Instituto Superior Técnico</span><b>✦</b>
           <span>Sky · Lisbon</span><b>✦</b><span>NextFlat · Zürich</span><b>✦</b>
@@ -94,21 +106,22 @@
         </div>
 
         <p class="ab-role rup" style="--d:.1s">
-          Product Designer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon
+          Design Engineer &nbsp;·&nbsp; Front-End Developer &nbsp;·&nbsp; Lisbon
         </p>
 
         <div class="ab-rule rup" style="--d:.16s"><span class="ab-rule-diamond">◆</span></div>
 
-        <p class="ab-bio rup" style="--d:.22s">Finishing my <strong>MSc at Instituto Superior Técnico</strong> in UX &amp; Interaction Design. Shipped real products at <strong>Sky</strong> &amp; <strong>nextflat CH</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
+        <p class="ab-bio rup" style="--d:.22s">M.Sc. in Computer Science (Interaction &amp; Visualization) at <strong>Instituto Superior Técnico</strong>, GPA 18/20. Now a Frontend Developer at <strong>Phira Ventures</strong>, after shipping real products at <strong>Sky</strong> &amp; <strong>nextflat CH</strong>. Seven years teaching ballet &amp; maths. Eight years volunteering.</p>
 
         <div class="ab-stats rup" style="--d:.3s">
-          <div class="ab-stat"><span class="abs-n">5k+</span><span class="abs-l">conference attendees</span></div>
-          <div class="ab-stat"><span class="abs-n">500+</span><span class="abs-l">platform users</span></div>
-          <div class="ab-stat"><span class="abs-n">~30%</span><span class="abs-l">faster feature builds</span><span class="abs-ctx">via CSS component library · nextflat</span></div>
+          <div class="ab-stat"><span class="abs-n">200k+</span><span class="abs-l">customers on the storefront I build</span><span class="abs-ctx">mySheepi · Phira Ventures</span></div>
+          <div class="ab-stat"><span class="abs-n">~10×</span><span class="abs-l">average daily sales growth</span><span class="abs-ctx">mySheepi, since Apr 2026</span></div>
+          <div class="ab-stat"><span class="abs-n">20s → 90s</span><span class="abs-l">PageSpeed score</span><span class="abs-ctx">mySheepi rebuild</span></div>
+          <div class="ab-stat"><span class="abs-n">~30%</span><span class="abs-l">faster feature builds</span><span class="abs-ctx">design system · nextflat</span></div>
         </div>
 
         <div class="ab-chips rup" style="--d:.38s">
-          <a href="https://constancadcunha.github.io/portfolio/" target="_blank" class="abchip abchip-hero"><span class="material-symbols-outlined">open_in_new</span>View Portfolio</a>
+          <a href="https://constancadcunha.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="abchip abchip-hero"><span class="material-symbols-outlined">open_in_new</span>View Portfolio</a>
         </div>
 
         <div class="ab-quote rup" style="--d:.46s">
@@ -116,9 +129,9 @@
           <p id="abq-text">If you hear a voice within you saying 'you cannot paint' — then by all means paint, and that voice will be silenced.</p>
           <cite id="abq-cite">— Vincent van Gogh</cite>
           <div class="abq-row">
-            <button class="abq-btn" id="abq-prev">←</button>
+            <button class="abq-btn" id="abq-prev" aria-label="Previous quote">←</button>
             <div class="abq-dots" id="abq-dots"></div>
-            <button class="abq-btn" id="abq-next">→</button>
+            <button class="abq-btn" id="abq-next" aria-label="Next quote">→</button>
           </div>
         </div>
       </div>
@@ -146,6 +159,7 @@
         <div class="sk-tags">
           <span class="skt star">Figma</span><span class="skt star">UX Research</span><span class="skt star">Prototyping</span>
           <span class="skt">Illustrator</span><span class="skt">Photoshop</span><span class="skt">After Effects</span>
+          <span class="skt">Premiere Pro</span><span class="skt">Visual Identity</span>
           <span class="skt">Usability Testing</span><span class="skt">Design Thinking</span>
         </div>
       </div>
@@ -163,7 +177,9 @@
         <h3 class="sk-paint-title">Engineering</h3>
         <p class="sk-paint-sub">The craft behind every pixel</p>
         <div class="sk-tags">
-          <span class="skt star">HTML / CSS</span><span class="skt star">JavaScript</span><span class="skt star">Python</span>
+          <span class="skt star">Next.js</span><span class="skt star">React</span><span class="skt star">TypeScript</span>
+          <span class="skt star">Tailwind CSS</span><span class="skt star">Shopify Liquid</span>
+          <span class="skt">HTML / CSS</span><span class="skt">JavaScript</span><span class="skt">Python</span>
           <span class="skt">Three.js</span><span class="skt">D3.js</span><span class="skt">Julia</span>
           <span class="skt">Java</span><span class="skt">C / C++</span>
         </div>
@@ -210,6 +226,24 @@
       <div class="sk-paint-frame"></div>
     </div>
 
+    <div class="sk-painting rup" style="--d:.28s;--prot:-1.1deg;--sacc:#d98b6a;--sbg:linear-gradient(160deg,#180806 0%,#34140e 55%,#5e2618 100%)">
+      <div class="sk-paint-spotlight"></div>
+      <canvas class="sk-paint-cv"></canvas>
+      <div class="sk-paint-art">
+        <span class="sk-paint-num">V</span>
+        <span class="material-symbols-outlined sk-paint-ic">auto_awesome</span>
+      </div>
+      <div class="sk-paint-info">
+        <h3 class="sk-paint-title">AI Workflow</h3>
+        <p class="sk-paint-sub">New brushes, same hand</p>
+        <div class="sk-tags">
+          <span class="skt star">Cursor</span><span class="skt star">Claude Code</span>
+          <span class="skt">LLM Integration</span>
+        </div>
+      </div>
+      <div class="sk-paint-frame"></div>
+    </div>
+
   </div>
 </section>
 <section id="experience">
@@ -239,12 +273,34 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="0">
             <div class="exp-card-left">
+              <span class="exp-eyebrow">Frontend Developer · Lisbon, Hybrid · Apr 2026–present</span>
+              <h3 class="exp-title">Phira <em>Ventures</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-0">
+            <div class="exp-card-body-inner">
+              <p>Two very different projects under one roof. For <strong>mySheepi</strong>, a German sleep brand with <span class="exp-hl">200,000+</span> customers, I'm redesigning and rebuilding the Shopify storefront: PageSpeed scores went from the <span class="exp-hl">20s–30s</span> to the <span class="exp-hl">80s–90s</span>, and average daily sales have grown roughly <span class="exp-hl">10×</span> since I joined. I also built the team's KPI dashboard, which watches the live site and flags problems (accessibility included) the moment they happen, plus a scheduler for promotions.</p>
+              <p>For <strong>Margem</strong>, a new bookstore opening in Ericeira, I'm the only designer and developer, building its website from the ground up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:0.08s" data-i="1">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">02</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="1">
+            <div class="exp-card-left">
               <span class="exp-eyebrow">Product Design &amp; Frontend Engineering · Zürich, Remote · Sep 2025–Mar 2026</span>
               <h3 class="exp-title">nextflat <em>CH</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
-          <div class="exp-card-body" id="expb-0">
+          <div class="exp-card-body" id="expb-1">
             <div class="exp-card-body-inner">
               <p>Remote work on a live real estate platform used by <span class="exp-hl">500+</span> people in Zurich. Redesigned the homepage, dashboards, and feed to make them actually usable — then worked directly with engineers to ship it across <span class="exp-hl">2</span> release cycles.</p>
               <p>Built a CSS module component library from atomic design principles. Implementation time for new features dropped by roughly <span class="exp-hl">~30%</span>. Features went through multiple rounds of stakeholder and user feedback before shipping — balancing what people asked for with what the product actually needed.</p>
@@ -253,29 +309,7 @@
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.1s" data-i="1">
-        <div class="exp-marker">
-          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
-          <span class="exp-num">02</span>
-        </div>
-        <div class="exp-card" data-open="false">
-          <button class="exp-card-head" data-target="1">
-            <div class="exp-card-left">
-              <span class="exp-eyebrow">Front-End Developer Internship · Lisbon · Jul–Aug 2024</span>
-              <h3 class="exp-title">Sky</h3>
-            </div>
-            <span class="exp-toggle-icon material-symbols-outlined">add</span>
-          </button>
-          <div class="exp-card-body" id="expb-1">
-            <div class="exp-card-body-inner">
-              <p>Two months in Lisbon. Built an internal STB device management system from nothing in under <span class="exp-hl">2 weeks</span>. Before it existed, onboarding a device took several days. After: <span class="exp-hl">&lt;4 hours</span>.</p>
-              <p>Also automated repetitive workflows and built structured data exports used across all operational teams. Most of it came from talking to the people who'd actually use the thing before writing a single line of code.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item rup" style="--d:.2s" data-i="2">
+      <div class="exp-item rup" style="--d:0.16s" data-i="2">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
           <span class="exp-num">03</span>
@@ -283,21 +317,21 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="2">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Student Org · Lisbon · Mar 2022–May 2025</span>
-              <h3 class="exp-title">SINFO</h3>
+              <span class="exp-eyebrow">Apprentice Developer · Internship · Lisbon · Jul–Sep 2024</span>
+              <h3 class="exp-title">Sky</h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-2">
             <div class="exp-card-body-inner">
-              <p>Started making content, ended up running the conference. Three years at Portugal's largest free tech event — <span class="exp-hl">5,000+</span> attendees, <span class="exp-hl">85+</span> partner companies, entirely free to attend.</p>
-              <p>As Coordinator (2024–2025), led a <span class="exp-hl">30-person</span> team through the full event cycle: curating speakers, securing Tier-1 sponsorships including Oracle, and coordinating national media coverage through CNN Portugal. As Multimedia Team Member (2022–2024), handled production and communications across two consecutive editions.</p>
+              <p>Three months in Lisbon. Built an internal STB device management system from nothing in under <span class="exp-hl">2 weeks</span>. Before it existed, onboarding a device took several days. After: <span class="exp-hl">&lt;4 hours</span>.</p>
+              <p>Also automated repetitive workflows and built structured data exports used across all operational teams. Most of it came from talking to the people who'd actually use the thing before writing a single line of code.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.28s" data-i="3">
+      <div class="exp-item rup" style="--d:0.24s" data-i="3">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
           <span class="exp-num">04</span>
@@ -305,12 +339,35 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="3">
             <div class="exp-card-left">
+              <span class="exp-eyebrow">Student Org · Lisbon · May 2022–May 2025</span>
+              <h3 class="exp-title">SINFO</h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-3">
+            <div class="exp-card-body-inner">
+              <p>Started making content, ended up running the conference. Three years at Portugal's largest free tech event — <span class="exp-hl">5,000+</span> attendees, <span class="exp-hl">85+</span> partner companies, entirely free to attend.</p>
+              <p>As Coordinator (2024–2025), led a <span class="exp-hl">30-person</span> team through the full event cycle: curating speakers, securing Tier-1 sponsorships including Oracle, and coordinating national media coverage through CNN Portugal. As Multimedia Designer (2022–2024), designed <span class="exp-hl">30+</span> graphics, from posters and social content to merchandise, including two of SINFO's top-performing Instagram posts and the recruitment campaign for SINFO 31.</p>
+              <p class="exp-links"><button type="button" class="exp-link" id="sinfo-designs-btn"><span class="material-symbols-outlined">imagesmode</span>View the SINFO designs</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:0.32s" data-i="4">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">05</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="4">
+            <div class="exp-card-left">
               <span class="exp-eyebrow">Head of HR · Lisbon · Mar 2022–May 2023</span>
               <h3 class="exp-title">Diferencial</h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
-          <div class="exp-card-body" id="expb-3">
+          <div class="exp-card-body" id="expb-4">
             <div class="exp-card-body-inner">
               <p>Built the HR function from scratch for a <span class="exp-hl">20+</span> person student team at IST's student newspaper. No existing process — recruitment, onboarding, retention — all of it written from nothing.</p>
               <p>The goal: get the right people in, and make sure they stayed. First-year retention improved, and so did how quickly new members found their footing.</p>
@@ -319,28 +376,7 @@
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.36s" data-i="4">
-        <div class="exp-marker">
-          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
-          <span class="exp-num">05</span>
-        </div>
-        <div class="exp-card" data-open="false">
-          <button class="exp-card-head" data-target="4">
-            <div class="exp-card-left">
-              <span class="exp-eyebrow">Volunteering · Lisbon · 2023</span>
-              <h3 class="exp-title">Web<em>Summit</em></h3>
-            </div>
-            <span class="exp-toggle-icon material-symbols-outlined">add</span>
-          </button>
-          <div class="exp-card-body" id="expb-4">
-            <div class="exp-card-body-inner">
-              <p>One edition of WebSummit in Lisbon. Guided speakers, press, and partners through a multi-day, multi-venue event where thousands of things can go wrong — and usually don't, because people behind the scenes keep it together.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-item rup" style="--d:.44s" data-i="5">
+      <div class="exp-item rup" style="--d:0.40s" data-i="5">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
           <span class="exp-num">06</span>
@@ -348,20 +384,20 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="5">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Education &amp; Arts · Lisbon · 2015–2022</span>
-              <h3 class="exp-title">Teaching &amp; <em>Ballet</em></h3>
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2023</span>
+              <h3 class="exp-title">Web<em>Summit</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-5">
             <div class="exp-card-body-inner">
-              <p><span class="exp-hl">7 years</span> teaching two completely different things to completely different people. Maths and Physics to students who needed structured thinking. Ballet to children who needed to trust their bodies. Both came down to the same skill: breaking something hard into steps someone else can follow.</p>
+              <p>One edition of WebSummit in Lisbon. Guided speakers, press, and partners through a multi-day, multi-venue event where thousands of things can go wrong — and usually don't, because people behind the scenes keep it together.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.52s" data-i="6">
+      <div class="exp-item rup" style="--d:0.48s" data-i="6">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
           <span class="exp-num">07</span>
@@ -369,20 +405,20 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="6">
             <div class="exp-card-left">
-              <span class="exp-eyebrow">Volunteering · Lisbon · 2017–2020</span>
-              <h3 class="exp-title">Re<em>Food</em></h3>
+              <span class="exp-eyebrow">Education &amp; Arts · Lisbon · 2015–2022</span>
+              <h3 class="exp-title">Teaching &amp; <em>Ballet</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
           <div class="exp-card-body" id="expb-6">
             <div class="exp-card-body-inner">
-              <p><span class="exp-hl">3 years</span> of weekly food rescue across Lisbon — collecting surplus from restaurants and supermarkets, delivering to families in need. The kind of work that doesn't show up in a CV the way it should.</p>
+              <p><span class="exp-hl">7 years</span> teaching two completely different things to completely different people. Maths and Physics to students who needed structured thinking. Ballet to children who needed to trust their bodies. Both came down to the same skill: breaking something hard into steps someone else can follow.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="exp-item rup" style="--d:.60s" data-i="7">
+      <div class="exp-item rup" style="--d:0.56s" data-i="7">
         <div class="exp-marker">
           <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
           <span class="exp-num">08</span>
@@ -390,12 +426,33 @@
         <div class="exp-card" data-open="false">
           <button class="exp-card-head" data-target="7">
             <div class="exp-card-left">
+              <span class="exp-eyebrow">Volunteering · Lisbon · 2017–2020</span>
+              <h3 class="exp-title">Re<em>Food</em></h3>
+            </div>
+            <span class="exp-toggle-icon material-symbols-outlined">add</span>
+          </button>
+          <div class="exp-card-body" id="expb-7">
+            <div class="exp-card-body-inner">
+              <p><span class="exp-hl">3 years</span> of weekly food rescue across Lisbon — collecting surplus from restaurants and supermarkets, delivering to families in need. The kind of work that doesn't show up in a CV the way it should.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item rup" style="--d:0.60s" data-i="8">
+        <div class="exp-marker">
+          <div class="exp-dot-outer"><div class="exp-dot-inner"></div></div>
+          <span class="exp-num">09</span>
+        </div>
+        <div class="exp-card" data-open="false">
+          <button class="exp-card-head" data-target="8">
+            <div class="exp-card-left">
               <span class="exp-eyebrow">Volunteering · Lisbon · 2014–2020</span>
               <h3 class="exp-title">Banco <em>Alimentar</em></h3>
             </div>
             <span class="exp-toggle-icon material-symbols-outlined">add</span>
           </button>
-          <div class="exp-card-body" id="expb-7">
+          <div class="exp-card-body" id="expb-8">
             <div class="exp-card-body-inner">
               <p>Portugal's national food bank campaigns — annual collection drives, warehouse sorting, and distribution across Lisbon. The kind of volunteering you start young and don't stop thinking about.</p>
             </div>
@@ -406,9 +463,87 @@
     </div>
   </div>
 </section>
+<section id="workshop">
+  <div class="ws-head rup">
+    <p class="room-tag">Room IV — The Workshop</p>
+    <h2 class="ws-h2">Things I make <em>after hours</em></h2>
+    <p class="ws-intro">Side projects, designed and built end to end. Every piece on this wall is live: step through the frame and try it.</p>
+  </div>
+  <div class="ws-wall">
+    <article class="ws-piece rup ws-feature" style="--acc:#e8b84b">
+      <a class="ws-frame" href="https://knitcraft-production.up.railway.app/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <span class="ws-corner ws-c-tl"></span><span class="ws-corner ws-c-tr"></span><span class="ws-corner ws-c-bl"></span><span class="ws-corner ws-c-br"></span>
+        <span class="ws-canvas"><img src="img/workshop/stitchcraft.jpg" alt="" loading="lazy" decoding="async" width="1280" height="800"/></span>
+        <span class="ws-onview"><i></i>On view</span>
+      </a>
+      <div class="ws-label">
+        <span class="ws-num">No. I</span>
+        <h3 class="ws-title">StitchCraft <em>Studio</em></h3>
+        <p class="ws-line">A studio for knitters: AI pattern drafting, colourwork charts and a hands-free row tracker.</p>
+        <div class="ws-tags"><span>Next.js</span><span>TypeScript</span><span>AI pattern drafting</span></div>
+        <div class="ws-links">
+          <a href="https://knitcraft-production.up.railway.app/" target="_blank" rel="noopener noreferrer" class="ws-link ws-link-live" aria-label="StitchCraft Studio, open the live site"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit</a>
+          <a href="https://github.com/constancadcunha/knitcraft" target="_blank" rel="noopener noreferrer" class="ws-link" aria-label="StitchCraft Studio, source code on GitHub"><span class="material-symbols-outlined" aria-hidden="true">code</span>Code</a>
+        </div>
+      </div>
+    </article>
+    <article class="ws-piece rup" style="--acc:#7aaad4">
+      <a class="ws-frame" href="https://constancadcunha.github.io/skein/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <span class="ws-corner ws-c-tl"></span><span class="ws-corner ws-c-tr"></span><span class="ws-corner ws-c-bl"></span><span class="ws-corner ws-c-br"></span>
+        <span class="ws-canvas"><img src="img/workshop/skein.jpg" alt="" loading="lazy" decoding="async" width="960" height="720"/></span>
+        <span class="ws-onview"><i></i>On view</span>
+      </a>
+      <div class="ws-label">
+        <span class="ws-num">No. II</span>
+        <h3 class="ws-title">skein<em>.</em></h3>
+        <p class="ws-line">A live colour studio for crochet.</p>
+        <div class="ws-tags"><span>JavaScript</span><span>SVG</span></div>
+        <div class="ws-links">
+          <a href="https://constancadcunha.github.io/skein/" target="_blank" rel="noopener noreferrer" class="ws-link ws-link-live" aria-label="skein, open the live site"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit</a>
+          <a href="https://github.com/constancadcunha/skein" target="_blank" rel="noopener noreferrer" class="ws-link" aria-label="skein, source code on GitHub"><span class="material-symbols-outlined" aria-hidden="true">code</span>Code</a>
+        </div>
+      </div>
+    </article>
+    <article class="ws-piece rup" style="--acc:#c97d2a">
+      <a class="ws-frame" href="https://constancadcunha.github.io/bookPod/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <span class="ws-corner ws-c-tl"></span><span class="ws-corner ws-c-tr"></span><span class="ws-corner ws-c-bl"></span><span class="ws-corner ws-c-br"></span>
+        <span class="ws-canvas"><img src="img/workshop/bookpod.jpg" alt="" loading="lazy" decoding="async" width="960" height="720"/></span>
+        <span class="ws-onview"><i></i>On view</span>
+      </a>
+      <div class="ws-label">
+        <span class="ws-num">No. III</span>
+        <h3 class="ws-title">book<em>Pod</em></h3>
+        <p class="ws-line">An iPod classic, but for books.</p>
+        <div class="ws-tags"><span>JavaScript</span><span>Web Audio</span></div>
+        <div class="ws-links">
+          <a href="https://constancadcunha.github.io/bookPod/" target="_blank" rel="noopener noreferrer" class="ws-link ws-link-live" aria-label="bookPod, open the live site"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit</a>
+          <a href="https://github.com/constancadcunha/bookPod" target="_blank" rel="noopener noreferrer" class="ws-link" aria-label="bookPod, source code on GitHub"><span class="material-symbols-outlined" aria-hidden="true">code</span>Code</a>
+        </div>
+      </div>
+    </article>
+    <article class="ws-piece rup" style="--acc:#b87abf">
+      <a class="ws-frame" href="https://constancadcunha.github.io/incipit/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+        <span class="ws-corner ws-c-tl"></span><span class="ws-corner ws-c-tr"></span><span class="ws-corner ws-c-bl"></span><span class="ws-corner ws-c-br"></span>
+        <span class="ws-canvas"><img src="img/workshop/incipit.jpg" alt="" loading="lazy" decoding="async" width="960" height="720"/></span>
+        <span class="ws-onview"><i></i>On view</span>
+      </a>
+      <div class="ws-label">
+        <span class="ws-num">No. IV</span>
+        <h3 class="ws-title">incipit<em>.</em></h3>
+        <p class="ws-line">The first line of a novel that was never written.</p>
+        <div class="ws-tags"><span>JavaScript</span><span>Web Audio</span></div>
+        <div class="ws-links">
+          <a href="https://constancadcunha.github.io/incipit/" target="_blank" rel="noopener noreferrer" class="ws-link ws-link-live" aria-label="incipit, open the live site"><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>Visit</a>
+          <a href="https://github.com/constancadcunha/incipit" target="_blank" rel="noopener noreferrer" class="ws-link" aria-label="incipit, source code on GitHub"><span class="material-symbols-outlined" aria-hidden="true">code</span>Code</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 <section id="courses">
   <div class="crs-head rup">
-    <p class="room-tag">Room IV — The Studio</p>
+    <p class="room-tag">Room V — The Studio</p>
     <h2 class="crs-h2">Where I studied <em>the craft</em></h2>
   </div>
   <div class="crs-wall">
@@ -446,6 +581,8 @@
           <h3 class="crs-title">Interaction Visualization</h3>
           <p class="crs-body">Information visualization theory and interactive data exploration. Interactive charts with D3.js; dashboards and visual narratives for real datasets. Clarity through form.</p>
           <div class="crs-chips"><span>D3.js</span><span>Data Viz</span><span>SVG</span><span>Interaction</span><span>Narrative</span></div>
+          <!-- TODO(Constança): no live demo yet. Enable GitHub Pages on MentalHealth-Database and add a "Live" link next to this one. -->
+          <a href="https://github.com/constancadcunha/MentalHealth-Database" target="_blank" rel="noopener noreferrer" class="crs-link"><span class="material-symbols-outlined" aria-hidden="true">code</span>View project</a>
         </div>
         <div class="crs-shine"></div>
       </div>
@@ -467,6 +604,10 @@
           <h3 class="crs-title">3D Programming</h3>
           <p class="crs-body">3D graphics — transformations, lighting models, shading pipelines. Interactive scenes with Three.js and WebGL. Built a complete browser-based 3D application as final project.</p>
           <div class="crs-chips"><span>Three.js</span><span>WebGL</span><span>Shaders</span><span>GLSL</span><span>Lighting</span></div>
+          <!-- TODO(Constança): add a "View project" link for the 3D Programming final project, e.g.
+               <a href="https://github.com/constancadcunha/REPO" target="_blank" rel="noopener noreferrer" class="crs-link"><span class="material-symbols-outlined" aria-hidden="true">code</span>View project</a>
+               Candidates on GitHub: GPU_PathTracer (GLSL) or Project2.CG_22-23 (Three.js); neither is clearly this course. -->
+
         </div>
         <div class="crs-shine"></div>
       </div>
@@ -543,7 +684,7 @@
 </section>
 <section id="education">
   <div class="edu-head rup">
-    <p class="room-tag">Room V — The Roots</p>
+    <p class="room-tag">Room VI — The Roots</p>
     <h2 class="edu-h2">Academic <em>foundations</em></h2>
   </div>
   <div class="edu-diplomas">
@@ -568,12 +709,12 @@
         <p class="edu-dip-hereby">This is to certify that</p>
         <p class="edu-dip-name">Constança Cunha</p>
         <p class="edu-dip-has">has successfully fulfilled all requirements for the degree of</p>
-        <h3 class="edu-dip-degree">Bachelor of Science<br><em>in Computer Science &amp; Engineering</em></h3>
+        <h3 class="edu-dip-degree">Bachelor of Science<br><em>in Computer Science</em></h3>
         <div class="edu-dip-rule">
           <span class="edu-dip-rule-diamond">◆</span>
         </div>
         <p class="edu-dip-school"><span class="material-symbols-outlined">school</span>Universidade de Lisboa · Portugal</p>
-        <p class="edu-dip-years">2020 — 2024</p>
+        <p class="edu-dip-years">2020 — 2024 &nbsp;·&nbsp; Final grade 17/20</p>
         <div class="edu-dip-chips">
           <span>Software Engineering</span><span>Graphic Design</span>
           <span>OOP &amp; Algorithms</span><span>Computer Graphics</span>
@@ -605,6 +746,7 @@
       <div class="edu-dip-border-outer"></div>
       <div class="edu-dip-border-mid"></div>
       <div class="edu-dip-border-inner"></div>
+      <!-- TODO(Constança): if the M.Sc. is complete, remove this "In Progress" badge and change "is presently pursuing" below to "has successfully fulfilled all requirements for". -->
       <div class="edu-dip-progress">In Progress</div>
       <div class="edu-dip-inner">
         <div class="edu-dip-header">
@@ -618,12 +760,12 @@
         <p class="edu-dip-hereby">This is to certify that</p>
         <p class="edu-dip-name">Constança Cunha</p>
         <p class="edu-dip-has">is presently pursuing the requirements for the degree of</p>
-        <h3 class="edu-dip-degree">Master of Science<br><em>in Computer Science &amp; Engineering</em></h3>
+        <h3 class="edu-dip-degree">Master of Science<br><em>in Computer Science</em><br><em>Interaction &amp; Visualization</em></h3>
         <div class="edu-dip-rule">
           <span class="edu-dip-rule-diamond">◆</span>
         </div>
         <p class="edu-dip-school"><span class="material-symbols-outlined">school</span>Universidade de Lisboa · Portugal</p>
-        <p class="edu-dip-years">2024 — 2026</p>
+        <p class="edu-dip-years">2024 — 2026 &nbsp;·&nbsp; GPA 18/20</p>
         <div class="edu-dip-chips">
           <span>UX &amp; Interaction Design</span><span>Visualization</span>
           <span>NLP</span><span>3D Programming</span>
@@ -655,14 +797,14 @@
   <div class="ctt-layout">
 
     <div class="ctt-left">
-      <p class="room-tag rup">Room VI — The Letter</p>
+      <p class="room-tag rup">Room VII — The Letter</p>
       <h2 class="ctt-h2 rup" style="--d:.05s">Write me<br><em>a letter</em></h2>
       <div class="ctt-letter rup" style="--d:.18s">
         <div class="ctt-letter-head">
           <div class="ctt-stamp"><span>CC</span><div class="ctt-stamp-perf"></div></div>
           <div class="ctt-lh-text">
             <strong>Constança Cunha</strong>
-            <span>Lisbon · Graduate programs &amp; full-time roles</span>
+            <span>Lisbon · Open to relocation · EU citizen · Full-time roles</span>
           </div>
           <span class="ctt-date" id="ctt-date"></span>
         </div>
@@ -709,21 +851,21 @@
         <cite>— Claude Monet</cite>
       </blockquote>
       <div class="ctt-soc-grid">
-        <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" class="ctt-soc"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
-        <a href="https://github.com/constancadcunha" target="_blank" class="ctt-soc"><span class="material-symbols-outlined">code</span>GitHub</a>
+        <a href="https://www.linkedin.com/in/constanca-cunha/" target="_blank" rel="noopener noreferrer" class="ctt-soc"><span class="material-symbols-outlined">open_in_new</span>LinkedIn</a>
+        <a href="https://github.com/constancadcunha" target="_blank" rel="noopener noreferrer" class="ctt-soc"><span class="material-symbols-outlined">code</span>GitHub</a>
         <a href="resume.pdf" download class="ctt-soc"><span class="material-symbols-outlined">download</span>Resume</a>
         <a href="Constanca_Cunha_Designs.zip" download class="ctt-soc"><span class="material-symbols-outlined">folder_zip</span>Projects</a>
       </div>
       <div class="ctt-mpaint">
         <p class="ctt-mpl" id="ctt-mpl-text"><span class="material-symbols-outlined">brush</span>Paint your own starry night</p>
-        <canvas id="mini-canvas" width="300" height="150"></canvas>
+        <canvas id="mini-canvas" width="300" height="150" aria-label="Drawing canvas"></canvas>
         <div class="ctt-mpc">
-          <button class="mdot on" data-c="#e8b84b" style="--dc:#e8b84b"></button>
-          <button class="mdot" data-c="#4a7ab5" style="--dc:#4a7ab5"></button>
-          <button class="mdot" data-c="#f5e6c8" style="--dc:#f5e6c8"></button>
-          <button class="mdot" data-c="#7dbd7d" style="--dc:#7dbd7d"></button>
-          <button class="mdot" data-c="#c94040" style="--dc:#c94040"></button>
-          <button class="mini-clr" id="mini-clear"><span class="material-symbols-outlined">restart_alt</span></button>
+          <button class="mdot on" data-c="#e8b84b" aria-label="Paint colour gold" style="--dc:#e8b84b"></button>
+          <button class="mdot" data-c="#4a7ab5" aria-label="Paint colour blue" style="--dc:#4a7ab5"></button>
+          <button class="mdot" data-c="#f5e6c8" aria-label="Paint colour cream" style="--dc:#f5e6c8"></button>
+          <button class="mdot" data-c="#7dbd7d" aria-label="Paint colour green" style="--dc:#7dbd7d"></button>
+          <button class="mdot" data-c="#c94040" aria-label="Paint colour red" style="--dc:#c94040"></button>
+          <button class="mini-clr" id="mini-clear" aria-label="Clear canvas"><span class="material-symbols-outlined">restart_alt</span></button>
         </div>
       </div>
     </div>
@@ -732,27 +874,36 @@
 
 <footer>
   <span class="footer-credit">Constança Cunha &nbsp;·&nbsp; Painted with passion &nbsp;·&nbsp; 2026</span>
-  <button id="footer-star"><span class="material-symbols-outlined">star</span></button>
+  <button id="footer-star" aria-label="Open the painting easter egg"><span class="material-symbols-outlined">star</span></button>
 </footer>
 
 <div id="egg-modal" aria-hidden="true">
   <div class="egg-box">
-    <button id="egg-close"><span class="material-symbols-outlined">close</span></button>
+    <button id="egg-close" aria-label="Close"><span class="material-symbols-outlined">close</span></button>
     <h3 id="egg-title">Paint Your Starry Night</h3>
     <p class="egg-sub" id="egg-sub-text">Drag your brush across the canvas.</p>
-    <canvas id="egg-canvas" width="560" height="340"></canvas>
+    <canvas id="egg-canvas" width="560" height="340" aria-label="Drawing canvas"></canvas>
     <div class="egg-ctrl">
-      <button class="epdot on" data-c="#E8B84B" style="--bc:#E8B84B"></button>
-      <button class="epdot" data-c="#4A7AB5" style="--bc:#4A7AB5"></button>
-      <button class="epdot" data-c="#F5E6C8" style="--bc:#F5E6C8"></button>
-      <button class="epdot" data-c="#7DBD7D" style="--bc:#7DBD7D"></button>
-      <button class="epdot" data-c="#C94040" style="--bc:#C94040"></button>
-      <button class="epdot" data-c="#ffffff" style="--bc:#ffffff"></button>
+      <button class="epdot on" data-c="#E8B84B" aria-label="Paint colour gold" style="--bc:#E8B84B"></button>
+      <button class="epdot" data-c="#4A7AB5" aria-label="Paint colour blue" style="--bc:#4A7AB5"></button>
+      <button class="epdot" data-c="#F5E6C8" aria-label="Paint colour cream" style="--bc:#F5E6C8"></button>
+      <button class="epdot" data-c="#7DBD7D" aria-label="Paint colour green" style="--bc:#7DBD7D"></button>
+      <button class="epdot" data-c="#C94040" aria-label="Paint colour red" style="--bc:#C94040"></button>
+      <button class="epdot" data-c="#ffffff" aria-label="Paint colour white" style="--bc:#ffffff"></button>
       <button id="egg-clear"><span class="material-symbols-outlined">restart_alt</span>Clear</button>
     </div>
     <p class="egg-quote" id="egg-quote-text">"I dream my painting and I paint my dream." — Van Gogh</p>
   </div>
 </div>
+
+<dialog id="sinfo-dialog" class="sd-dialog" aria-labelledby="sd-title">
+  <div class="sd-box">
+    <button type="button" class="sd-close" id="sd-close" aria-label="Close"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+    <p class="room-tag">Room III — A side gallery</p>
+    <h3 class="sd-title" id="sd-title">SINFO <em>designs</em></h3>
+    <div class="sd-grid" id="sd-grid"></div>
+  </div>
+</dialog>
 
 <script src="script.js"></script>
 </body>
